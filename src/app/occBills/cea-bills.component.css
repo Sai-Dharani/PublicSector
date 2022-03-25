@@ -1,0 +1,107 @@
+body {
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    position: static;
+    margin-bottom: 320px;
+}
+.addressBackBtn {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.page-title{
+    color: #104d83;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+    padding: 20px 0;
+    margin: 0;
+    padding-left: 10px;
+    white-space: normal;
+}
+.text-body{
+    font-size: 14px;
+}
+.btn {
+    font-size: 14px;
+    text-transform: none;
+    white-space: normal;
+}
+.btn-primary {
+    border: 1px solid;
+    color: #000000;
+    background-color: #fdda19;
+    border-color: #fdda19;
+    font-weight: bold;
+    width: 110%;
+}
+
+table{
+    /* text-align: center; */
+    box-shadow: #000000;
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+
+}
+    .table-striped>tr>th{
+
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+
+        overflow: auto;
+        padding: 20px;
+        font-weight: 550;
+        font-size: 17px;
+        vertical-align: top;
+        background-color: #f2f2f2;
+        color: #000000;
+        text-align: left;
+    }
+    .tleft{
+        text-align: left;
+    }
+    .talign{
+        text-align: center;
+    }
+    .tbutton{
+        background-color: white;
+        color: #FF0F0F;
+        text-align: center;
+    }
+    
+    .table-striped>tbody>tr{
+        font-size: 14px;
+
+    }
+.table-striped>tbody>tr:nth-child(even)>td{
+    background-color: #F9F9F9;
+    /* text-align: center; */
+    /* padding-left: 10px; */
+
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td{
+    background-color:white;
+    /* text-align: center; */
+    
+}
+.table-striped>tbody>tr:nth-child(even)>th{
+    background-color: #F9F9F9;
+}
+.table-striped>tbody>tr:nth-child(odd)>th{
+    background-color:white;
+    
+}
+
+
+/* table, td, th{
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    width:90%;
+    margin-bottom: 50%
+}
+
+th{
+    height: 50px;
+} */

@@ -1,103 +1,67 @@
-<style>
- table, td, th{
-     border: 1px solid black;
- }
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<div class="container-fluid" style="width: 90%;">
+        <button type="button" class="addressBackBtn" >
+          <a href="#">
+            <span class="glyphicon glyphicon-chevron-left" style="font-size: 18px;"></span>
+          </a>
+          <!-- <img src = "\assets\chevron-left.svg" alt="chevron-left"/> -->
+        </button>
+        <span class="page-title">Bills</span>
+        <br>
 
- table{
-     border-collapse: collapse;
-     width:90%;
-     margin-bottom: 50%
- }
+        <br>
 
- th{
-     height: 50px;
- }
-
-</style>
-
-
-
-
-<H1>Sample form page</H1>
-
-<!--<table>
- <tr>
-    <th>ID</th>
-    <th>Post ID</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Body</th>
- </tr>
-
- <tr *ngFor="let com of lstcomments">
-     <td>{{com.id}}</td>
-     <td>{{com.postId}}</td>
-     <td>{{com.name}}</td>
-     <td>{{com.email}}</td>
-     <td>{{com.body}}</td>
- </tr>
+      <p class="text-body">These are your bills. Select which one you want to pay for.
+      </p>
+      <br>
+      <p class="text-body">Find the bills of your relationships below.
+      </p>
+      <br>
+      <!-- currentPage: number;
+  pageSize: number;
+  sort: string;
+  totalPages: number;
+  totalResults: number; -->
+      
+      
+      <p>{{products.pagination.totalResults}}</p>
 
 
-</table>-->
-
-
-<pre>{{product | json}}</pre>--------------------
-
-<!--<pre>{{product.categories | json}}</pre>!!!!!!!!!!!!!!!!!-->
-
-
-<!--<pre>{{orderEntries$ | async | json}}</pre>
-
-<pre>{{product$ | async | json}}</pre>-->
-
-
-
-<ng-container *ngIf="product! | json">
-   <h3>Product:</h3>&nbsp;{{product.code}}<br>
-   <h3>Available For Pickup:</h3>&nbsp;{{product.availableForPickup}}<br>
-  <ul>
-    <ng-container *ngFor="let item of product.categories">
-      <li>
-        {{item.code}}, {{item.name}}
-      </li>
-    </ng-container>
-  </ul>
-</ng-container>
-
-
-
-
-<!--
-<h3>categories:
-<ul>
-    <li *ngFor="let cate of product!.categories | async as json">
-        <h3>code:</h3>&nbsp;{{cate.code}}<br>
-        <h3>Name:</h3>&nbsp;{{cate.name}}
-    </li>
-</ul>-->
+      <table class="table table-striped table-borderless">
+        
+          <tr class="" >
+          <th>Bill Type</th>
+          <th scope="col" class="table-header talign">Due Date</th>
+          <th scope="col" class="table-header tleft">Amount Due</th>
+          <th scope="col" class="table-header talign">Bill Total</th>
+          <th scope="col" class="table-header talign">Issue Date</th>
+          <th scope="col" class="table-header talign">Bill ID</th>
+          <th scope="col" class="table-header talign">Status</th>
+          <th></th>
+          <th></th>
+          </tr>
+        
+        <tbody>
+          <tr *ngFor="let item of products.bills">
+            <th scope="row">{{item.type.description}}</th>
+            <td class="align-top talign">{{this.datepipe.transform(item.dueAt, 'MMM dd,yyyy')}}</td>
+            <td class="align-top ">{{item.outstandingAmount}}</td>
+            <td class="align-top ">{{item.totalAmount}}</td>
+            <td class="align-top talign">{{this.datepipe.transform(item.createdAt, 'MMM dd,yyyy')}}</td>
+            <td class="align-top talign">{{item.displayBillId}}</td>
+            <td class="align-top talign">{{item.paymentStatus}}</td>
+            <td class="align-top talign" ><img src = "\assets\file-earmark-pdf.svg" alt="file-earmark-pdf"/>Download bill as PDF</td>
+            <td class="align-top talign" >
+              <div *ngIf="item.isOverDue" class="tbutton"  >Overdue Bill</div>
+              <div *ngIf="item.type.isPaymentAllowed" class="tbutton"  >Payment Not Allowed</div>
+              <div>
+              <button type="button" class="btn btn-primary" *ngIf="item.type.isPaymentAllowed">{{item.type.isPaymentAllowed ? 'Pay This Bill' : 'More Info'}}</button></div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
     
-    
-  
-   
- 
-
- <!-- <table>
-    <tr>
-       <th>Base Price</th>
-       <th>Entry Number</th>
-    </tr>
-   
-    
-    <tr *ngFor="let order of orderEntries$ | async as json">
-        <td>{{order.basePrice.formattedValue | json}}, {{order.basePrice.value | json}}</td>
-        <td>{{order.entryNumber}}</td>
-    </tr>
-   
-   
-   </table>
-   -->
-<div id="demo">123</div>
-
-
-
-
