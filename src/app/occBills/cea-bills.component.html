@@ -1,0 +1,103 @@
+<style>
+ table, td, th{
+     border: 1px solid black;
+ }
+
+ table{
+     border-collapse: collapse;
+     width:90%;
+     margin-bottom: 50%
+ }
+
+ th{
+     height: 50px;
+ }
+
+</style>
+
+
+
+
+<H1>Sample form page</H1>
+
+<!--<table>
+ <tr>
+    <th>ID</th>
+    <th>Post ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+ </tr>
+
+ <tr *ngFor="let com of lstcomments">
+     <td>{{com.id}}</td>
+     <td>{{com.postId}}</td>
+     <td>{{com.name}}</td>
+     <td>{{com.email}}</td>
+     <td>{{com.body}}</td>
+ </tr>
+
+
+</table>-->
+
+
+<pre>{{product | json}}</pre>--------------------
+
+<!--<pre>{{product.categories | json}}</pre>!!!!!!!!!!!!!!!!!-->
+
+
+<!--<pre>{{orderEntries$ | async | json}}</pre>
+
+<pre>{{product$ | async | json}}</pre>-->
+
+
+
+<ng-container *ngIf="product! | json">
+   <h3>Product:</h3>&nbsp;{{product.code}}<br>
+   <h3>Available For Pickup:</h3>&nbsp;{{product.availableForPickup}}<br>
+  <ul>
+    <ng-container *ngFor="let item of product.categories">
+      <li>
+        {{item.code}}, {{item.name}}
+      </li>
+    </ng-container>
+  </ul>
+</ng-container>
+
+
+
+
+<!--
+<h3>categories:
+<ul>
+    <li *ngFor="let cate of product!.categories | async as json">
+        <h3>code:</h3>&nbsp;{{cate.code}}<br>
+        <h3>Name:</h3>&nbsp;{{cate.name}}
+    </li>
+</ul>-->
+    
+    
+  
+   
+ 
+
+ <!-- <table>
+    <tr>
+       <th>Base Price</th>
+       <th>Entry Number</th>
+    </tr>
+   
+    
+    <tr *ngFor="let order of orderEntries$ | async as json">
+        <td>{{order.basePrice.formattedValue | json}}, {{order.basePrice.value | json}}</td>
+        <td>{{order.entryNumber}}</td>
+    </tr>
+   
+   
+   </table>
+   -->
+<div id="demo">123</div>
+
+
+
+

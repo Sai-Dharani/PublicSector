@@ -1,0 +1,11 @@
+<cx-navigation-ui
+  *ngIf="data$ | async as data"
+  [node]="node$ | async"
+  [ngClass]="data.styleClass"
+  [wrapAfter]="data.wrapAfter"
+  [resetMenuOnClose]="data.resetMenuOnClose"
+></cx-navigation-ui>
+<!-- {{(node$ | async) | json}} -->
+<h1>Hello</h1>
+<!-- {{(data$ | async).navigationNode.children | json}} -->
+
