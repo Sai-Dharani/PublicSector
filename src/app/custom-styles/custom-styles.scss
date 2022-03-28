@@ -1,41 +1,36 @@
 
-
-cx-page-layout.LandingPage2Template cx-page-slot.Section2A, cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+cx-page-layout.LandingPage2Template cx-page-slot.Section2C{
     --cx-flex-basis: 50%;
-    max-width: 1150px;
-    margin: 50px;
+  // flex:auto;
+ //  margin: 10px 80px 0px 85px;
+  margin: auto;
+ // padding-left: 85px;
 }
 
-cx-page-layout cx-page-slot{
-    --cx-flex-basis: 50%;
-    //max-width: 1150px;
-    //max-width: var(--cx-page-width-max);
-    margin: 10px;
-    
-}
-
-// state of rose bud occupied whole page 
+// state of rose bud 
 main cx-page-layout.LandingPage2Template {
     /* display: flex; */
     display: block;
     flex-wrap: wrap;
-   // width: 1240px;
-    //height: 367px;
     margin: auto;
 }
 
-
+//responsive
  a cx-media {
     position: relative;
-    display: inline-flex;
+    display: auto;
     width: auto;
     padding: 10px;
 }
 
+cx-media {
+    position: relative;
+    display: flex;
+}
 
 main cx-page-layout.LandingPage2Template cx-page-slot.Section2A, 
 cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
     --cx-flex-basis: 1 !important;
-    max-width: 1250px !important;
+    max-width: 100% !important;
 }
 
