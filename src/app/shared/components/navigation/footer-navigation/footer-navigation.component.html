@@ -4,6 +4,5 @@
   [flyout]="false"
   [ngClass]="styleClass$"
 ></cx-navigation-ui>
-{{(node$ | async) | json}}
 {{(styleClass$ | async) | json}}
-
+<pre>{{(node$ | async) | json}}</pre>

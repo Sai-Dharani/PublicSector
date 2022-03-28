@@ -7,7 +7,7 @@ import { NavigationModule } from '../navigation/navigation.module';
 import { FooterNavigationComponent } from './footer-navigation.component';
 
 @NgModule({
-  declarations: [FooterNavigationComponent, NavigationUIComponent],
+  declarations: [FooterNavigationComponent],
   imports: [
     CommonModule,
     RouterModule,

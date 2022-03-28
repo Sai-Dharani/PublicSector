@@ -6,6 +6,7 @@
   [resetMenuOnClose]="data.resetMenuOnClose"
 ></cx-navigation-ui>
 <!-- {{(node$ | async) | json}} -->
-<h1>Hello</h1>
-<!-- {{(data$ | async).navigationNode.children | json}} -->
-
+<div class="container" *ngIf="(data$ | async).navigationNode.children as data">
+<!-- {{data | json}} -->
+<!-- <pre>{{data | json}}</pre> -->
+</div>

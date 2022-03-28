@@ -20,10 +20,13 @@ import { FooterNavigationComponent } from "./shared/components/navigation/footer
 import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
 import { PSCustomSocialMediaComponent } from './shared/components/pscustom-social-media/pscustom-social-media.component';
 import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-media/pscustom-social-media.module";
+import { PSCustomFeaturedLinksComponent } from './shared/components/pscustom-featured-links/pscustom-featured-links.component';
+import { PSCustomFeaturedLinksModule } from "./shared/components/pscustom-featured-links/pscustom-featured-links.module";
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-m
     FooterNavigationModule,
     NavigationModule,
     CategoryNavigationModule,
-    PSCustomSocialMediaModule
+    PSCustomSocialMediaModule,
+    PSCustomFeaturedLinksModule
   ],
   providers: [provideConfig(publicsectorLayoutConfig),],
   bootstrap: [AppComponent]
