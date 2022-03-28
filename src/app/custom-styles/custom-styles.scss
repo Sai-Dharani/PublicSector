@@ -33,4 +33,9 @@ cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
     --cx-flex-basis: 1 !important;
     max-width: 100% !important;
 }
-
+main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline{
+    font-weight: normal;
+    font-size: 2vw;
+    display: flex;
+    padding-top: 15%;
+}

@@ -1,5 +1,14 @@
-<ng-container *ngIf="data$ | async as data">
-    <p>{{data.header}}</p>
-    <p>{{data.description}}</p>
-    <cx-media [container]="data.media"></cx-media>
-</ng-container>
+<div class="latest-news-component row container" *ngIf="data$ | async as data">
+    <div class="col-xs-12 col-sm-12 col-md-6 latest-news-box-wrapper">
+        <div class="latest-news">
+            <cx-media class="responsive" [container]="data.media"></cx-media>
+            <div class="latest-news-content">
+                <h3 class="latest-news-title">
+                    <span><p>{{data.header}}</p></span>
+                </h3>
+                <p class="description">{{data.description}}</p>
+                <a href="#">read more<span class="glyphicon glyphicon-menu-right"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
