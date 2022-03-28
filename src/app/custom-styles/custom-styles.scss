@@ -32,15 +32,10 @@ main cx-page-layout.LandingPage2Template {
     padding: 10px;
 }
 
-cx-page-layout cx-page-slot.section2c{
-    width: 550px;
-    height: 250px;
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A, 
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 1 !important;
+    max-width: 1250px !important;
 }
 
-
-// state of rose
-
-// cx-page-layout.LandingPage2Template cx-page-slot cx-banner cx-media img {
-//     display: flex;
-//     height: auto;
-// }
