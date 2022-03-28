@@ -1,0 +1,46 @@
+
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2A, cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 50%;
+    max-width: 1150px;
+    margin: 50px;
+}
+
+cx-page-layout cx-page-slot{
+    --cx-flex-basis: 50%;
+    //max-width: 1150px;
+    //max-width: var(--cx-page-width-max);
+    margin: 10px;
+    
+}
+
+// state of rose bud occupied whole page 
+main cx-page-layout.LandingPage2Template {
+    /* display: flex; */
+    display: block;
+    flex-wrap: wrap;
+   // width: 1240px;
+    //height: 367px;
+    margin: auto;
+}
+
+
+ a cx-media {
+    position: relative;
+    display: inline-flex;
+    width: auto;
+    padding: 10px;
+}
+
+cx-page-layout cx-page-slot.section2c{
+    width: 550px;
+    height: 250px;
+}
+
+
+// state of rose
+
+// cx-page-layout.LandingPage2Template cx-page-slot cx-banner cx-media img {
+//     display: flex;
+//     height: auto;
+// }
