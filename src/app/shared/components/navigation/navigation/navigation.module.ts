@@ -10,11 +10,11 @@ import { NavigationComponent } from './navigation.component';
 
 
 @NgModule({
-  declarations: [NavigationComponent],
   imports: [
     CommonModule,
     RouterModule,
     I18nModule,
+
   ],
   providers: [
     provideDefaultConfig(<CmsConfig>{
@@ -25,6 +25,7 @@ import { NavigationComponent } from './navigation.component';
       },
     }),
   ],
-  exports: [],
+  declarations: [NavigationComponent, NavigationUIComponent],
+  exports: [NavigationComponent, NavigationUIComponent],
 })
 export class NavigationModule {}

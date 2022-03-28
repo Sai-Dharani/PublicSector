@@ -37,9 +37,9 @@ export const staticRoutes: Routes = [
         PSSimpleResponsiveBannerComponent: {
           component: BannerComponent,
         },
-        PSFeaturedLinksComponent:{
-          component: LinkComponent,
-        },
+        // PSFeaturedLinksComponent:{
+        //   component: LinkComponent,
+        // },
         PSBannerComponent: {
           component: BannerComponent,
         },

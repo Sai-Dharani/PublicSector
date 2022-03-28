@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CmsNavigationComponent } from '@spartacus/core';
-import { CmsComponentData, NavigationService } from '@spartacus/storefront';
+import { CmsComponentData } from '@spartacus/storefront';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { NavigationNode } from './navigation-node.model';
+import { NavigationService } from './navigation.service';
 // import { CmsComponentData } from '../../../cms-structure/page/model/cms-component-data';
-// import { NavigationNode } from './navigation-node.model';
-// import { NavigationService } from './navigation.service';
+
 
 @Component({
   selector: 'cx-navigation',
