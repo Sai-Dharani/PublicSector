@@ -13,11 +13,11 @@ import {
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { debounceTime, filter } from 'rxjs/operators';
-// import { ICON_TYPE } from '../../misc/icon/index';
+
 import { NavigationNode } from './navigation-node.model';
 import { distinctUntilChanged } from 'rxjs/operators';
 // import { HamburgerMenuService } from './../../../layout/header/hamburger-menu/hamburger-menu.service';
-import { HamburgerMenuService } from '@spartacus/storefront';
+import { HamburgerMenuService, ICON_TYPE } from '@spartacus/storefront';
 
 @Component({
   selector: 'cx-navigation-ui',
@@ -56,7 +56,7 @@ export class NavigationUIComponent implements OnInit, OnDestroy {
    * the icon type that will be used for navigation nodes
    * with children.
    */
-  // iconType = ICON_TYPE;
+  iconType = ICON_TYPE;
 
   /**
    * Indicates whether the navigation should support flyout.
