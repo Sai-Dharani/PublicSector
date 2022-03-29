@@ -151,3 +151,38 @@ div {
     text-align: left;
 }
 
+/* cx-page-layout.LoginPageTemplate cx-page-slot, cx-page-layout.CheckoutLoginPageTemplate cx-page-slot, cx-page-layout.AccountPageTemplate cx-page-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: var(--cx-page-width-max);
+    padding-top: 3rem;
+    padding-inline-end: 1.5rem;
+    padding-bottom: 0;
+    padding-inline-start: 1.5rem;
+    margin: auto;
+  } */
+
+/*  
+cx-page-layout.LoginPageTemplate cx-page-slot, cx-page-layout.CheckoutLoginPageTemplate cx-page-slot, cx-page-layout.AccountPageTemplate cx-page-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--cx-page-width-max);
+  padding-top: 3rem;
+  padding-inline-end: 1.5rem;
+  padding-bottom: 0;
+  padding-inline-start: 1.5rem;
+  margin: auto;
+}
+cx-page-layout.LoginPageTemplate cx-page-slot, cx-page-layout.CheckoutLoginPageTemplate cx-page-slot, cx-page-layout.AccountPageTemplate cx-page-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--cx-page-width-max);
+  padding-top: 3rem;
+  padding-inline-end: 1.5rem;
+  padding-bottom: 0;
+  padding-inline-start: 1.5rem;
+  margin: auto;
+} */

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { RoutingConfig, AuthGuard, ConfigModule, UrlModule } from '@spartacus/core';
 import { CmsPageGuard } from '@spartacus/storefront';
-import { JwPaginationComponent } from 'jw-angular-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { freeApiService } from '../services/freeapi.service';
 import { CeaBillsComponent } from './cea-bills.component';
 
@@ -17,7 +17,8 @@ export const defaultCEABillsRoutingConfig: RoutingConfig = {
   imports: [
     CommonModule,
     UrlModule,
-    JwPaginationComponent,
+    NgxPaginationModule,
+    // JwPaginationComponent,
 
     // RouterModule.forChild([
     //   {

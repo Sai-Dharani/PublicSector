@@ -13,10 +13,11 @@ import { ceaBill } from './cea-bills.model';
 
 })
 export class CeaBillsComponent implements OnInit {
-
-  orderEntries$: Observable<OrderEntry[]> = this.cartService.getEntries();
-  product$: Observable<Product | null> = this.currentProductService.getProduct();
-
+  pageOfItems: any[];
+  products!: ceaBill;
+  p: Number = 1;
+  count: Number = 2;
+  total: Number = 26;
   constructor(
     private _freeApiService: freeApiService,
     private cartService: ActiveCartService,
@@ -27,23 +28,20 @@ export class CeaBillsComponent implements OnInit {
   ) {
 
   }
-
-
-  products!: ceaBill;
-
-  trainingPlanResponse: any[] = [];
-
   ngOnInit() {
     this._freeApiService.getcomments()
       .subscribe
       (
         data => {
           this.products = data;
+
         }
       );
+  }
 
-
-
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
   }
 
 
