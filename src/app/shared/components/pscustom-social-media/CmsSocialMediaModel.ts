@@ -1,4 +1,4 @@
-import { CmsBannerComponentMedia, CmsComponent, CmsResponsiveBannerComponentMedia } from "@spartacus/core";
+import { CmsComponent } from "@spartacus/core";
 
 export interface CmsSocialMediaComponent extends CmsComponent {
     name?:string;

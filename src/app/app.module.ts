@@ -11,7 +11,7 @@ import { SpartacusModule } from './spartacus/spartacus.module';
 import { provideConfig } from "@spartacus/core";
 import { CustomRoutingModule } from "./routing/custom-routing/custom-routing.module";
 import { PSEnhancedCustomBannerModule } from "./shared/components/psenhanced-custom-banner/psenhanced-custom-banner.module";
-import { CommonModule, DatePipe } from "@angular/common";
+import { CommonModule } from "@angular/common";
 import { FooterNavigationModule } from "./shared/components/navigation/footer-navigation/footer-navigation.module";
 import { NavigationModule } from "./shared/components/navigation/navigation/navigation.module";
 import { NavigationUIComponent } from "./shared/components/navigation/navigation/navigation-ui.component";
@@ -20,11 +20,13 @@ import { FooterNavigationComponent } from "./shared/components/navigation/footer
 import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
 import { PSCustomSocialMediaComponent } from './shared/components/pscustom-social-media/pscustom-social-media.component';
 import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-media/pscustom-social-media.module";
-import { JwPaginationComponent } from "jw-angular-pagination";
+import { PSCustomFeaturedLinksComponent } from './shared/components/pscustom-featured-links/pscustom-featured-links.component';
+import { PSCustomFeaturedLinksModule } from "./shared/components/pscustom-featured-links/pscustom-featured-links.module";
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
   ],
   imports: [
     BrowserModule,
@@ -41,9 +43,9 @@ import { JwPaginationComponent } from "jw-angular-pagination";
     NavigationModule,
     CategoryNavigationModule,
     PSCustomSocialMediaModule,
-    JwPaginationComponent,
+    PSCustomFeaturedLinksModule
   ],
-  providers: [provideConfig(publicsectorLayoutConfig), DatePipe],
+  providers: [provideConfig(publicsectorLayoutConfig),],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

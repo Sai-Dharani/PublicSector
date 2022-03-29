@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CmsNavigationComponent } from '@spartacus/core';
-import { CmsComponentData, NavigationService } from '@spartacus/storefront';
+import { CmsComponentData } from '@spartacus/storefront';
 import { Observable } from 'rxjs';
 import { NavigationNode } from '../navigation/navigation-node.model';
+import { NavigationService } from '../navigation/navigation.service';
 
 
 @Component({
@@ -11,8 +12,7 @@ import { NavigationNode } from '../navigation/navigation-node.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CategoryNavigationComponent {
-  node$: Observable<NavigationNode> = 
-    this.componentData.data$
+  node$: Observable<NavigationNode> = this.service.getNavigationNode(this.componentData.data$)
   
 
   data$: Observable<CmsNavigationComponent> = this.componentData.data$;

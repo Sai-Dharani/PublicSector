@@ -1,0 +1,41 @@
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2C{
+    --cx-flex-basis: 50%;
+  // flex:auto;
+ //  margin: 10px 80px 0px 85px;
+  margin: auto;
+ // padding-left: 85px;
+}
+
+// state of rose bud 
+main cx-page-layout.LandingPage2Template {
+    /* display: flex; */
+    display: block;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+//responsive
+ a cx-media {
+    position: relative;
+    display: auto;
+    width: auto;
+    padding: 10px;
+}
+
+cx-media {
+    position: relative;
+    display: flex;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A, 
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 1 !important;
+    max-width: 100% !important;
+}
+main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline{
+    font-weight: normal;
+    font-size: 2vw;
+    display: flex;
+    padding-top: 15%;
+}
