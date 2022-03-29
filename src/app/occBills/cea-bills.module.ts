@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { provideDefaultConfig, RoutingConfig, CmsConfig, AuthGuard, ConfigModule, UrlModule } from '@spartacus/core';
+import { RoutingConfig, AuthGuard, ConfigModule, UrlModule } from '@spartacus/core';
 import { CmsPageGuard } from '@spartacus/storefront';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 import { freeApiService } from '../services/freeapi.service';
 import { CeaBillsComponent } from './cea-bills.component';
 
@@ -16,15 +17,17 @@ export const defaultCEABillsRoutingConfig: RoutingConfig = {
   imports: [
     CommonModule,
     UrlModule,
-    RouterModule.forChild([
-      {
+    JwPaginationComponent,
 
-        path: 'null',
-        component: CeaBillsComponent,
-        canActivate: [AuthGuard, CmsPageGuard],
-        data: { cxRoute: 'BillsList' }
-      }
-    ]),
+    // RouterModule.forChild([
+    //   {
+
+    //     path: 'null',
+    //     component: CeaBillsComponent,
+    //     canActivate: [AuthGuard, CmsPageGuard],
+    //     data: { cxRoute: 'BillsList' }
+    //   }
+    // ]),
     ConfigModule.withConfig({
       cmsComponents: {
         CeaBillsComponent: {

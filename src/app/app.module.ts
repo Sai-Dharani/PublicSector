@@ -20,6 +20,7 @@ import { FooterNavigationComponent } from "./shared/components/navigation/footer
 import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
 import { PSCustomSocialMediaComponent } from './shared/components/pscustom-social-media/pscustom-social-media.component';
 import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-media/pscustom-social-media.module";
+import { JwPaginationComponent } from "jw-angular-pagination";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-m
     FooterNavigationModule,
     NavigationModule,
     CategoryNavigationModule,
-    PSCustomSocialMediaModule
+    PSCustomSocialMediaModule,
+    JwPaginationComponent,
   ],
   providers: [provideConfig(publicsectorLayoutConfig), DatePipe],
   bootstrap: [AppComponent]
