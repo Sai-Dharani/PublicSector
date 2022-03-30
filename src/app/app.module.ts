@@ -14,15 +14,8 @@ import { PSEnhancedCustomBannerModule } from "./shared/components/psenhanced-cus
 import { CommonModule, DatePipe } from "@angular/common";
 import { FooterNavigationModule } from "./shared/components/navigation/footer-navigation/footer-navigation.module";
 import { NavigationModule } from "./shared/components/navigation/navigation/navigation.module";
-import { NavigationUIComponent } from "./shared/components/navigation/navigation/navigation-ui.component";
-import { NavigationComponent } from "./shared/components/navigation/navigation/navigation.component";
-import { FooterNavigationComponent } from "./shared/components/navigation/footer-navigation/footer-navigation.component";
 import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
-import { PSCustomSocialMediaComponent } from './shared/components/pscustom-social-media/pscustom-social-media.component';
 import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-media/pscustom-social-media.module";
-
-
-import { PSCustomFeaturedLinksComponent } from './shared/components/pscustom-featured-links/pscustom-featured-links.component';
 import { PSCustomFeaturedLinksModule } from "./shared/components/pscustom-featured-links/pscustom-featured-links.module";
 import { NgxPaginationModule } from "ngx-pagination";
 

@@ -33,7 +33,7 @@
       [style]="node.styleAttributes"
       [class]="node.styleClasses"
     >
-      {{ node.title }}
+      {{ node.title }} {{'REPORT AN ISSUE'}}
       <cx-icon
         *ngIf="flyout && node.children?.length > 0"
         [type]="iconType.CARET_DOWN"
@@ -42,7 +42,7 @@
 
     <ng-template #heading>
       <span [attr.tabindex]="flyout && (depth === 0 || node.url) ? 0 : -1">
-        {{ node.title }}
+        {{ node.title }} {{'REPORT AN ISSUE'}}
         <cx-icon
           *ngIf="flyout && node.children?.length > 0"
           [type]="iconType.CARET_DOWN"
