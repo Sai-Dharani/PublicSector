@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 .container-fluid {
     margin-right: auto;
     margin-left: auto;
@@ -17,8 +18,10 @@ body {
     position: static;
     margin-bottom: 320px;
 }
-/* .glyphicon-align-left{
-}  */
+.glyphicon-chevron-left{
+    font-size: 18px;
+    color: #156ab5;
+}
 .addressBackBtn {
     background-color: transparent;
     border: none;

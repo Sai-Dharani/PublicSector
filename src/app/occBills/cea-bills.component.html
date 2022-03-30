@@ -5,9 +5,8 @@
 <div class="container-fluid">
   <button type="button" class="addressBackBtn">
     <a (click)="onBack()">
-      <span class="glyphicon glyphicon-chevron-left" style="font-size: 18px;"></span>
+      <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <!-- <img src = "\assets\chevron-left.svg" alt="chevron-left"/> -->
   </button>
   <span class="page-title">Bills</span>
   <br>
@@ -117,42 +116,3 @@
     </div>
   </div>
 </div>
-<!-- *ngif=" products.bills == null" -->
-<!-- <table class="table table-striped table-borderless">
-
-    <tr class="">
-      <th>Bill Type</th>
-      <th scope="col" class="table-header talign">Due Date</th>
-      <th scope="col" class="table-header tleft">Amount Due</th>
-      <th scope="col" class="table-header talign">Bill Total</th>
-      <th scope="col" class="table-header talign">Issue Date</th>
-      <th scope="col" class="table-header talign">Bill ID</th>
-      <th scope="col" class="table-header talign">Status</th>
-      <th></th>
-      <th></th>
-    </tr>
-
-    <tbody>
-      <tr *ngFor="let item of products.bills | paginate: { itemsPerPage: count, currentPage: p }">
-
-        <th scope="row"></th>
-        <td class="align-top talign"></td>
-        <td class="align-top "></td>
-        <td class="align-top "></td>
-        <td class="align-top talign"></td>
-        <td class="align-top talign"></td>
-        <td class="align-top talign"></td>
-        <td class="align-top talign"> Download bill as
-          PDF</td>
-        <td class="align-top talign">
-
-
-          <button type="button" class="btn btn-primary" *ngIf="item.type.isPaymentAllowed"></button> -->
-<!-- </div>
-</td>
-</tr>
-
-</tbody>
-</table>
-</div> -->
-<!-- ______________________________________________________-->
