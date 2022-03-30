@@ -1,12 +1,12 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <div class="container-fluid">
   <button type="button" class="addressBackBtn">
-    <a href="#">
-      <span class="glyphicon glyphicon-chevron-left" style="font-size: 18px;"></span>
+    <a (click)="onBack()">
+      <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <!-- <img src = "\assets\chevron-left.svg" alt="chevron-left"/> -->
   </button>
   <span class="page-title">Bills</span>
   <br>
@@ -22,49 +22,10 @@
 
 
 
-
   <div class="text-right">
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
   </div>
-  <!-- *ngif=" products.bills == null" -->
-  <!-- <table class="table table-striped table-borderless">
 
-    <tr class="">
-      <th>Bill Type</th>
-      <th scope="col" class="table-header talign">Due Date</th>
-      <th scope="col" class="table-header tleft">Amount Due</th>
-      <th scope="col" class="table-header talign">Bill Total</th>
-      <th scope="col" class="table-header talign">Issue Date</th>
-      <th scope="col" class="table-header talign">Bill ID</th>
-      <th scope="col" class="table-header talign">Status</th>
-      <th></th>
-      <th></th>
-    </tr>
-
-    <tbody>
-      <tr *ngFor="let item of products.bills | paginate: { itemsPerPage: count, currentPage: p }">
-
-        <th scope="row"></th>
-        <td class="align-top talign"></td>
-        <td class="align-top "></td>
-        <td class="align-top "></td>
-        <td class="align-top talign"></td>
-        <td class="align-top talign"></td>
-        <td class="align-top talign"></td>
-        <td class="align-top talign"> Download bill as
-          PDF</td>
-        <td class="align-top talign">
-
-
-          <button type="button" class="btn btn-primary" *ngIf="item.type.isPaymentAllowed"></button> -->
-  <!-- </div>
-</td>
-</tr>
-
-</tbody>
-</table>
-</div> -->
-  <!-- ______________________________________________________-->
   <div class="divOuterTable row no-margin my-bill">
     <div class="divTable billhistory-list-table" role="grid">
       <div class="divTableHeading hidden-xs hidden-sm" role="row">
@@ -98,46 +59,46 @@
           <strong>{{item.type.description}}</strong>
         </span>
 
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-1 same-line" role="gridcell">
+        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
           <div class="hidden-md hidden-lg">
             <strong>Due Date</strong>
           </div>{{this.datepipe.transform(item.dueAt, 'MMM dd,yyyy')}}
         </span>
 
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-1 bill-amount-due" role="gridcell">
+        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 bill-amount-due" role="gridcell">
           <div class="hidden-md hidden-lg">
             <strong>Amount Due</strong>
           </div>{{item.outstandingAmount}}
         </span>
 
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-1 bill-total" role="gridcell">
+        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 bill-total" role="gridcell">
           <div class="hidden-md hidden-lg">
             Bill Total</div>{{item.totalAmount}}
         </span>
 
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-1 same-line" role="gridcell">
+        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
           <div class="hidden-md hidden-lg">
             Issue Date</div>{{this.datepipe.transform(item.createdAt, 'MMM dd,yyyy')}}
         </span>
 
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-1 same-line" role="gridcell">
+        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
           <div class="hidden-md hidden-lg">
             Bill ID</div>{{item.displayBillId}}
         </span>
 
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-1" role="gridcell">
+        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1" role="gridcell">
           <div class="hidden-md hidden-lg">
             Status</div>{{item.paymentStatus}}
         </span>
 
-        <span class="divTableCell col-xs-5 col-sm-6 col-md-2" role="gridcell">
+        <span class="divTableCell col-xs-5 col-sm-6 col-md-6 col-lg-2" role="gridcell">
           <div class="col-md-12 no-space">
             <i class="bi bi-file-earmark-pdf"></i> <a href="http://localhost:4200/my-account/cea-bills"
               class="bill-download-pdf"> Download bill as PDF</a>
           </div>
         </span>
 
-        <span class="divTableCell billType-message col-xs-7 col-sm-6 col-md-2" role="gridcell">
+        <span class="divTableCell billType-message col-xs-7 col-sm-6 col-md-6 col-lg-2" role="gridcell">
           <div *ngIf="item.isOverDue" class="tbutton">Overdue Bill</div>
 
           <div *ngIf="item.type.isPaymentAllowed" class="tbutton">Payment Not
@@ -155,158 +116,3 @@
     </div>
   </div>
 </div>
-<!-- ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-<div class="global-content-space my-bill all-bills">
-  <div class="row no-margin">
-    <div class="back-link border">
-      <div class="row">
-        <div class="col-md-6">
-          <button type="button" class="addressBackBtn" data-back-to-addresses="/yacceleratorstorefront/en/my-account">
-            <span class="glyphicon glyphicon-chevron-left" aria-label="Back"></span>
-          </button>
-          <h1 class="custom-h1">
-            <span class="label" tabindex="0">Bills</span>
-          </h1>
-        </div>
-      </div>
-    </div>
-    <div tabindex="0">
-      These are your bills. Select which one you want to pay for.</div>
-    <br>
-    <div class="">
-      <span tabindex="0">Find the bills of your relationships below.</span>
-    </div>
-    <div class="pagination-bar top">
-      <div class="pagination-toolbar">
-        <div class="helper clearfix hidden-md hidden-lg"></div>
-        <div class="sort-refine-bar">
-          <div class="row">
-            <div class="col-xs-6 col-sm-4 col-md-4 hidden-lg hidden-md hidden-sm">
-              <div class="totalResults ng-binding top" tabindex="0">
-                <strong>1&nbsp; - &nbsp;10 </strong> &nbsp;of&nbsp; <strong>&nbsp;25&nbsp;</strong> bills found
-              </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-8 visible-lg visible-md visible-sm ">
-              <div class="totalResults ng-binding top col-xs-12 col-sm-5" tabindex="0">
-                <span class="total-bill-result"> <strong>1&nbsp; - &nbsp;10 </strong> &nbsp;of&nbsp;
-                  <strong>&nbsp;25&nbsp;</strong> bills found</span>
-              </div>
-              <div class="col-sm-1 bill-seperator"></div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <form id="billSortForm1" name="billSortForm1" method="get" action="#">
-                    <input type="hidden" name="customerPK" value=" ">
-                    <label class="acc_hidden" for="sortOptions1">Filter by bill status</label>
-                    <select id="sortOptions1" name="filterCode" class="form-control bills-select sortOptions1">
-                      <option value="All">
-                        Show all</option>
-                      <option value="Unpaid" selected="selected">
-                        Show unpaid &amp; part-paid</option>
-                      <option value="Paid">
-                        Show paid</option>
-                    </select>
-                    <input type="hidden" name="show" value="Page">
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-6 col-sm-4 col-md-4 pagination-wrap">
-              <ul class="pagination">
-                <li class="pagination-prev disabled"><span class="glyphicon glyphicon-chevron-left"></span></li>
-                <li class="active"><span>1<span class="sr-only">(current)</span></span></li>
-                <li><a class="" href="/yacceleratorstorefront/en/my-account/all-bills?page=1">2</a></li>
-                <li><a class="" href="/yacceleratorstorefront/en/my-account/all-bills?page=2">3</a></li>
-                <li class="pagination-next">
-                  <a href="/yacceleratorstorefront/en/my-account/all-bills?page=1" rel="next"
-                    class="glyphicon glyphicon-chevron-right"></a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-              <div class="form-group">
-                <form id="sortForm1" name="sortForm1" method="get" action="#">
-                  <label class="acc_hidden" for="sortOptions2">Filter by bill status</label>
-                  <select id="sortOptions2" name="filterCode" class="form-control bills-select sortOptions2">
-                    <option value="All">
-                      Show all</option>
-                    <option value="Unpaid" selected="selected">
-                      Show unpaid &amp; part-paid</option>
-                    <option value="Paid">
-                      Show paid</option>
-                  </select>
-                  <input type="hidden" name="show" value="Page">
-                </form>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="pagination-bar-results">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="divOuterTable row no-margin my-bill">
-      <div class="divTable billhistory-list-table" role="grid">
-        <div class="divTableHeading hidden-xs hidden-sm" role="row">
-          <span class="divTableCell col-md-2" role="columnheader">Bill Type</span>
-          <span class="divTableCell col-md-1" role="columnheader">Due Date</span>
-          <span class="divTableCell col-md-1" role="columnheader">Amount
-            Due</span> <span class="divTableCell col-md-1" role="columnheader">Bill Total</span> <span
-            class="divTableCell col-md-1" role="columnheader">Issue Date</span> <span class="divTableCell col-md-1"
-            role="columnheader">Bill ID</span> <span class="divTableCell col-md-1" role="columnheader">Status</span>
-          <span class="divTableCell col-md-2" role="columnheader"><span class="acc_hidden">Download bill as a
-              PDF</span></span>
-          <span class="divTableCell col-md-2" role="columnheader"><span class="acc_hidden">Bill options</span></span>
-        </div>
-        <div class="divTableRow" role="row">
-          <span class="divTableCell col-xs-12 col-sm-12 col-md-2" role="gridcell"> <strong>Speeding Fine</strong>
-          </span>
-          <span class="divTableCell col-xs-6 col-sm-6 col-md-1 same-line" role="gridcell">
-            <div class="hidden-md hidden-lg">
-              <strong>Due Date</strong>
-            </div> Sep 11, 2016
-          </span>
-          <span class="divTableCell col-xs-6 col-sm-6 col-md-1 bill-amount-due" role="gridcell">
-            <div class="hidden-md hidden-lg">
-              <strong>Amount Due</strong>
-            </div> $150.21
-          </span>
-          <span class="divTableCell col-xs-6 col-sm -6 col-md-1 bill-total" role="gridcell">
-            <div class="hidden-md hidden-lg">
-              Bill Total</div> $150.21
-          </span>
-          <span class="divTableCell col-xs-6 col-sm-6 col-md-1 same-line" role="gridcell">
-            <div class="hidden-md hidden-lg">
-              Issue Date</div> Mar 2, 2016
-          </span>
-          <span class="divTableCell col-xs-6 col-sm-6 col-md-1 same-line" role="gridcell">
-            <div class="hidden-md hidden-lg">
-              Bill ID</div> E-10004
-          </span>
-          <span class="divTableCell col-xs-6 col-sm-6 col-md-1" role="gridcell">
-            <div class="hidden-md hidden-lg">
-              Status</div> Unpaid
-          </span>
-          <span class="divTableCell col-xs-5 col-sm-6 col-md-2" role="gridcell">
-            <div class="col-md-12 no-space">
-              <span class="icon-file-pdf gi-1.5x"></span> <a
-                href="/yacceleratorstorefront/_ui/addons/billaddon/responsive/common/images/pdf/Sample_Bill_PDF.pdf"
-                class="bill-download-pdf"> Download bill as PDF</a>
-            </div>
-          </span>
-          <span class="divTableCell billType-message col-xs-7 col-sm-6 col-md-2" role="gridcell"> Overdue Bill <br>
-            Payment Not Allowed<div class="col-md-12 no-space bill-more-info">
-              <button type="button" class="btn btn-primary btn-block "
-                onclick="window.location='/yacceleratorstorefront/en/bills/payment?billCode=10004'">
-                More Info</button>
-            </div>
-
-          </span>
-        </div>
