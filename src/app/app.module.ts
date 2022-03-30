@@ -11,17 +11,19 @@ import { SpartacusModule } from './spartacus/spartacus.module';
 import { provideConfig } from "@spartacus/core";
 import { CustomRoutingModule } from "./routing/custom-routing/custom-routing.module";
 import { PSEnhancedCustomBannerModule } from "./shared/components/psenhanced-custom-banner/psenhanced-custom-banner.module";
-import { CommonModule } from "@angular/common";
+import { CommonModule, DatePipe } from "@angular/common";
 import { FooterNavigationModule } from "./shared/components/navigation/footer-navigation/footer-navigation.module";
 import { NavigationModule } from "./shared/components/navigation/navigation/navigation.module";
 import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
 import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-media/pscustom-social-media.module";
 import { PSCustomFeaturedLinksModule } from "./shared/components/pscustom-featured-links/pscustom-featured-links.module";
+import { NgxPaginationModule } from "ngx-pagination";
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +40,11 @@ import { PSCustomFeaturedLinksModule } from "./shared/components/pscustom-featur
     NavigationModule,
     CategoryNavigationModule,
     PSCustomSocialMediaModule,
-    PSCustomFeaturedLinksModule
+    NgxPaginationModule,
+    PSCustomFeaturedLinksModule,
+
   ],
-  providers: [provideConfig(publicsectorLayoutConfig),],
+  providers: [provideConfig(publicsectorLayoutConfig), DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
