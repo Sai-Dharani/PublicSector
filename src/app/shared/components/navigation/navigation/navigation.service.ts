@@ -4,9 +4,10 @@ import {
   CmsService,
   SemanticPathService,
 } from '@spartacus/core';
+import { NavigationNode } from '@spartacus/storefront';
 import { combineLatest, Observable, of } from 'rxjs';
 import { filter, map, switchMap, tap } from 'rxjs/operators';
-import { NavigationNode } from './navigation-node.model';
+
 
 @Injectable({
   providedIn: 'root',
@@ -154,7 +155,7 @@ export class NavigationService {
     const item = items[`${entry.itemId}_${entry.itemSuperType}`];
 
     // now we only consider CMSLinkComponent
-    if (item && entry.itemType === 'CMSLinkComponent') {
+    if (item && entry.itemType === 'PSCMSLinkComponent') {
       if (!node.title) {
         node.title = item.linkName;
       }
