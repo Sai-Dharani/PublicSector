@@ -3,3 +3,10 @@
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
 @import 'src/app/custom-styles/custom-styles.scss';
+
+@media (min-width: 1400px){
+    .account-section {
+        margin: 0 auto;
+        width: 1400px;
+    }
+}
