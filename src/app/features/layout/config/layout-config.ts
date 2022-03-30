@@ -8,7 +8,7 @@ export const publicsectorLayoutConfig: LayoutConfig = {
                 'SiteLogo',
                 'SiteLogin',
                 'NavigationBar',
-                'HeaderLinks',
+                //'HeaderLinks',
                 'TopHeaderSlot',
                 'BottomHeaderSlot',              
                 'PlaceholderContentSlot',

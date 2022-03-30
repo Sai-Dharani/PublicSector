@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CmsConfig, provideDefaultConfig } from '@spartacus/core';
-import { NavigationModule } from '../navigation/navigation.module';
+import { NavigationModule } from '@spartacus/storefront';
+
 import { CategoryNavigationComponent } from './category-navigation.component';
 
 @NgModule({
