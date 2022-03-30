@@ -39,3 +39,6 @@ main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline{
     display: flex;
     padding-top: 15%;
 }
+cx-page-layout.AccountPageTemplate  cx-page-slot.has-components {
+    max-width: 90%;
+}

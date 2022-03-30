@@ -16,8 +16,8 @@ export class CeaBillsComponent implements OnInit {
   pageOfItems: any[];
   products!: ceaBill;
   p: Number = 1;
-  count: Number = 2;
-  total: Number = 26;
+  count: Number = 10;
+  back;
   constructor(
     private _freeApiService: freeApiService,
     private cartService: ActiveCartService,
@@ -29,16 +29,18 @@ export class CeaBillsComponent implements OnInit {
 
   }
   ngOnInit() {
+
     this._freeApiService.getcomments()
       .subscribe
       (
         data => {
           this.products = data;
-
         }
       );
   }
-
+  onBack() {
+    this.back = window.history.back();
+  }
   onChangePage(pageOfItems: Array<any>) {
     // update current page of items
     this.pageOfItems = pageOfItems;
