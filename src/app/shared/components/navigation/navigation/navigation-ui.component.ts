@@ -14,10 +14,10 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { debounceTime, filter } from 'rxjs/operators';
 
-import { NavigationNode } from './navigation-node.model';
+
 import { distinctUntilChanged } from 'rxjs/operators';
 // import { HamburgerMenuService } from './../../../layout/header/hamburger-menu/hamburger-menu.service';
-import { HamburgerMenuService, ICON_TYPE } from '@spartacus/storefront';
+import { HamburgerMenuService, ICON_TYPE, NavigationNode } from '@spartacus/storefront';
 
 @Component({
   selector: 'cx-navigation-ui',

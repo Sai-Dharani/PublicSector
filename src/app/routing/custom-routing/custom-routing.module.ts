@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UrlModule, AuthGuard, CmsConfig, ConfigModule } from '@spartacus/core';
 import { LogoutRedirectGuard } from './logout-redirect/logout-redirect-guard';
 import { LoginRedirectGuard } from './login-redirect/login-redirect-guard';
-import { BannerComponent, CategoryNavigationComponent, CmsPageGuard, FooterNavigationComponent, LinkComponent, MediaComponent, MediaModule, PageLayoutComponent } from '@spartacus/storefront';
+import { BannerComponent, CmsPageGuard, FooterNavigationComponent, LinkComponent, MediaComponent, MediaModule, PageLayoutComponent } from '@spartacus/storefront';
 
 export const staticRoutes: Routes = [
   {
@@ -46,9 +46,9 @@ export const staticRoutes: Routes = [
         // PSSocialMediaComponent: {
         //   component: MediaComponent,
         // },
-        PSSimpleBannerComponent:{
-          component:BannerComponent,
-        },
+        // PSSimpleBannerComponent:{
+        //   component:BannerComponent,
+        // },
         CMSLinkComponent :{
           component:LinkComponent
         },

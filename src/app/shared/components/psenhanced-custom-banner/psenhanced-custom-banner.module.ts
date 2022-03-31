@@ -7,7 +7,6 @@ import { PSEnhancedCustomBannerComponent } from './psenhanced-custom-banner.comp
 
 
 @NgModule({
-  declarations: [PSEnhancedCustomBannerComponent],
   imports: [
     CommonModule,
     MediaModule,
@@ -19,7 +18,8 @@ import { PSEnhancedCustomBannerComponent } from './psenhanced-custom-banner.comp
       },
     } as CmsConfig),
   ],
-    entryComponents: [PSEnhancedCustomBannerComponent],
+  declarations: [PSEnhancedCustomBannerComponent],
+  entryComponents: [PSEnhancedCustomBannerComponent],
 
 })
 export class PSEnhancedCustomBannerModule { }
