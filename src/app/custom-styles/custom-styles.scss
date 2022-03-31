@@ -1,4 +1,7 @@
-
+*{
+    font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
 cx-page-layout.LandingPage2Template cx-page-slot.Section2C{
     --cx-flex-basis: 50%;
   margin: auto;
@@ -45,6 +48,54 @@ cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
     --cx-flex-basis: 1 !important;
     max-width: 100% !important;
 }
+main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline{
+     font-weight: normal;
+     font-size: 1.5vw;
+     display: flex;
+     padding-top: 17%;
+     overflow-wrap: break-word;
+    width: auto;
+    line-height: 1;
+    font-family: sans-serif;
+    margin:0 3% 0 3% ;
+}
+cx-page-slot.Section2C .heading{
+    padding-bottom: 2px;
+}
+cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
+    margin-left: 10%;
+}
+cx-page-slot.SiteLogin{
+    position: absolute;
+    top:60px;
+    right:20%;
+    color:black;
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: end;
+}
+cx-page-slot.SiteLogin cx-login .cx-login-greet{
+    color: black;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 5%;
+}
+cx-page-slot.SiteLogin cx-login{
+    display: flex;
+}
+@media (max-width: 1000px) {
+    cx-page-slot.Section2C app-psenhanced-custom-banner .latest-news-content{
+        width: 100%;
+    }
+    cx-page-layout.LandingPage2Template cx-page-slot.Section2C{
+        --cx-flex-basis: 100%;
+    }
+    cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
+        margin-left: 0%;
+    }
 
 app-pscustom-featured-links{
     color: white;
@@ -69,5 +120,15 @@ app-pscustom-featured-links h2{
     line-height: 1.2;
 }
 
+        
+}
+cx-storefront main .LandingPage2Template{
+    background: #eee;
 
-
+}
+main{
+    padding-bottom: 4%;
+}
+cx-page-layout.AccountPageTemplate  cx-page-slot.has-components {
+    max-width: 90%;//for incrasing width of occBills's table 
+}
