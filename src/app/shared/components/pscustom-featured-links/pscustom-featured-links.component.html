@@ -1,7 +1,15 @@
-<h2>{{(data$ | async).name}}</h2>
-<h3>
-    {{(data$ | async).links}} 
-</h3>
-<h2>
+<div class="frequentserviceslist"><h2>{{(data$ | async).name}}</h2>
+    <ul class="tagex">
+       <li><a href="#Register_a_Birth">Register a Birth</a></li> 
+        <li><a href="#Event_Permit">Apply for an Event Permit</a></li>
+      <li> <a href="#Marriage_Certificate"> Apply for a Marriage Certificate</a></li>
+       <li><a href="#Children_Check">Apply for a Working With Children Check</a></li>
+      <li> <a href="Report_pothole">Report a Pothole</a></li>
+       <li><a href="#apply_learner_permit">Apply for a Car Learner Permit</a></li>
+    </ul>
+    <!-- {{(data$ | async).links}}  -->
+<h2 class="serviceall">
     <a href="{{(data$ | async).urlTextLink}}">{{(data$ | async).urlText}}</a>
 </h2>
+
+</div>
