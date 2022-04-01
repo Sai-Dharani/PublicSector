@@ -10,9 +10,7 @@
   </button>
   <span class="page-title">Bills</span>
   <br>
-
   <br>
-
   <p class="text-body">These are your bills. Select which one you want to pay for.
   </p>
   <br>
@@ -20,12 +18,9 @@
   </p>
   <br>
 
-
-
   <div class="text-right">
-    <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+    <pagination-controls (pageChange)="pageNo = $event" class="my-pagination"></pagination-controls>
   </div>
-
   <div class="divOuterTable row no-margin my-bill">
     <div class="divTable billhistory-list-table" role="grid">
       <div class="divTableHeading hidden-xs hidden-sm" role="row">
@@ -52,10 +47,10 @@
           <span class="hidden-xs hidden-sm hidden-md hidden-lg">Bill options</span></span>
       </div>
 
-      <div *ngFor="let item of products.bills | paginate: { itemsPerPage: count, currentPage: p }" class="divTableRow"
-        role="row">
+      <div *ngFor="let item of products.bills | paginate: { itemsPerPage: count, currentPage: pageNo }"
+        class="divTableRow" role="row">
 
-        <span class="divTableCell col-xs-12 col-sm-12 col-md-2" role="gridcell">
+        <span class="divTableCell col-xs-12 col-sm-12 col-md-12 col-lg-2" role="gridcell">
           <strong>{{item.type.description}}</strong>
         </span>
 
@@ -115,4 +110,7 @@
       </div>
     </div>
   </div>
+</div>
+<div class="text-right">
+  <pagination-controls (pageChange)="pageNo = $event" class="my-pagination"></pagination-controls>
 </div>

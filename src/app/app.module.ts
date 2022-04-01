@@ -41,7 +41,7 @@ import { NgxPaginationModule } from "ngx-pagination";
     NavigationModule,
     CategoryNavigationModule,
     PSCustomSocialMediaModule,
-    NgxPaginationModule,
+
     PSCustomFeaturedLinksModule,
 
   ],
