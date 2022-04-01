@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CmsNavigationComponent } from '@spartacus/core';
-import { CmsComponentData } from '@spartacus/storefront';
+import { CmsComponentData, NavigationNode } from '@spartacus/storefront';
 import { Observable } from 'rxjs';
-import { NavigationNode } from '../navigation/navigation-node.model';
+
 import { NavigationService } from '../navigation/navigation.service';
 
 
