@@ -13,19 +13,17 @@ import { CustomRoutingModule } from "./routing/custom-routing/custom-routing.mod
 import { PSEnhancedCustomBannerModule } from "./shared/components/psenhanced-custom-banner/psenhanced-custom-banner.module";
 import { CommonModule, DatePipe } from "@angular/common";
 import { FooterNavigationModule } from "./shared/components/navigation/footer-navigation/footer-navigation.module";
- import { NavigationModule } from "./shared/components/navigation/navigation/navigation.module";
- import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
+import { NavigationModule } from "./shared/components/navigation/navigation/navigation.module";
+import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
 import { PSCustomSocialMediaModule } from "./shared/components/pscustom-social-media/pscustom-social-media.module";
 import { PSCustomFeaturedLinksModule } from "./shared/components/pscustom-featured-links/pscustom-featured-links.module";
 import { CategoryNavigationComponent } from "./shared/components/navigation/category-navigation/category-navigation.component";
-import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
-import { NgxPaginationModule } from "ngx-pagination";
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,  
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,11 +40,10 @@ import { NgxPaginationModule } from "ngx-pagination";
     NavigationModule,
     CategoryNavigationModule,
     PSCustomSocialMediaModule,
-
     PSCustomFeaturedLinksModule,
 
   ],
-  providers: [provideConfig(publicsectorLayoutConfig), DatePipe],
+  providers: [provideConfig(publicsectorLayoutConfig)],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

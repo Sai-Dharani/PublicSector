@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActiveCartService, CmsService, OrderEntry, Product } from '@spartacus/core';
 import { Observable, of } from 'rxjs';
 import { CurrentProductService } from '@spartacus/storefront';
@@ -14,35 +14,74 @@ import { occBillsService } from '../services/occBills.service';
 })
 export class CeaBillsComponent implements OnInit {
   // 
+  config = {
+    itemsPerPage: 10,
+    currentPage: 1,
+    totalItems: 0,
+  };
+
+  public maxSize: number = 7;
+  public directionLinks: boolean = true;
+  public autoHide: boolean = false;
+  public responsive: boolean = true;
+  public labels: any = {
+    previousLabel: '<--',
+    nextLabel: '-->',
+    screenReaderPaginationLabel: 'Pagination',
+    screenReaderPageLabel: 'page',
+    screenReaderCurrentLabel: `You're on page`
+  };
 
   // 
-  pageOfItems: any[];
-  products!: ceaBill;
-  pageNo: Number = 1;
-  count: Number = 2;
+  products: ceaBill;
+  currentpage: number = 1;
+  itemsperpage: number = 10;
+  totalitems: number = 0;
   constructor(
     private _OccBillsService: occBillsService,
     public datepipe: DatePipe,
+    protected cdr: ChangeDetectorRef
 
-  ) {
-
-  }
+  ) { }
   ngOnInit() {
+    this.fetchData();
+  }
 
-    this._OccBillsService.getcomments()
-      .subscribe
+  onTableDataChange(event: number) {
+    this.currentpage = event;
+    this.fetchData();
+  }
+  fetchData() {
+    this._OccBillsService.getBills(this.currentpage - 1).subscribe
       (
         data => {
           this.products = data;
+          this.config.totalItems = this.products.pagination.totalResults;
+          this.config.itemsPerPage = this.products.pagination.pageSize;
+          this.cdr.detectChanges();//this is required to detect the new reponese(page) from server and display it
         }
-      );
+      );;
+  }
+  filterData(value: string) {
+    switch (value) {
+      case "All":
+        this._OccBillsService.getStatus(value);
+        this.fetchData();
+        break;
+      case "Unpaid":
+        this._OccBillsService.getStatus(value);
+        this.fetchData();
+        break;
+      case "Paid":
+        this._OccBillsService.getStatus(value);
+        this.fetchData();
+        break;
+      default:
+        console.log("bill status selected is invalid");
+    }
   }
   onBack() {
     window.history.back();//redirect the current page to page's URL
-  }
-  onChangePage(pageOfItems: Array<any>) {
-    // update current page of items
-    this.pageOfItems = pageOfItems;
   }
 
 }
