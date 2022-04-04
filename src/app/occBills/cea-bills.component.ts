@@ -48,11 +48,12 @@ export class CeaBillsComponent implements OnInit {
   }
 
   onTableDataChange(event: number) {
-    this.currentpage = event;
+    this.config.currentPage = event;
+
     this.fetchData();
   }
   fetchData() {
-    this._OccBillsService.getBills(this.currentpage - 1).subscribe
+    this._OccBillsService.getBills(this.config.currentPage - 1).subscribe
       (
         data => {
           this.products = data;
