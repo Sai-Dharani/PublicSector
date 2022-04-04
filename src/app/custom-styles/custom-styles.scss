@@ -290,8 +290,8 @@ cx-page-layout.AccountPageTemplate cx-page-slot.has-components {
     max-width: 100%; //for incrasing width of occBills's table 
 }
 
+// login screen stylling start
 cx-page-layout.LoginPageTemplate cx-page-slot {
-    // cx-page-layout.LoginPageTemplate this is for login screen styling 
     width: 100%;
 }
 
@@ -381,3 +381,5 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
         }
     }
 }
+
+// login screen stylling end
