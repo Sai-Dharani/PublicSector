@@ -6,6 +6,7 @@ export const publicsectorLayoutConfig: LayoutConfig = {
             lg: {
                 slots: [
                 'SiteLogo',
+                'SearchBox',
                 'SiteLogin',
                 'NavigationBar',
                 //'HeaderLinks',
@@ -15,7 +16,7 @@ export const publicsectorLayoutConfig: LayoutConfig = {
                 'HomepageNavLink',
                 ],
             },
-            slots: ['SiteLogo', 'TopHeaderSlot','NavigationBar','BottomHeaderSlot']
+            slots: ['SiteLogo', 'SearchBox','TopHeaderSlot','NavigationBar','BottomHeaderSlot']
         },
         LandingPage2Template: {
             slots: [

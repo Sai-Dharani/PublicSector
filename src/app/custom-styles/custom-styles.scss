@@ -2,20 +2,30 @@
     font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
     box-sizing: border-box;
 }
+body{
+    cx-storefront.stop-navigating:after,
+    cx-storefront.start-navigating:after,
+    cx-storefront.stop-navigating:before,
+    cx-storefront.start-navigating:before{
+        display: none;
+    } 
+}
 cx-page-layout.LandingPage2Template cx-page-slot.Section2C{
     --cx-flex-basis: 50%;
-  // flex:auto;
- //  margin: 10px 80px 0px 85px;
   margin: auto;
- // padding-left: 85px;
 }
-
 // state of rose bud 
 main cx-page-layout.LandingPage2Template {
     /* display: flex; */
     display: block;
     flex-wrap: wrap;
-    margin: auto;
+}
+
+@media (max-width: 991.98px){
+main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
+    margin-top: 0;
+    height: auto !important;
+}
 }
 
 //responsive
@@ -56,35 +66,132 @@ cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news 
 cx-page-slot.SiteLogin{
     position: absolute;
     top:60px;
-    right:20%;
+    right:5%;
     color:black;
     display: flex;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    text-align: end;
+    cx-login {
+        .cx-login-greet{
+            color: black;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-left: 5%;
+        }
+        display: flex;
+        width: 150%;
+        font-weight: 700;
+        div{
+            width: 70%;
+            padding: 2px 15px 0px 0px;
+        }
+        .HeaderLinks cx-link a:hover{
+            color: #ffffff;
+            background: #156ab5;
+            text-decoration: none;
+            padding: 10%;
+            border-radius: 7%;
+        }
+    }
 }
-cx-page-slot.SiteLogin cx-login .cx-login-greet{
-    color: black;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-left: 5%;
+header cx-page-layout.header{
+    margin: 6px;
+    letter-spacing: 0.1px;
 }
-cx-page-slot.SiteLogin cx-login{
-    display: flex;
+cx-category-navigation cx-navigation-ui.flyout{
+    span:hover, cx-generic-link a:hover{
+        color: #ffffff;
+    }
+    nav .wrapper .childs{
+        padding: 30px 60px 3px 12px;
+        border-top: var(--cx-color-dark);
+    }
+    div:nth-of-type(1){
+        background:var(--cx-color-dark);
+        color: #ffffff;
+        padding: 0%;
+    }
+} 
+cx-category-navigation cx-navigation-ui nav{
+    .wrapper .childs nav{
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            padding-bottom: 7px;
+        }
+        span:hover{
+            background: none;
+        }
+    }
+    .wrapper{
+        border-top: 1px solid #ffffff;
+    }
+    .wrapper .childs nav .wrapper .childs {
+        padding: 5px 0px 0px 0px;
+        } nav {
+            padding: 5px 9px 9px 9px;
+    }
+    span, cx-generic-link a{
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .wrapper .all{
+        display: none;
+    }
+    span:hover, cx-generic-link a:hover{
+        background: #104d83;
+        text-decoration: none;
+    }
 }
+main cx-page-layout.LandingPage2Template cx-page-slot.Section1{
+   max-width: 100%;
+    margin: 0%;
+    cx-banner cx-generic-link cx-media{
+        padding: 0%;
+    }
+}
+// cx-page-layout .NavigationBar{
+//     // background: var(--cx-color-dark);
+//     // color: #ffffff;
+// }
 @media (max-width: 1000px) {
-    cx-page-slot.Section2C app-psenhanced-custom-banner .latest-news-content{
-        width: 100%;
+    cx-page-slot.Section2C app-psenhanced-custom-banner{ 
+        .latest-news-content{
+            width: 100%;
+        }
+        .latest-news-component .latest-news-box-wrapper{
+            max-width: 100%;
+        }
     }
     cx-page-layout.LandingPage2Template cx-page-slot.Section2C{
         --cx-flex-basis: 100%;
     }
     cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
-
         margin-left: 0%;
     }
+}
+app-pscustom-featured-links{
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+   //top: 0;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid rgba(189, 189, 189, 0.5);
+}
+
+app-pscustom-featured-links h2{
+    color: #fff;
+   // padding-left: 800px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 15px 0 0 40px;
+    line-height: 1.2;
 }
 cx-storefront main .LandingPage2Template{
     background: #eee;
