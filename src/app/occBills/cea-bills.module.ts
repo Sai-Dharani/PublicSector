@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { RoutingConfig, AuthGuard, ConfigModule, UrlModule } from '@spartacus/core';
@@ -27,13 +27,14 @@ export const defaultCEABillsRoutingConfig: RoutingConfig = {
       routing: {
         routes: {
           BillsList: {
-            paths: ['my-account/cea-bills']
+            paths: ['my-account/cea-bills'],
           }
         }
       }
-    })
+    }),
+
   ],
-  providers: [occBillsService],
+  providers: [occBillsService, DatePipe],
 
 })
 export class CeaBillsRoutingModule { }
