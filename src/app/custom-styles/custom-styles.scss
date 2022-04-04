@@ -1,6 +1,6 @@
-*{
-    font-family: "Alegreya Sans", Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
+body , main{
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+    overflow-x: hidden;
 }
 body{
     cx-storefront.stop-navigating:after,
@@ -78,6 +78,7 @@ cx-page-slot.SiteLogin{
             font-size: 11px;
             text-transform: uppercase;
             margin-left: 5%;
+            font-weight: bold;
         }
         display: flex;
         width: 150%;
@@ -95,22 +96,47 @@ cx-page-slot.SiteLogin{
         }
     }
 }
-header cx-page-layout.header{
-    margin: 6px;
-    letter-spacing: 0.1px;
+cx-storefront header {
+    cx-page-layout.header{
+        margin-left: 6px;
+        letter-spacing: 0.1px;
+    }
+    background-color: #182029;
 }
 cx-category-navigation cx-navigation-ui.flyout{
     span:hover, cx-generic-link a:hover{
         color: #ffffff;
     }
     nav .wrapper .childs{
-        padding: 30px 60px 3px 12px;
-        border-top: var(--cx-color-dark);
+        padding: 15px 0px 3px 12px;
+    }
+    nav .wrapper .childs nav span{
+        padding-right: 70px;
+    }
+    nav .wrapper .childs nav:nth-of-type(2) span{
+        padding-right: 120px;
     }
     div:nth-of-type(1){
-        background:var(--cx-color-dark);
+        background: #182029;
         color: #ffffff;
         padding: 0%;
+    }
+    nav span cx-icon{
+        display: none;
+    }
+    nav:nth-of-type(5) .wrapper .childs nav cx-generic-link a{
+        padding-right: 120px;
+    }
+    nav div.wrapper{
+        border-top: #182029;
+    }
+    span:nth-of-type(1){
+        font-weight: 600;
+    }
+    span a, cx-generic-link a {
+        display: block;
+        width: 100%;
+        font-weight: 600;
     }
 } 
 cx-category-navigation cx-navigation-ui nav{
@@ -124,7 +150,7 @@ cx-category-navigation cx-navigation-ui nav{
             background: none;
         }
     }
-    .wrapper{
+    .wrapper .childs nav .wrapper{
         border-top: 1px solid #ffffff;
     }
     .wrapper .childs nav .wrapper .childs {
@@ -143,6 +169,7 @@ cx-category-navigation cx-navigation-ui nav{
         background: #104d83;
         text-decoration: none;
     }
+    padding-right: 10px;
 }
 main cx-page-layout.LandingPage2Template cx-page-slot.Section1{
    max-width: 100%;
@@ -170,6 +197,9 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1{
     cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
         margin-left: 0%;
     }
+    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text{
+        text-align: center;
+    }
 }
 app-pscustom-featured-links{
     color: white;
@@ -193,12 +223,16 @@ app-pscustom-featured-links h2{
     margin: 15px 0 0 40px;
     line-height: 1.2;
 }
+cx-storefront header .NavigationBar {
+    flex: 100%;
+    min-height: auto;
+}
 cx-storefront main .LandingPage2Template{
     background: #eee;
 
 }
 main{
-    padding-bottom: 4%;
+    padding-bottom: 3%;
 }
 cx-page-layout.AccountPageTemplate  cx-page-slot.has-components {
     max-width: 90%;//for incrasing width of occBills's table 
