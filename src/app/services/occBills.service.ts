@@ -16,13 +16,13 @@ export class occBillsService {
     protected occEndpoints: OccEndpointsService
   ) { }
 
-  getStatus(value: string) {
+  setStatus(value: string) {
     this.status = value;
   }
-  getSort(value: string) {
+  setSort(value: string) {
     this.sort = value;
   }
-  getpageSize(value: number) {
+  setpageSize(value: number) {
     this.pageSize = value;
   }
 
