@@ -1,7 +1,10 @@
 body , main{
-    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif !important ;
     overflow-x: hidden;
 }
+// html{
+//     font-family:sans-serif ;
+// }
 body{
     cx-storefront.stop-navigating:after,
     cx-storefront.start-navigating:after,
@@ -46,6 +49,9 @@ cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
     --cx-flex-basis: 1 !important;
     max-width: 100% !important;
 }
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B{
+    padding-top: 5%;
+}
 main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline{
      font-weight: normal;
      font-size: 1.5vw;
@@ -75,14 +81,15 @@ cx-page-slot.SiteLogin{
     cx-login {
         .cx-login-greet{
             color: black;
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
             margin-left: 5%;
             font-weight: bold;
         }
         display: flex;
-        width: 150%;
-        font-weight: 700;
+        width: 160%;
+        font-weight: 600;
+        font-size: 12px;
         div{
             width: 70%;
             padding: 2px 15px 0px 0px;
@@ -131,12 +138,14 @@ cx-category-navigation cx-navigation-ui.flyout{
         border-top: #182029;
     }
     span:nth-of-type(1){
-        font-weight: 600;
+        font-weight: 500;
+        font-size: 14px;
     }
     span a, cx-generic-link a {
         display: block;
         width: 100%;
-        font-weight: 600;
+        font-weight: 500;
+        font-size: 14px;
     }
 } 
 cx-category-navigation cx-navigation-ui nav{
@@ -200,6 +209,13 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1{
     cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text{
         text-align: center;
     }
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+        .js-responsive-image img{
+            width: 380px;
+        }
+    }
 }
 app-pscustom-featured-links{
     color: white;
@@ -219,7 +235,7 @@ app-pscustom-featured-links h2{
     font-weight: normal;
     font-family: inherit;
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 18px;
     margin: 15px 0 0 40px;
     line-height: 1.2;
 }
