@@ -1,50 +1,88 @@
-import { Component, OnInit } from '@angular/core';
-import { freeApiService } from '../services/freeapi.service';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActiveCartService, CmsService, OrderEntry, Product } from '@spartacus/core';
 import { Observable, of } from 'rxjs';
 import { CurrentProductService } from '@spartacus/storefront';
 import { DatePipe } from '@angular/common';
 import { ceaBill } from './cea-bills.model';
+import { occBillsService } from '../services/occBills.service';
 
 @Component({
   selector: 'cea-bills',
   templateUrl: './cea-bills.component.html',
-  styleUrls: ['./cea-bills.component.css']
+  styleUrls: ['./cea-bills.component.scss']
 
 })
 export class CeaBillsComponent implements OnInit {
-  pageOfItems: any[];
-  products!: ceaBill;
-  p: Number = 1;
-  count: Number = 10;
-  back;
+  // 
+  config = {
+    itemsPerPage: 10,
+    currentPage: 1,
+    totalItems: 0,
+  };
+
+  public maxSize: number = 7;
+  public directionLinks: boolean = true;
+  public autoHide: boolean = false;
+  public responsive: boolean = true;
+  public labels: any = {
+    previousLabel: '<--',
+    nextLabel: '-->',
+    screenReaderPaginationLabel: 'Pagination',
+    screenReaderPageLabel: 'page',
+    screenReaderCurrentLabel: `You're on page`
+  };
+
+  // 
+  products: ceaBill;
+  currentpage: number = 1;
+  itemsperpage: number = 10;
+  totalitems: number = 0;
   constructor(
-    private _freeApiService: freeApiService,
-    private cartService: ActiveCartService,
-    private cmsService: CmsService,
-    private currentProductService: CurrentProductService,
+    private _OccBillsService: occBillsService,
     public datepipe: DatePipe,
+    protected cdr: ChangeDetectorRef
 
-  ) {
-
-  }
+  ) { }
   ngOnInit() {
+    this.fetchData();
+  }
 
-    this._freeApiService.getcomments()
-      .subscribe
+  onTableDataChange(event: number) {
+    this.config.currentPage = event;
+
+    this.fetchData();
+  }
+  fetchData() {
+    this._OccBillsService.getBills(this.config.currentPage - 1).subscribe
       (
         data => {
           this.products = data;
+          this.config.totalItems = this.products.pagination.totalResults;
+          this.config.itemsPerPage = this.products.pagination.pageSize;
+          this.cdr.detectChanges();//this is required to detect the new reponese(page) from server and display it
         }
-      );
+      );;
+  }
+  filterData(value: string) {
+    switch (value) {
+      case "All":
+        this._OccBillsService.getStatus(value);
+        this.fetchData();
+        break;
+      case "Unpaid":
+        this._OccBillsService.getStatus(value);
+        this.fetchData();
+        break;
+      case "Paid":
+        this._OccBillsService.getStatus(value);
+        this.fetchData();
+        break;
+      default:
+        console.log("bill status selected is invalid");
+    }
   }
   onBack() {
-    this.back = window.history.back();
+    window.history.back();//redirect the current page to page's URL
   }
-  onChangePage(pageOfItems: Array<any>) {
-    // update current page of items
-    this.pageOfItems = pageOfItems;
-  }
-
 
 }
