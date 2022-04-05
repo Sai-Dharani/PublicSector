@@ -34,7 +34,6 @@ export class CeaBillsComponent implements OnInit {
           this.products = data;
           this.config.totalItems = this.products.pagination.totalResults;
           this.config.itemsPerPage = this.products.pagination.pageSize;
-          console.log(this.products.bills[0].currency.isocode);
           //this is required to detect the new reponese(page) from server and display it
           this.cdr.detectChanges();
         }
