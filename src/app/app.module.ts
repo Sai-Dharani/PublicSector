@@ -20,6 +20,8 @@ import { CategoryNavigationComponent } from "./shared/components/navigation/cate
 import { CategoryNavigationModule } from "./shared/components/navigation/category-navigation/category-navigation.module";
 import { NgxPaginationModule } from "ngx-pagination";
 import { PSCustomSimpleBannerModule } from "./shared/components/pscustom-simple-banner/pscustom-simple-banner.module";
+import { PSCustomBannerComponent } from './shared/components/pscustom-banner/pscustom-banner.component';
+import { PSCustomBannerModule } from "./shared/components/pscustom-banner/pscustom-banner.module";
 
 
 
@@ -44,7 +46,8 @@ import { PSCustomSimpleBannerModule } from "./shared/components/pscustom-simple-
     PSCustomSocialMediaModule,
     NgxPaginationModule,
     PSCustomFeaturedLinksModule,
-    PSCustomSimpleBannerModule
+    PSCustomSimpleBannerModule,
+    PSCustomBannerModule
 
   ],
   providers: [provideConfig(publicsectorLayoutConfig), DatePipe],
