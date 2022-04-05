@@ -1,50 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-import { freeApiService } from '../services/freeapi.service';
-import { ActiveCartService, CmsService, OrderEntry, Product } from '@spartacus/core';
-import { Observable, of } from 'rxjs';
-import { CurrentProductService } from '@spartacus/storefront';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { ceaBill } from './cea-bills.model';
-
+import { occBillsService } from '../services/occBills.service';
 @Component({
   selector: 'cea-bills',
   templateUrl: './cea-bills.component.html',
-  styleUrls: ['./cea-bills.component.css']
+  styleUrls: ['./cea-bills.component.scss']
 
 })
 export class CeaBillsComponent implements OnInit {
-  pageOfItems: any[];
-  products!: ceaBill;
-  p: Number = 1;
-  count: Number = 10;
-  back;
+  config = {
+    itemsPerPage: 10,
+    currentPage: 1,
+    totalItems: 0,
+  };
+  products: ceaBill;
   constructor(
-    private _freeApiService: freeApiService,
-    private cartService: ActiveCartService,
-    private cmsService: CmsService,
-    private currentProductService: CurrentProductService,
+    private _OccBillsService: occBillsService,
     public datepipe: DatePipe,
-
-  ) {
-
-  }
+    protected cdr: ChangeDetectorRef
+  ) { }
   ngOnInit() {
-
-    this._freeApiService.getcomments()
-      .subscribe
+    this.fetchData();
+  }
+  onTableDataChange(event: number) {
+    this.config.currentPage = event;
+    this.fetchData();
+  }
+  fetchData() {
+    this._OccBillsService.getBills(this.config.currentPage - 1).subscribe
       (
         data => {
           this.products = data;
+          this.config.totalItems = this.products.pagination.totalResults;
+          this.config.itemsPerPage = this.products.pagination.pageSize;
+          //this is required to detect the new reponese(page) from server and display it
+          this.cdr.detectChanges();
         }
-      );
+      );;
+  }
+  filterData(value: string) {
+    this._OccBillsService.setStatus(value);
+    this.fetchData();
   }
   onBack() {
-    this.back = window.history.back();
+    //redirect the current page to page's URL
+    window.history.back();
   }
-  onChangePage(pageOfItems: Array<any>) {
-    // update current page of items
-    this.pageOfItems = pageOfItems;
-  }
-
 
 }

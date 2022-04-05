@@ -1,7 +1,3 @@
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-</head>
 <div class="container-fluid">
   <button type="button" class="addressBackBtn">
     <a (click)="onBack()">
@@ -9,110 +5,151 @@
     </a>
   </button>
   <span class="page-title">Bills</span>
-  <br>
-
-  <br>
-
+  <br><br>
   <p class="text-body">These are your bills. Select which one you want to pay for.
   </p>
   <br>
   <p class="text-body">Find the bills of your relationships below.
   </p>
   <br>
-
-
-
-  <div class="text-right">
-    <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+  <div class="col-xs-6 col-sm-8 visible-lg visible-md visible-sm totalResults-top-padding">
+    <div class="totalResults ng-binding top totalResults-top-padding col-xs-12 col-sm-5" tabindex="0">
+      <span class="total-bill-result">
+        <!-- outputs which bills are displayed in 1-10,11-20 format  -->
+        <strong>{{
+          (config.currentPage * config.itemsPerPage) - 9}}&nbsp; - &nbsp;{{(config.currentPage *
+          config.itemsPerPage)>config.totalItems ?
+          config.totalItems : (config.currentPage *config.itemsPerPage)
+          }} </strong>
+        &nbsp;of&nbsp;
+        <strong>&nbsp;{{config.totalItems}}&nbsp;</strong> bills found
+      </span>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="form-group">
+        <input type="hidden" name="customerPK" value=" ">
+        <label class="hidden-md hidden-lg" for=" sortOptions1">Filter by bill status</label>
+        <select id="sortOptions1" name="filterCode" class="form-control bills-select sortOptions1"
+          (change)="filterData($event.target.value)">
+          <option value="All" selected="selected">
+            Show all</option>
+          <option value="Unpaid">
+            Show unpaid &amp; part-paid</option>
+          <option value="Paid">
+            Show paid</option>
+        </select>
+        <input type="hidden" name="show" value="Page">
+      </div>
+    </div>
   </div>
-
-  <div class="divOuterTable row no-margin my-bill">
+  <div class="text-right totalResults top">
+    <pagination-template #p="paginationApi" (pageChange)="onTableDataChange($event)">
+      <div class="custom-pagination">
+        <div class="pagination-previous" [class.disabled]="p.isFirstPage()">
+          <span (click)="p.previous()">
+            <span class="glyphicon glyphicon-chevron-left"></span> </span>
+        </div>
+        <div class="page-number" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
+          <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">{{ page.label }}</span>
+          <div *ngIf="p.getCurrent() === page.value">
+            <span>{{ page.label }}</span>
+          </div>
+        </div>
+        <div class="pagination-next" [class.disabled]="p.isLastPage()">
+          <span (click)="p.next()"> <span class="glyphicon glyphicon-chevron-right"></span>
+          </span>
+        </div>
+      </div>
+    </pagination-template>
+  </div>
+  <div class="divOuterTable row no-margin my-bill ">
     <div class="divTable billhistory-list-table" role="grid">
       <div class="divTableHeading hidden-xs hidden-sm" role="row">
         <span class="divTableCell col-md-2" role="columnheader">Bill Type</span>
-
         <span class="divTableCell col-md-1" role="columnheader">Due Date</span>
-
         <span class="divTableCell col-md-1" role="columnheader">Amount Due</span>
-
         <span class="divTableCell col-md-1" role="columnheader">Bill Total</span>
-
         <span class="divTableCell col-md-1" role="columnheader">Issue Date</span>
-
         <span class="divTableCell col-md-1" role="columnheader">Bill ID</span>
-
         <span class="divTableCell col-md-1" role="columnheader">Status</span>
-
         <span class="divTableCell col-md-2" role="columnheader">
           <span class="hidden-xs hidden-sm hidden-md hidden-lg">Download bill as a
             PDF</span>
         </span>
-
         <span class="divTableCell col-md-2" role="columnheader">
           <span class="hidden-xs hidden-sm hidden-md hidden-lg">Bill options</span></span>
       </div>
+      <ng-container *ngIf="products.bills">
+        <div *ngFor="let item of products.bills | paginate: config" class="divTableRow" role="row">
+          <span class="divTableCell col-xs-12 col-sm-12 col-md-12 col-lg-2" role="gridcell">
+            <strong>{{item.type.description}}</strong>
+          </span>
+          <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
+            <div class="hidden-md hidden-lg">
+              <strong>Due Date</strong>
+            </div>{{this.datepipe.transform(item.dueAt, 'MMM dd,yyyy')}}
+          </span>
+          <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 bill-amount-due" role="gridcell">
+            <div class="hidden-md hidden-lg">
+              <strong>Amount Due</strong>
+            </div>{{item.outstandingAmount | currency: item.currency.isocode :item.currency.symbol}}
+          </span>
+          <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 bill-total" role="gridcell">
+            <div class="hidden-md hidden-lg">
+              Bill Total</div>{{item.totalAmount | currency: item.currency.isocode:item.currency.symbol}}
+          </span>
+          <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
+            <div class="hidden-md hidden-lg">
+              Issue Date</div>{{this.datepipe.transform(item.createdAt, 'MMM dd,yyyy')}}
+          </span>
+          <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
+            <div class="hidden-md hidden-lg">
+              Bill ID</div>{{item.displayBillId}}
+          </span>
+          <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1" role="gridcell">
+            <div class="hidden-md hidden-lg">
+              Status</div>{{item.paymentStatus}}
+          </span>
+          <span class="divTableCell col-xs-5 col-sm-6 col-md-6 col-lg-2" role="gridcell">
+            <div class="col-md-12 no-space">
+              <i class="bi bi-file-earmark-pdf"></i> <a href="http://localhost:4200/my-account/cea-bills"
+                class="bill-download-pdf"> Download bill as PDF</a>
+            </div>
+          </span>
+          <span class="divTableCell billType-message col-xs-7 col-sm-6 col-md-6 col-lg-2" role="gridcell">
+            <div *ngIf="item.isOverDue" class="tbutton">Overdue Bill</div>
+            <div *ngIf="item.type.isPaymentAllowed" class="tbutton">Payment Not
+              Allowed</div>
+            <div>
+              <div class="col-md-12 no-space bill-more-info">
+                <button type="button" class="btn btn-primary btn-block "
+                  onclick="window.location='/yacceleratorstorefront/en/bills/payment?billCode=10004'">
+                  {{item.type.isPaymentAllowed ? 'Pay This Bill' : 'More Info'}}
+                </button>
+              </div>
+            </div>
+          </span>
+        </div>
+      </ng-container>
 
-      <div *ngFor="let item of products.bills | paginate: { itemsPerPage: count, currentPage: p }" class="divTableRow"
-        role="row">
 
-        <span class="divTableCell col-xs-12 col-sm-12 col-md-2" role="gridcell">
-          <strong>{{item.type.description}}</strong>
-        </span>
-
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
-          <div class="hidden-md hidden-lg">
-            <strong>Due Date</strong>
-          </div>{{this.datepipe.transform(item.dueAt, 'MMM dd,yyyy')}}
-        </span>
-
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 bill-amount-due" role="gridcell">
-          <div class="hidden-md hidden-lg">
-            <strong>Amount Due</strong>
-          </div>{{item.outstandingAmount}}
-        </span>
-
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 bill-total" role="gridcell">
-          <div class="hidden-md hidden-lg">
-            Bill Total</div>{{item.totalAmount}}
-        </span>
-
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
-          <div class="hidden-md hidden-lg">
-            Issue Date</div>{{this.datepipe.transform(item.createdAt, 'MMM dd,yyyy')}}
-        </span>
-
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1 same-line" role="gridcell">
-          <div class="hidden-md hidden-lg">
-            Bill ID</div>{{item.displayBillId}}
-        </span>
-
-        <span class="divTableCell col-xs-6 col-sm-6 col-md-6 col-lg-1" role="gridcell">
-          <div class="hidden-md hidden-lg">
-            Status</div>{{item.paymentStatus}}
-        </span>
-
-        <span class="divTableCell col-xs-5 col-sm-6 col-md-6 col-lg-2" role="gridcell">
-          <div class="col-md-12 no-space">
-            <i class="bi bi-file-earmark-pdf"></i> <a href="http://localhost:4200/my-account/cea-bills"
-              class="bill-download-pdf"> Download bill as PDF</a>
-          </div>
-        </span>
-
-        <span class="divTableCell billType-message col-xs-7 col-sm-6 col-md-6 col-lg-2" role="gridcell">
-          <div *ngIf="item.isOverDue" class="tbutton">Overdue Bill</div>
-
-          <div *ngIf="item.type.isPaymentAllowed" class="tbutton">Payment Not
-            Allowed</div>
-          <div>
-            <div class="col-md-12 no-space bill-more-info">
-              <button type="button" class="btn btn-primary btn-block "
-                onclick="window.location='/yacceleratorstorefront/en/bills/payment?billCode=10004'">
-                {{item.type.isPaymentAllowed ? 'Pay This Bill' : 'More Info'}}
-              </button>
+      <div class="text-right">
+        <pagination-template #p="paginationApi" (pageChange)="onTableDataChange($event)">
+          <div class="custom-pagination">
+            <div class="pagination-previous" [class.disabled]="p.isFirstPage()">
+              <span (click)="p.previous()">
+                <span class="glyphicon glyphicon-chevron-left"></span> </span>
+            </div>
+            <div class="page-number" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
+              <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">{{ page.label }}</span>
+              <div *ngIf="p.getCurrent() === page.value">
+                <span>{{ page.label }}</span>
+              </div>
+            </div>
+            <div class="pagination-next" [class.disabled]="p.isLastPage()">
+              <span (click)="p.next()"> <span class="glyphicon glyphicon-chevron-right"></span>
+              </span>
             </div>
           </div>
-        </span>
+        </pagination-template>
       </div>
-    </div>
-  </div>
-</div>
