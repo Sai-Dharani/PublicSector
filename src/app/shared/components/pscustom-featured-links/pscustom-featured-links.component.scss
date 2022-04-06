@@ -1,6 +1,4 @@
-.tagex a{
-    color: #fff;
-}
+
 a:hover{
     text-decoration: none;
 }
@@ -11,18 +9,23 @@ a:hover{
 .tagex li {
     display: grid;
     list-style-type: none;
-    grid-gap: 10px;
+     grid-gap: 10px;
    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
    font-size: 14px;
+
+   
 }
 ul{
     margin-top: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    grid-auto-rows: 1fr;
     width:fit-content;
 }
 .serviceall a{
     text-decoration: none;
+  //  color: #fff;
     color: #fff;
     font-size: 16px;
 }

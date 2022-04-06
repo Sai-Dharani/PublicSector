@@ -251,6 +251,51 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
     cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
         margin-left: 0%;
     }
+// iphone xr
+ 
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist .tagex li a{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       width: 100%;
+       height: 100%;
+       background: #01579b;
+       color: #fff;
+       line-height: 1.2;
+       font-size: 13px;
+       padding: 10px;
+       border-radius: 2px;
+    }
+
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist h2.serviceall a{
+        color: black;
+    }
+    app-pscustom-featured-links{
+        color: black;
+        background: #fff !important; 
+        min-height: 220px;
+        position: relative;
+        margin-top: 0;
+        width: 100%;
+        padding: 0;
+        border-top: 1px solid rgba(189, 189, 189, 0.5);
+    }
+
+    app-pscustom-featured-links h2{
+        color: black;
+        text-align: center;
+    }
+}
+
+//freq backgorund color
+
+ app-pscustom-featured-links{
+     color: white;
+     background: #182029;
+    min-height: 220px;
+    position: relative;
+    margin-top: 0;
 
     cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
         text-align: center;
@@ -285,6 +330,10 @@ app-pscustom-featured-links {
     width: 100%;
     padding: 0;
     border-top: 1px solid rgba(189, 189, 189, 0.5);
+    text-decoration: none;
+}
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist  a{
+    color: white;
 }
 
 app-pscustom-featured-links h2 {
