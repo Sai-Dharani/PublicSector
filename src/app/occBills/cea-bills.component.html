@@ -79,7 +79,7 @@
         <span class="divTableCell col-md-2" role="columnheader">
           <span class="hidden-xs hidden-sm hidden-md hidden-lg">Bill options</span></span>
       </div>
-      <ng-container *ngIf="products.bills">
+      <ng-container *ngIf="products">
         <div *ngFor="let item of products.bills | paginate: config" class="divTableRow" role="row">
           <span class="divTableCell col-xs-12 col-sm-12 col-md-12 col-lg-2" role="gridcell">
             <strong>{{item.type.description}}</strong>
@@ -131,8 +131,6 @@
           </span>
         </div>
       </ng-container>
-
-
       <div class="text-right">
         <pagination-template #p="paginationApi" (pageChange)="onTableDataChange($event)">
           <div class="custom-pagination">
