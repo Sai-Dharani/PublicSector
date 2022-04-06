@@ -1,0 +1,12 @@
+<div class="container row no-margin" *ngIf="data$ | async as data">
+    <div class="hero-boxes-wrapper">
+        <div class="yCmsContentSlot row hero-boxes">
+            <div class="simple-responsive-banner-component simple-banner">
+            <a href="{{data.urlLink}}">
+                <cx-media class="js-responsive-image" [container]="data.media"></cx-media>
+                <span class="hero-text">{{data.headline}}</span>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>

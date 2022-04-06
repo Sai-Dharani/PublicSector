@@ -1,0 +1,16 @@
+<!-- <div *ngIf="data$ | async as data">
+    <cx-media class="banner" [container]="data.media"></cx-media>
+    <h2>{{data.headline}}</h2>
+    <p>{{data.urlText}}</p>
+</div> -->
+<div *ngIf="data$ | async as data">
+    <div class="qps-banner">
+        <cx-media class="banner" [container]="data.media"></cx-media>
+    </div>
+<div class="banner-text-wrapper">
+ <div class="banner-text">
+    <h1><span tabindex="0">{{data.headline}}</span></h1>
+    <a class="button" href="{{data.urlTextLink}}">{{data.urlText}}&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></a>
+</div>
+</div>
+</div>

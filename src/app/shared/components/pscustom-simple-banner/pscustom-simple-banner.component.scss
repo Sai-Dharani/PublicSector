@@ -1,0 +1,45 @@
+.banner{
+    position: relative;
+    margin-bottom: -18.5%;
+    margin-top: -18.5%;
+}
+
+.qps-banner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.banner-text-wrapper {
+    top: auto;
+    bottom: 0;
+}
+.banner-text-wrapper {
+    background: #182029;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.banner-text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    text-align: left;
+    color: #fff;
+}
+h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: -5px;
+}
+.banner-text-wrapper .banner-text a {
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}

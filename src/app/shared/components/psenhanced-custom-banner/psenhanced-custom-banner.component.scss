@@ -19,7 +19,8 @@
     position: relative;
     float: right;
     background: #002f6c;
-    padding-left: 3%;
+    padding: 20px;
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
 }
 .latest-news-title{
     font-size: 24px;
@@ -41,4 +42,9 @@
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
+}
+@media(max-width:1000px){
+    .latest-news-component{
+        padding: 0%;
+    }
 }

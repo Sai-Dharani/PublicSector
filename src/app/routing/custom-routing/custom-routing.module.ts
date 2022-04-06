@@ -40,9 +40,9 @@ export const staticRoutes: Routes = [
         // PSFeaturedLinksComponent:{
         //   component: LinkComponent,
         // },
-        PSBannerComponent: {
-          component: BannerComponent,
-        },
+        // PSBannerComponent: {
+        //   component: BannerComponent,
+        // },
         // PSSocialMediaComponent: {
         //   component: MediaComponent,
         // },
