@@ -9,10 +9,16 @@
     padding-left: 3%;
 }
 .news{
-    font-size: 27px;
-    font-weight: normal;
+    font-size: 32px;
+    font-weight: 400;
     color: #002f6c;
     text-transform: uppercase;
-    margin-bottom: 15%;
-    margin-top: 15%;
+    margin-bottom: 20%;
+    margin-top: 30%;
+}
+@media(max-width: 991.98px){
+    .news{
+        margin-bottom: 10%;
+        margin-top: 15%;
+    }
 }
