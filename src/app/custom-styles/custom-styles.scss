@@ -314,6 +314,10 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
         color: black;
     }
 
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist{
+        width: 100% !important;
+    }
+
     app-pscustom-featured-links {
         color: black;
         background: #fff !important;
