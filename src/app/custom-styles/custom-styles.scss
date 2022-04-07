@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,300');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
 body , main{
     font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif !important ;
     overflow-x: hidden;
 }
-// html{
-//     font-family:sans-serif ;
-// }
-
 
 body {
     cx-storefront.stop-navigating:after,
@@ -29,9 +29,8 @@ main cx-page-layout.LandingPage2Template {
 }
 
 @media (max-width: 991.98px) {
-    main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
-        margin-top: 0;
-        height: auto !important;
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section1 app-pscustom-simple-banner img{
+        height: 367px;
     }
 }
 
@@ -121,6 +120,9 @@ cx-storefront header {
     cx-page-layout.header {
         margin-left: 14px;
         letter-spacing: 0.1px;
+        .SearchBox{
+            margin: 0%;
+        }
     }
 
     background-color: #182029;
@@ -243,6 +245,9 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
             max-width: 100%;
         }
     }
+    cx-page-layout.LandingPage2Template cx-page-slot.Section2B{
+        padding-top: 0%;
+    }
 
     cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
         --cx-flex-basis: 100%;
@@ -251,6 +256,33 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
     cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
         margin-left: 0%;
     }
+    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+        text-align: center;
+    }
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+        .js-responsive-image img{
+            width: auto;
+            height: 300px;
+            span{
+                font-size: 24px;
+            }
+        }
+    }
+    cx-page-slot.Section2B app-pscustom-banner{
+        max-width: fit-content;
+    }
+     cx-storefront header {
+        cx-page-layout.header{
+            margin: 0%;
+        }
+    }
+    cx-storefront.LandingPage2Template main .LandingPage2Template {
+        background: #ffffff;
+    
+    }
+
 // iphone xr
  
     main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist .tagex li a{
@@ -283,7 +315,7 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
     }
 
     app-pscustom-featured-links h2{
-        color: black;
+        color: black !important;
         text-align: center;
     }
 }
