@@ -3,6 +3,7 @@
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
 @import 'src/app/custom-styles/custom-styles.scss';
+@import 'src/app/custom-styles/custom-mobileview.scss';
 
 
 @media (min-width: 1400px) {

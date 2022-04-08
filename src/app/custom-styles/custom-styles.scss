@@ -29,9 +29,10 @@ main cx-page-layout.LandingPage2Template {
     flex-wrap: wrap;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 639px) {
     main cx-page-layout.LandingPage2Template cx-page-slot.Section1 app-pscustom-simple-banner img{
         height: 367px;
+        object-fit: cover;
     }
 }
 
@@ -153,11 +154,11 @@ cx-category-navigation cx-navigation-ui.flyout {
         color: #ffffff;
         padding: 0%;
     }
-
-    nav span cx-icon {
-        display: none;
+    @media(min-width:767px){
+        nav span cx-icon {
+            display: none;
+        }
     }
-
     nav:nth-of-type(5) .wrapper .childs nav cx-generic-link a {
         padding-right: 120px;
     }
