@@ -24,7 +24,6 @@ cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
 
 // state of rose bud 
 main cx-page-layout.LandingPage2Template {
-    /* display: flex; */
     display: block;
     flex-wrap: wrap;
 }
@@ -246,6 +245,72 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
 //     }
 // }
 
+
+
+//freq backgorund color
+
+app-pscustom-featured-links {
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+    margin-top: 0;
+
+    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+        text-align: center;
+    }
+
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+
+        .js-responsive-image img {
+            width: auto;
+            height: 300px;
+
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    cx-page-slot.Section2B app-pscustom-banner {
+        max-width: fit-content;
+    }
+
+    cx-storefront header {
+        cx-page-layout.header {
+            margin: 0%;
+        }
+    }
+}
+
+app-pscustom-featured-links {
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid rgba(189, 189, 189, 0.5);
+    text-decoration: none;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist a {
+    color: white;
+}
+
+app-pscustom-featured-links h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 15px 0 0 40px;
+    line-height: 1.2;
+    
+}
 @media (max-width: 1000px) {
     cx-page-slot.Section2C app-psenhanced-custom-banner {
         .latest-news-content {
@@ -316,7 +381,8 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
     }
 
     main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist{
-        width: 100% !important;
+       
+       width: 100%;
     }
 
     app-pscustom-featured-links {
@@ -331,75 +397,32 @@ main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
     }
 
     app-pscustom-featured-links h2{
-        color: black !important;
+     color: black;
         text-align: center;
     }
 }
-
-//freq backgorund color
-
-app-pscustom-featured-links {
-    color: white;
-    background: #182029;
-    min-height: 220px;
-    position: relative;
-    margin-top: 0;
-
-    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
-        text-align: center;
+@media (min-width:1000px){
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2C app-psenhanced-custom-banner .latest-news-content
+    {
+        max-width: 40%;
+    }
+}
+@media (min-width: 650px) and (max-width: 1000px){
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2C app-psenhanced-custom-banner .latest-news-content
+    {
+        max-width: 60%;
+    }
+}
+@media (min-width: 576px) and (max-width: 1000px){
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2B app-pscustom-banner  .hero-boxes .simple-responsive-banner-component{
+   padding: 2.5% !important;
     }
 
     cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
-        padding-top: 0%;
-        padding-bottom: 0%;
-
-        .js-responsive-image img {
-            width: auto;
-            height: 300px;
-
-            span {
-                font-size: 24px;
-            }
-        }
+    .js-responsive-image img{
+        padding-inline: 10px;
+         }
     }
-
-    cx-page-slot.Section2B app-pscustom-banner {
-        max-width: fit-content;
-    }
-
-    cx-storefront header {
-        cx-page-layout.header {
-            margin: 0%;
-        }
-    }
-}
-
-app-pscustom-featured-links {
-    color: white;
-    background: #182029;
-    min-height: 220px;
-    position: relative;
-    //top: 0;
-    width: 100%;
-    padding: 0;
-    border-top: 1px solid rgba(189, 189, 189, 0.5);
-    text-decoration: none;
-}
-
-main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist a {
-    color: white;
-}
-
-app-pscustom-featured-links h2 {
-    color: #fff;
-    // padding-left: 800px;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-family: inherit;
-    letter-spacing: 1px;
-    font-size: 18px;
-    margin: 15px 0 0 40px;
-    line-height: 1.2;
 }
 
 cx-storefront header .NavigationBar {
