@@ -1,0 +1,262 @@
+@media (max-width: 1000px) {
+    cx-page-slot.Section2C app-psenhanced-custom-banner {
+        .latest-news-content {
+            width: 100%;
+        }
+
+        .latest-news-component .latest-news-box-wrapper {
+            max-width: 100%;
+        }
+    }
+    cx-page-layout.LandingPage2Template cx-page-slot.Section2B{
+        padding-top: 0%;
+    }
+
+    cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
+        --cx-flex-basis: 100%;
+    }
+
+    cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
+        margin-left: 0%;
+    }
+    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+        text-align: center;
+    }
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+        .js-responsive-image img{
+            width: auto;
+            height: 300px;
+            span{
+                font-size: 24px;
+            }
+        }
+    }
+    cx-page-slot.Section2B app-pscustom-banner{
+        max-width: fit-content;
+    }
+     cx-storefront header {
+        cx-page-layout.header{
+            margin: 0%;
+        }
+    }
+    cx-storefront.LandingPage2Template main .LandingPage2Template {
+        background: var(--cx-color-links);
+    
+    }
+
+// iphone xr
+ 
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist .tagex li a{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       width: 100%;
+       height: 100%;
+       background: #01579b;
+       color: var(--cx-color-services);
+       line-height: 1.2;
+       font-size: 13px;
+       padding: 10px;
+       border-radius: 2px;
+    }
+
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist h2.serviceall a {
+        color: var(-cx-color-dark);
+    }
+
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist{
+        width: 100% !important;
+    }
+
+    app-pscustom-featured-links {
+        color: var(-cx-color-dark);
+        background: var(--cx-color-services) !important;
+        min-height: 220px;
+        position: relative;
+        margin-top: 0;
+        width: 100%;
+        padding: 0;
+        border-top: 1px solid rgba(189, 189, 189, 0.5);
+    }
+
+    app-pscustom-featured-links h2{
+        color: var(-cx-color-dark) !important;
+        text-align: center;
+    }
+}
+app-pscustom-featured-links {
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+    margin-top: 0;
+
+    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+        text-align: center;
+    }
+
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+
+        .js-responsive-image img {
+            width: auto;
+            height: 300px;
+
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    cx-page-slot.Section2B app-pscustom-banner {
+        max-width: fit-content;
+    }
+
+    cx-storefront header {
+        cx-page-layout.header {
+            margin: 0%;
+        }
+    }
+}
+app-pscustom-featured-links {
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+    //top: 0;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid rgba(189, 189, 189, 0.5);
+    text-decoration: none;
+}
+app-pscustom-featured-links h2 {
+    color: var(--cx-color-services);
+    // padding-left: 800px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 15px 0 0 40px;
+    line-height: 1.2;
+}
+cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
+    --cx-flex-basis: 50%;
+    margin: auto;
+}
+
+// state of rose bud 
+main cx-page-layout.LandingPage2Template {
+    /* display: flex; */
+    display: block;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 639px) {
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section1 app-pscustom-simple-banner img{
+        height: 367px;
+        object-fit: cover;
+    }
+}
+
+//responsive
+a cx-media {
+    position: relative;
+    display: auto;
+    width: auto;
+    padding: 10px;
+}
+
+cx-media {
+    position: relative;
+    display: flex;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A,
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 1 !important;
+    max-width: 100% !important;
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    padding-top: 5%;
+}
+
+main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline {
+    font-weight: normal;
+    font-size: 1.5vw;
+    display: flex;
+    padding-top: 17%;
+    overflow-wrap: break-word;
+    width: auto;
+    line-height: 1;
+    font-family: sans-serif;
+    margin: 0 3% 0 3%;
+}
+
+cx-page-slot.Section2C .heading {
+    padding-bottom: 2px;
+}
+
+cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
+    margin-left: 10%;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
+    max-width: 100%;
+    margin: 0%;
+
+    cx-banner cx-generic-link cx-media {
+        padding: 0%;
+    }
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist a {
+    color: white;
+}
+
+
+
+cx-storefront main .LandingPage2Template {
+    background: var(--cx-color-main-background);
+
+}
+ //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          MOBILE STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      // 0 - 639px 
+      @media (max-width: --screen-xs-max) {
+        body {
+          margin-bottom:440px;
+        }
+      
+      }
+      
+       
+      
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          TABLET STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      
+      // 640px - 1023px 
+      @media (min-width: --screen-sm-min) {
+
+      }

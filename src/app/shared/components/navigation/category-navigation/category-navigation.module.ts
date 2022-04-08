@@ -2,10 +2,12 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CmsConfig, provideDefaultConfig } from '@spartacus/core';
 import { NavigationModule } from '@spartacus/storefront';
+import { LogosComponent } from 'src/app/components/logos/logos.component';
 
 import { CategoryNavigationComponent } from './category-navigation.component';
 
 @NgModule({
+  declarations: [CategoryNavigationComponent, LogosComponent],
   imports: [CommonModule, NavigationModule],
   providers: [
     provideDefaultConfig(<CmsConfig>{
@@ -19,8 +21,8 @@ import { CategoryNavigationComponent } from './category-navigation.component';
       },
     }),
   ],
-  declarations: [CategoryNavigationComponent],
+
   exports: [CategoryNavigationComponent],
-  entryComponents: [CategoryNavigationComponent],
+  entryComponents: [CategoryNavigationComponent, LogosComponent],
 })
 export class CategoryNavigationModule {}

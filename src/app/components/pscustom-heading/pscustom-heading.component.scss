@@ -1,0 +1,18 @@
+
+.heading{
+    padding-left: 3%;
+}
+.news{
+    font-size: 32px;
+    font-weight: 400;
+    color: #002f6c;
+    text-transform: uppercase;
+    margin-bottom: 20%;
+    margin-top: 30%;
+}
+@media(max-width: 991.98px){
+    .news{
+        margin-bottom: 10%;
+        margin-top: 15%;
+    }
+}
