@@ -13,7 +13,7 @@ export class AppComponent {
     var d1 = this.elementRef.nativeElement.querySelector('cx-page-slot');
     d1.insertAdjacentHTML('beforeend', '<div class="pageLeftTitle1">Sign in - returning cetizen</div>');
     d1.insertAdjacentHTML('beforeend', '<div class="pageLeftTitle2">Already have an account? Sign in to retrieve your account settings.</div>');
-    d1.insertAdjacentHTML('beforeend', '<div class="pageLeftTitle2">Fields marked * are required Email Address .</div>');
+    d1.insertAdjacentHTML('beforeend', '<div class="pageLeftTitle2">Fields marked <span class="at-red">*</span> are required Email Address .</div>');
   }
 
 
