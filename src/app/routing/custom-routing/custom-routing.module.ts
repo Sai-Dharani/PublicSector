@@ -49,9 +49,9 @@ export const staticRoutes: Routes = [
         // PSSimpleBannerComponent:{
         //   component:BannerComponent,
         // },
-        CMSLinkComponent :{
-          component:LinkComponent
-        },
+        // CMSLinkComponent :{
+        //   component:LinkComponent
+        // },
         // CategoryNavigationComponent:{
         //   component:CategoryNavigationComponent
         // }
