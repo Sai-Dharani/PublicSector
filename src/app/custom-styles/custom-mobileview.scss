@@ -1,0 +1,66 @@
+@media(max-width:639px){
+    cx-storefront header .header .PreHeader cx-hamburger-menu {
+        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+            background-color: #000000;
+        }
+        button{
+            position: relative;
+            margin-top: -76%;
+        }
+        .is-active{
+            background-color: #123f67;
+            height: 10%;
+            display: inline-block;
+            color: transparent;
+            overflow: hidden;
+            border: none;
+            position: absolute;
+            margin-top: -28%;
+            margin-left: 81%;
+            display: inline-block;
+            cursor: pointer;
+            height: 60px;
+            width: 20%;
+            vertical-align: top;
+            border-left: 1px solid #e7e7e7;
+            border-right: 1px solid #e7e7e7;
+        }
+        .hamburger.is-active .hamburger-inner, .is-active.cx-hamburger .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .is-active.cx-hamburger .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after, .is-active.cx-hamburger .hamburger-inner::after {
+             background-color: #ffffff; 
+        }
+    }
+    cx-storefront header .navigation .SiteLogin{
+        cx-login{
+            position: relative;
+            margin-top: -145%;
+            margin-left: -230%;
+            margin-right: -20%;
+        }
+        cx-login .HeaderLinks{
+            display: none;
+        }
+        cx-login div{
+            line-height: 50px;
+            background-color: #123f67;
+            padding: 5px 12px 5px 20px;
+            cursor: pointer;
+            color: #ffffff;
+            display: inline-block;
+            width: 80%;
+            //float: left;
+            height: 60px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+    cx-storefront header .NavigationBar cx-category-navigation cx-navigation-ui {
+        nav{
+            background-color: #0b0e12;
+            color: #ffffff;
+        }
+        span, cx-generic-link a{
+            padding: 20px 30% 20px 50px;
+        }
+
+    }
+}
