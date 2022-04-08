@@ -45,3 +45,4 @@ testem.log
 Thumbs.db
 src/app/occBills/temp.css
 src/app/occBills/temp.css
+src/app/custom-styles/varable.ts

@@ -1,5 +1,27 @@
 cx-page-layout.LoginPageTemplate cx-page-slot {
     width: 100%;
+
+
+}
+
+.pageLeftTitle1 {
+    font-size: 18px;
+    color: #156ab5;
+    padding-top: 3%;
+    padding-left: 1.5%;
+    font-weight: 500;
+}
+
+.pageLeftTitle2 {
+    font-size: 14px;
+    color: black;
+    padding-top: 1%;
+    padding-left: 1.5%;
+    font-weight: 400;
+}
+
+.at-red {
+    color: red;
 }
 
 cx-page-layout.LoginPageTemplate cx-page-slot>* {
@@ -13,6 +35,9 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
         max-width: 50%;
 
     }
+
+
+
 
     font-family: "Alegreya Sans",
     Helvetica,
@@ -82,5 +107,110 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
             line-height: 1.375;
             border-radius: 0 !important;
         }
+    }
+}
+
+cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
+    float: right;
+
+    @media screen and (min-width: 992px) {
+        max-width: 50%;
+
+    }
+
+    @media (min-width: 768px) {
+        .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .justify-content-center {
+        justify-content: right !important;
+    }
+
+    .container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn-link {
+        font-size: 1.125rem;
+        color: #156ab5;
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+        font-size: 13px;
+    }
+
+    label .label-content {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    .form-control {
+        font-weight: 500;
+
+    }
+
+    .btn:hover,
+    .btn:active:hover,
+    .btn.active:hover {
+        outline: 2px solid #000000;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+        color: #000000;
+        background-color: #fdda19;
+        border-color: #000000;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .btn-primary {
+        border: 1px solid;
+        color: #000000;
+        background-color: #fdda19;
+        border-color: #fdda19;
+    }
+
+    .btn {
+        font-size: 16px;
+        text-transform: none;
+        white-space: normal;
+    }
+
+    .btn {
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px 15px;
+        font-size: 14px;
+        line-height: 1.375;
+        border-radius: 0 !important;
+    }
+
+    font-family: "Alegreya Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+    cx-login-form.user-form {
+        width: 100%;
+        padding-left: 1%;
+
+        .user-form button,
+        .user-form a {
+            flex: 0 0 calc(50% - 10px);
+            margin-top: 0.5rem;
+        }
+
+
     }
 }

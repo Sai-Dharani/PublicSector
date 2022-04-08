@@ -22,9 +22,6 @@ import { NgxPaginationModule } from "ngx-pagination";
 import { PSCustomSimpleBannerModule } from "./shared/components/pscustom-simple-banner/pscustom-simple-banner.module";
 import { PSCustomBannerComponent } from './shared/components/pscustom-banner/pscustom-banner.component';
 import { PSCustomBannerModule } from "./shared/components/pscustom-banner/pscustom-banner.module";
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,8 +44,6 @@ import { PSCustomBannerModule } from "./shared/components/pscustom-banner/pscust
     PSCustomFeaturedLinksModule,
     PSCustomSimpleBannerModule,
     PSCustomBannerModule
-
-
   ],
   providers: [provideConfig(publicsectorLayoutConfig)],
   bootstrap: [AppComponent]
