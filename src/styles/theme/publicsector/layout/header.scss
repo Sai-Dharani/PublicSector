@@ -1,0 +1,137 @@
+cx-page-slot.SiteLogin {
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    color: var(--cx-color-dark);
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    cx-login {
+        .cx-login-greet {
+            color: var(--cx-color-dark);
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-left: 5%;
+            font-weight: bold;
+        }
+
+        display: flex;
+        width: 160%;
+        font-weight: 600;
+        font-size: 12px;
+
+        div {
+            width: 70%;
+            padding: 2px 15px 0px 0px;
+        }
+
+        .HeaderLinks cx-link a:hover {
+            color: var(--cx-color-links);
+            background: var(--cx-color-services-background);
+            text-decoration: none;
+            padding: 10%;
+            border-radius: 7%;
+        }
+    }
+}
+cx-storefront header {
+    cx-page-layout.header {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        letter-spacing: 0.1px;
+        .SearchBox{
+            margin: 0%;
+        }
+    }
+    cx-page-slot.SiteLogo{
+        width: 100%;
+    }
+    background-color: var(--cx-color-navbar-background );
+}
+
+ //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          MOBILE STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      // 0 - 639px 
+      @include media-breakpoint-down(sm) {
+        cx-storefront header .header .PreHeader cx-hamburger-menu {
+            .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+                background-color: #000000;
+            }
+            button{
+                position: relative;
+                //margin-top: -76%;
+            }
+            .is-active{
+                background-color: #123f67;
+                height: 10%;
+                display: inline-block;
+                color: transparent;
+                overflow: hidden;
+                border: none;
+                position: absolute;
+                right: 0;
+                top:0;
+                display: inline-block;
+                cursor: pointer;
+                height: 60px;
+                width: 20%;
+                vertical-align: top;
+                border-left: 1px solid #e7e7e7;
+                border-right: 1px solid #e7e7e7;
+            }
+            .hamburger.is-active .hamburger-inner, .is-active.cx-hamburger .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .is-active.cx-hamburger .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after, .is-active.cx-hamburger .hamburger-inner::after {
+                 background-color: #ffffff; 
+            }
+        }
+        cx-storefront header .navigation .SiteLogin{
+            width: 100%;
+            top: 0;
+            position: fixed;
+            cx-login .HeaderLinks{
+                display: none;
+            }
+            cx-login div{
+                line-height: 50px;
+                background-color: #123f67;
+                padding: 5px 12px 5px 20px;
+                cursor: pointer;
+                color: #ffffff;
+                display: inline-block;
+                width: 100%;
+                //float: left;
+                height: 60px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+        }
+      
+      }
+      
+       
+      
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          TABLET STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      
+      // 640px - 1023px 
+      @media (min-width: --screen-sm-min) {
+
+      }

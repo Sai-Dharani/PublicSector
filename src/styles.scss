@@ -2,13 +2,24 @@
 
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
-@import 'src/app/custom-styles/custom-styles.scss';
-@import 'src/app/custom-styles/custom-mobileview.scss';
+@import 'styles/theme/publicsector/variable.scss';
+@import 'styles/theme/publicsector/common/common-style.scss';
+@import 'styles/theme/publicsector/layout/breadcrumb.scss';
+@import 'styles/theme/publicsector/layout/footer.scss';
+@import 'styles/theme/publicsector/layout/header.scss';
+@import 'styles/theme/publicsector/layout/navigation.scss';
+@import 'styles/theme/publicsector/layout/pagination.scss';
+@import 'styles/theme/publicsector/layout/table.scss';
+@import 'styles/theme/publicsector/page-templates/billspage.scss';
+@import 'styles/theme/publicsector/page-templates/homepage.scss';
+@import 'styles/theme/publicsector/page-templates/loginpage.scss';
 
 
-@media (min-width: 1400px) {
-    .account-section {
-        margin: 0 auto;
-        width: 1400px;
-    }
-}
+@import 'app/components/logos/logos.component.scss';
+@import 'app/components/occBills/cea-bills.component.scss';
+@import 'app/components/pscustom-banner/pscustom-banner.component.scss';
+@import 'app/components/pscustom-featured-links/pscustom-featured-links.component.scss';
+@import 'app/components/pscustom-heading/pscustom-heading.component.scss';
+@import 'app/components/pscustom-simple-banner/pscustom-simple-banner.component.scss';
+@import 'app/components/pscustom-social-media/pscustom-social-media.component.scss';
+@import 'app/components/psenhanced-custom-banner/psenhanced-custom-banner.component.scss';
