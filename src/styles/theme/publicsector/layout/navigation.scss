@@ -31,7 +31,7 @@ cx-category-navigation cx-navigation-ui.flyout {
         color: var(--cx-color-links);
         padding: 0%;
     }
-    @media(min-width:767px){
+     @media(min-width:767px){
         nav span cx-icon {
             display: none;
         }
@@ -100,6 +100,9 @@ cx-category-navigation cx-navigation-ui nav {
 
     padding-right: 10px;
 }
+cx-category-navigation cx-navigation-ui{
+    margin-left: 16px;
+}
 cx-storefront header .NavigationBar {
     flex: 100%;
     min-height: auto;
@@ -115,7 +118,7 @@ cx-storefront header .NavigationBar {
       //************************************************************
       //************************************************************
       // 0 - 639px 
-      @media (max-width: --screen-xs-max) {
+      @include media-breakpoint-down(sm) {
         cx-storefront header .NavigationBar cx-category-navigation cx-navigation-ui {
             nav{
                 background-color: #0b0e12;

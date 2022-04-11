@@ -1,3 +1,16 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+//   xs: 480px,
+//   sm: 640px,
+//   md: 1024px,
+//   lg: 1400px,
+);
+
 cx-storefront{
 --cx-color-dark : black;
 --cx-color-links : #ffffff;
@@ -8,7 +21,6 @@ cx-storefront{
 --brand-primary: 	#fdda19;  // yellow color
 --brand-secondary: 	#154259;  // blue color
 --brand-tertiary: 	#182029;  // dark blue gray color
-
 
 
 //*********Typography Colors*********

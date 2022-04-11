@@ -34,18 +34,6 @@ ul{
     float: right;
     margin-right: 3%;
 }
-@media(max-width:639px){
-    .frequentserviceslist{
-        margin-right: 0%;
-        margin-bottom: 14%;
-    }
-    ul{
-        padding: 0 10px;
-    }
-    h2{
-        margin-left: 0%;
-    }
-}
 
 //************************************************************
       //************************************************************
@@ -58,8 +46,17 @@ ul{
       //************************************************************
       //************************************************************
       // 0 - 639px 
-      @media (max-width: --screen-xs-max) {
-
+      @include media-breakpoint-down(sm) {
+        .frequentserviceslist{
+            margin-right: 0%;
+            margin-bottom: 14%;
+        }
+        ul{
+            padding: 0 10px;
+        }
+        h2{
+            margin-left: 0%;
+        }
       
     }
     

@@ -21,6 +21,7 @@ import { PSCustomSimpleBannerModule } from "./components/pscustom-simple-banner/
 import { PSCustomBannerModule } from "./components/pscustom-banner/pscustom-banner.module";
 import { CeaBillsRoutingModule } from "./components/occBills/cea-bills.module";
 import { PSCustomHeadingComponent } from "./components/pscustom-heading/pscustom-heading.component";
+import { LogosComponent } from "./components/logos/logos.component";
 
 
 
@@ -28,7 +29,8 @@ import { PSCustomHeadingComponent } from "./components/pscustom-heading/pscustom
 @NgModule({
   declarations: [
     AppComponent,
-    PSCustomHeadingComponent
+    PSCustomHeadingComponent,
+    LogosComponent
   
   ],
   imports: [
