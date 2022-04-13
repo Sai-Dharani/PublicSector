@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { ceaBill } from './cea-bills.model';
 import { occBillsService } from '../services/occBills.service';
+import * as myConstClass from './fileWithConstants';
 @Component({
   selector: 'cea-bills',
   templateUrl: './cea-bills.component.html',
@@ -14,12 +15,16 @@ export class CeaBillsComponent implements OnInit {
     currentPage: 1,
     totalItems: 0,
   };
+  page_label = myConstClass;
+
   products: ceaBill;
   constructor(
     private _OccBillsService: occBillsService,
     public datepipe: DatePipe,
-    protected cdr: ChangeDetectorRef
+    protected cdr: ChangeDetectorRef,
+
   ) { }
+
   ngOnInit() {
     this.fetchData();
   }

@@ -4,12 +4,12 @@
       <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
   </button>
-  <span class="page-title">Bills</span>
+  <span class="page-title">{{page_label.page_title}}</span>
   <br><br>
-  <p class="text-body">These are your bills. Select which one you want to pay for.
+  <p class="text-body">{{page_label.text_body_1}}
   </p>
   <br>
-  <p class="text-body">Find the bills of your relationships below.
+  <p class="text-body">{{page_label.text_body_2}}
   </p>
   <br>
   <div class="col-xs-6 col-sm-8 visible-lg visible-md visible-sm totalResults-top-padding">
@@ -28,7 +28,7 @@
     <div class="col-sm-6 col-md-3">
       <div class="form-group">
         <input type="hidden" name="customerPK" value=" ">
-        <label class="hidden-md hidden-lg" for=" sortOptions1">Filter by bill status</label>
+        <label class="hidden-md hidden-lg" for=" sortOptions1">{{page_label.filterlabel}}</label>
         <select id="sortOptions1" name="filterCode" class="form-control bills-select sortOptions1"
           (change)="filterData($event.target.value)">
           <option value="All" selected="selected">
@@ -65,16 +65,15 @@
   <div class="divOuterTable row no-margin my-bill ">
     <div class="divTable billhistory-list-table" role="grid">
       <div class="divTableHeading hidden-xs hidden-sm" role="row">
-        <span class="divTableCell col-md-2" role="columnheader">Bill Type</span>
-        <span class="divTableCell col-md-1" role="columnheader">Due Date</span>
-        <span class="divTableCell col-md-1" role="columnheader">Amount Due</span>
-        <span class="divTableCell col-md-1" role="columnheader">Bill Total</span>
-        <span class="divTableCell col-md-1" role="columnheader">Issue Date</span>
-        <span class="divTableCell col-md-1" role="columnheader">Bill ID</span>
-        <span class="divTableCell col-md-1" role="columnheader">Status</span>
+        <span class="divTableCell col-md-2" role="columnheader">{{page_label.BillType}}</span>
+        <span class="divTableCell col-md-1" role="columnheader">{{page_label.DueDate}}</span>
+        <span class="divTableCell col-md-1" role="columnheader"> {{ page_label.BillTotal }}</span>
+        <span class="divTableCell col-md-1" role="columnheader"> {{ page_label.IssueDate }} </span>
+        <span class="divTableCell col-md-1" role="columnheader"> {{ page_label.BillID }}</span>
+        <span class="divTableCell col-md-1" role="columnheader"> {{ page_label.Status }} </span>
+        <span class="divTableCell col-md-1" role="columnheader"> {{ page_label.DueDate }} </span>
         <span class="divTableCell col-md-2" role="columnheader">
-          <span class="hidden-xs hidden-sm hidden-md hidden-lg">Download bill as a
-            PDF</span>
+          <span class="hidden-xs hidden-sm hidden-md hidden-lg">{{ page_label.DownloadAs }}</span>
         </span>
         <span class="divTableCell col-md-2" role="columnheader">
           <span class="hidden-xs hidden-sm hidden-md hidden-lg">Bill options</span></span>
@@ -113,7 +112,7 @@
           <span class="divTableCell col-xs-5 col-sm-6 col-md-6 col-lg-2" role="gridcell">
             <div class="col-md-12 no-space">
               <i class="bi bi-file-earmark-pdf"></i> <a href="http://localhost:4200/my-account/cea-bills"
-                class="bill-download-pdf"> Download bill as PDF</a>
+                class="bill-download-pdf"> {{ page_label.DownloadAs }}</a>
             </div>
           </span>
           <span class="divTableCell billType-message col-xs-7 col-sm-6 col-md-6 col-lg-2" role="gridcell">
