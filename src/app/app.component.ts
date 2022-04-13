@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import * as myConstClass from './components/occBills/fileWithConstants';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'publicsector';
-  // temp = myConstClass
 }

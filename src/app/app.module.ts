@@ -23,15 +23,11 @@ import { CeaBillsRoutingModule } from "./components/occBills/cea-bills.module";
 import { PSCustomHeadingComponent } from "./components/pscustom-heading/pscustom-heading.component";
 import { LogosComponent } from "./components/logos/logos.component";
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     PSCustomHeadingComponent,
     LogosComponent
-  
   ],
   imports: [
     BrowserModule,
@@ -51,8 +47,6 @@ import { LogosComponent } from "./components/logos/logos.component";
     PSCustomFeaturedLinksModule,
     PSCustomSimpleBannerModule,
     PSCustomBannerModule
-
-
   ],
   providers: [provideConfig(publicsectorLayoutConfig)],
   bootstrap: [AppComponent]
