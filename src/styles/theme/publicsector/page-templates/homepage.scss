@@ -8,80 +8,17 @@ main {
 cx-category-navigation div.hybrislogo{
     display: none;
 }
-app-pscustom-featured-links {
-    color: white;
-    background: #182029;
-    min-height: 220px;
-    position: relative;
-    margin-top: 0;
-
-    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
-        text-align: center;
-    }
-
-    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
-        padding-top: 0%;
-        padding-bottom: 0%;
-
-        .js-responsive-image img {
-            width: auto;
-            height: 300px;
-
-            span {
-                font-size: 24px;
-            }
-        }
-    }
-
-    cx-page-slot.Section2B app-pscustom-banner {
-        max-width: fit-content;
-    }
-
-
-    cx-storefront header {
-        cx-page-layout.header {
-            margin: 0%;
-        }
-    }
-}
-app-pscustom-featured-links {
-    width: 100%;
-    padding: 0;
-    border-top: 1px solid rgba(189, 189, 189, 0.5);
-    text-decoration: none;
-}
-
-main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist a {
-    color: white;
-}
-
-app-pscustom-featured-links h2 {
-    color: var(--cx-color-services);
-   // color: #fff;
-    // padding-left: 800px;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-family: inherit;
-    letter-spacing: 1px;
-    font-size: 18px;
-    margin: 15px 0 0 40px;
-    line-height: 1.2;
-}
 
 cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
     --cx-flex-basis: 50%;
     margin: auto;
 }
 
-// state of rose bud 
 main cx-page-layout.LandingPage2Template {
-    /* display: flex; */
     display: block;
     flex-wrap: wrap;
 }
 
-
-//responsive
 a cx-media {
     position: relative;
     display: auto;
@@ -120,10 +57,6 @@ cx-page-slot.Section2C .heading {
     padding-bottom: 2px;
 }
 
-cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
-    margin-left: 10%;
-}
-
 main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
     max-width: 100%;
     margin: 0%;
@@ -158,23 +91,10 @@ cx-storefront main .LandingPage2Template {
         cx-storefront{
             overflow-x: hidden;
         }
-        app-pscustom-simple-banner .banner-text-wrapper .banner-text {
-            text-align: center;
-        }
         main cx-page-layout.LandingPage2Template cx-page-slot.Section1 app-pscustom-simple-banner img{
             height: 367px;
             object-fit: cover;
         }
-        cx-page-slot.Section2C app-psenhanced-custom-banner {
-            .latest-news-content {
-                   max-width: 100%;
-                   width: 100%;
-                }
-        
-                .latest-news-component .latest-news-box-wrapper {
-                    max-width: 100%;
-                }
-            }
             cx-page-layout.LandingPage2Template cx-page-slot.Section2B{
                 padding-top: 0%;
             }
@@ -183,23 +103,6 @@ cx-storefront main .LandingPage2Template {
                 --cx-flex-basis: 100%;
             }
         
-            cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
-                margin-left: 0%;
-            }
-            cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
-                padding-top: 0%;
-                padding-bottom: 0%;
-                .js-responsive-image img{
-                    width: auto;
-                    height: 300px;
-                    span{
-                        font-size: 24px;
-                    }
-                }
-            }
-            cx-page-slot.Section2B app-pscustom-banner{
-                max-width: fit-content;
-            }
              cx-storefront header {
                 cx-page-layout.header{
                     margin: 0%;
@@ -209,14 +112,6 @@ cx-storefront main .LandingPage2Template {
             cx-storefront.LandingPage2Template main .LandingPage2Template {
                 background: var(--cx-color-links);
             
-            }
-
-            cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
-                padding-left: 0px;
-                padding-right: 0px;
-                padding-bottom: 0px;
-               // padding: 0 0 0 0;
-               padding: 0px !important;
             }
             cx-category-navigation div.hybrislogo{
                 position: fixed;
@@ -253,20 +148,6 @@ cx-storefront main .LandingPage2Template {
         cx-storefront{
             overflow-x: hidden;
         }
-        cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
-            padding-top: 0%;
-            padding-bottom: 0%;
-            .js-responsive-image img{
-                width: auto;
-                height: 300px;
-                span{
-                    font-size: 24px;
-                }
-            }
-        }
-        cx-page-slot.Section2B app-pscustom-banner{
-            max-width: fit-content;
-        }
         cx-storefront.LandingPage2Template main .LandingPage2Template {
             background: var(--cx-color-links);
         }
@@ -281,15 +162,6 @@ cx-storefront main .LandingPage2Template {
             }
         }
 
-        cx-page-slot.Section2C app-psenhanced-custom-banner {
-            .latest-news-content {
-                width: 100%;
-                padding-right: 0px;
-            }
-            .latest-news-component .latest-news-box-wrapper {
-                max-width: 100%;
-            }
-        }
         cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
             --cx-flex-basis: 100%;
         }
@@ -299,9 +171,6 @@ cx-storefront main .LandingPage2Template {
 
         }
     
-        cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
-            margin-left: 0%;
-        }
         cx-category-navigation div.hybrislogo{
             position: fixed;
             display: block;

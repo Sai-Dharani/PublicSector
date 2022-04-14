@@ -1,4 +1,21 @@
 app-pscustom-featured-links{
+
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid rgba(189, 189, 189, 0.5);
+    text-decoration: none;
+
+    cx-storefront header {
+        cx-page-layout.header {
+            margin: 0%;
+        }
+    }
+
     a:hover{
         text-decoration: none;
     }
@@ -38,6 +55,36 @@ app-pscustom-featured-links{
         float: right;
         margin-right: 5%;
     }
+
+    // .frequentserviceslist a{ 
+    //     color: white;
+    // }
+
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+
+        .js-responsive-image img {
+            width: auto;
+            height: 300px;
+
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    h2 {
+        color: var(--cx-color-services);
+        text-transform: uppercase;
+        font-weight: normal;
+        font-family: inherit;
+        letter-spacing: 1px;
+        font-size: 18px;
+        margin: 15px 0 0 40px;
+        line-height: 1.2;
+    }
+
 }
 
 //************************************************************

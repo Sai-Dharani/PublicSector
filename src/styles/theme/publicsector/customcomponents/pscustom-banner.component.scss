@@ -2,6 +2,8 @@ app-pscustom-banner{
     .no-margin {
         margin: 0 !important;
     }
+    max-width: fit-content;
+    
     .hero-boxes .simple-responsive-banner-component a {
         position: relative;
         box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
@@ -36,6 +38,10 @@ app-pscustom-banner{
     }
 }
 
+app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+        text-align: center;
+    }
+
 //************************************************************
       //************************************************************
       //************************************************************
@@ -52,14 +58,27 @@ app-pscustom-banner{
             .hero-boxes .hero-text {
                 font-size: 24px;
             }
+            max-width: fit-content;
             .no-margin{
                 padding: 0%;
             }
             .hero-boxes .simple-responsive-banner-component{
                 padding: 0%;
             }
+
+            .hero-boxes-wrapper .simple-responsive-banner-component {
+                    padding-top: 0%;
+                    padding-bottom: 0%;
+                    .js-responsive-image img{
+                        width: auto;
+                        height: 300px;
+                        span{
+                            font-size: 24px;
+                        }
+                    }
         }
     }
+}
     
      
     
@@ -79,6 +98,19 @@ app-pscustom-banner{
         app-pscustom-banner{
             .no-margin{
                 padding: 10px;
+            }
+            max-width: fit-content;
+
+            .hero-boxes-wrapper .simple-responsive-banner-component {
+                padding-top: 0%;
+                padding-bottom: 0%;
+                .js-responsive-image img{
+                    width: auto;
+                    height: 300px;
+                    span{
+                        font-size: 24px;
+                    }
+                }
             }
         }
     }
