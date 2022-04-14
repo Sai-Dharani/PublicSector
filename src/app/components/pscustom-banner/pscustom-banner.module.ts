@@ -5,7 +5,6 @@ import { PSCustomBannerComponent } from './pscustom-banner.component';
 import { MediaModule } from '@spartacus/storefront';
 
 
-
 @NgModule({
   declarations: [PSCustomBannerComponent],
   imports: [

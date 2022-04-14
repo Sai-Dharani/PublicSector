@@ -70,25 +70,24 @@ cx-storefront header {
             }
             button{
                 position: relative;
-                //margin-top: -76%;
+                padding-top: 50px;
             }
             .is-active{
                 background-color: #123f67;
-                height: 10%;
-                display: inline-block;
+                height: auto;
                 color: transparent;
                 overflow: hidden;
                 border: none;
-                position: absolute;
+                position: fixed;
                 right: 0;
-                top:0;
+                margin-top: 3%;
+                padding-top: 6%;
                 display: inline-block;
                 cursor: pointer;
-                height: 60px;
                 width: 20%;
                 vertical-align: top;
-                border-left: 1px solid #e7e7e7;
-                border-right: 1px solid #e7e7e7;
+                border-left: 2px solid #e7e7e7;
+                border-right: 2px solid #e7e7e7;
             }
             .hamburger.is-active .hamburger-inner, .is-active.cx-hamburger .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .is-active.cx-hamburger .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after, .is-active.cx-hamburger .hamburger-inner::after {
                  background-color: #ffffff; 
@@ -96,7 +95,7 @@ cx-storefront header {
         }
         cx-storefront header .navigation .SiteLogin{
             width: 100%;
-            top: 0;
+            left: 0;
             position: fixed;
             cx-login .HeaderLinks{
                 display: none;
@@ -109,13 +108,16 @@ cx-storefront header {
                 color: #ffffff;
                 display: inline-block;
                 width: 100%;
-                //float: left;
+                margin: 0;
+                font-size: 16px;
                 height: 60px;
                 text-transform: uppercase;
                 text-align: left;
             }
         }
-      
+        cx-storefront header .header .PreHeader{
+            position: absolute;
+        }
       }
       
        
@@ -132,6 +134,78 @@ cx-storefront header {
       //************************************************************
       
       // 640px - 1023px 
-      @media (min-width: --screen-sm-min) {
-
+      @include media-breakpoint-between(sm,md) {
+           .offcanvas{
+               cx-storefront main{
+                    transform: translate(380px, 0);
+               }
+          }
+        cx-storefront header .header .PreHeader cx-hamburger-menu {
+            .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+                background-color: #000000;
+            }
+            button{
+                position: relative;
+                top:40px;
+            }
+            button:active{
+                @extend .offcanvas;
+            }
+            .is-active{
+                background-color: #123f67;
+                height: auto;
+                color: transparent;
+                overflow: hidden;
+                border: none;
+                position: fixed;
+                margin-left: 25%;
+                margin-top: 4%;
+                display: inline-block;
+                cursor: pointer;
+                width: 20%;
+                vertical-align: top;
+                border-left: 2px solid #e7e7e7;
+                border-right: 2px solid #e7e7e7;
+            }
+            .hamburger.is-active .hamburger-inner, .is-active.cx-hamburger .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .is-active.cx-hamburger .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after, .is-active.cx-hamburger .hamburger-inner::after {
+                 background-color: #ffffff; 
+            }
+        }
+        cx-storefront header .navigation .SiteLogin{
+            width: 410px;
+            left: 0;
+            position: fixed;
+            cx-login .HeaderLinks{
+                display: none;
+            }
+            cx-login div{
+                line-height: 50px;
+                background-color: #123f67;
+                padding: 5px 12px 5px 20px;
+                cursor: pointer;
+                color: #ffffff;
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                font-size: 16px;
+                height: 60px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+        }
+        cx-storefront header .header .PreHeader{
+            position: absolute;
+        }
+        cx-storefront header.is-expanded:after {
+            content: "";
+            display: block;
+            position: fixed;
+            width: 410px;
+            top: 0;
+            height: 100%;
+            left: 0;
+            background-color: var(--cx-color-dark);
+            z-index: 2;
+            -webkit-transform-origin-y: translate(410px,0);
+        }
       }

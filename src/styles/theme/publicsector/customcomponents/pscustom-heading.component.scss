@@ -1,15 +1,15 @@
+    .heading{
+        padding-left: 3%;
+    }
+    .news{
+        font-size: 32px;
+        font-weight: 400;
+        color: #002f6c;
+        text-transform: uppercase;
+        margin-bottom: 20%;
+        margin-top: 30%;
+    }
 
-.heading{
-    padding-left: 3%;
-}
-.news{
-    font-size: 32px;
-    font-weight: 400;
-    color: #002f6c;
-    text-transform: uppercase;
-    margin-bottom: 20%;
-    margin-top: 30%;
-}
 
 //************************************************************
       //************************************************************
@@ -22,13 +22,13 @@
       //************************************************************
       //************************************************************
       // 0 - 639px 
-    //   @include media-breakpoint-down(sm) {
-    //     .news{
-    //         margin-bottom: 10%;
-    //         margin-top: 15%;
-    //     }
-      
-    // }
+      @include media-breakpoint-down(sm) {
+            .news{
+                margin-bottom: 10%;
+                margin-top: 15%;
+            }
+
+    }
     
      
     
@@ -44,6 +44,6 @@
     //************************************************************
     
     // 640px - 1023px 
-    @media (min-width: --screen-sm-min) {
+    @include media-breakpoint-between(sm,md) {
 
     }

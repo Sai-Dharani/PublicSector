@@ -14,12 +14,14 @@ $styleVersion: 4.3;
 @import 'styles/theme/publicsector/page-templates/homepage.scss';
 @import 'styles/theme/publicsector/page-templates/loginpage.scss';
 
+@import 'styles/theme/publicsector/customcomponents/psenhanced-custom-banner.component.scss';
+@import 'styles/theme/publicsector/customcomponents/cea-bills.component.scss';
+@import 'styles/theme/publicsector/customcomponents/logos.component.scss';
+@import 'styles/theme/publicsector/customcomponents/pscustom-banner.component.scss';
+@import 'styles/theme/publicsector/customcomponents/pscustom-featured-links.component.scss';
+@import 'styles/theme/publicsector/customcomponents/pscustom-heading.component.scss';
+@import 'styles/theme/publicsector/customcomponents/pscustom-simple-banner.component.scss';
+@import 'styles/theme/publicsector/customcomponents/pscustom-social-media.component.scss';
 
-@import 'app/components/logos/logos.component.scss';
-@import 'app/components/occBills/cea-bills.component.scss';
-@import 'app/components/pscustom-banner/pscustom-banner.component.scss';
-@import 'app/components/pscustom-featured-links/pscustom-featured-links.component.scss';
-@import 'app/components/pscustom-heading/pscustom-heading.component.scss';
-@import 'app/components/pscustom-simple-banner/pscustom-simple-banner.component.scss';
-@import 'app/components/pscustom-social-media/pscustom-social-media.component.scss';
-@import 'app/components/psenhanced-custom-banner/psenhanced-custom-banner.component.scss';
+
+

@@ -59,29 +59,31 @@
       //************************************************************
       //************************************************************
       // 0 - 639px 
-    //   @include media-breakpoint-down(sm) {
-    //     .latest-news-content {
-    //         max-width: 50%;
-    //     }
-    //     .latest-news-component {
-    //         padding-left: 0px;
-    //         padding-right: 0px;
-    //         margin-left: 1%;
-    //         margin-right: 1%;
-    //         max-width: 96% ;
-    //     }
-    //     .latest-news {
-    //         margin-top: 0.3%;
-    //     }
-    //     .latest-news-component {
-    //         width: 100%;
-    //         max-width: 100%;
-    //     }
-    //     .latest-news{
-    //         height: 226px;
-    //         margin-top: 0.5%;
-    //     }
-    // }
+      @include media-breakpoint-down(sm) {
+        app-psenhanced-custom-banner{
+            .latest-news-content {
+                max-width: 50%;
+            }
+            .latest-news-component {
+                padding-left: 0px;
+                padding-right: 0px;
+                margin-left: 1%;
+                margin-right: 1%;
+                max-width: 96% ;
+            }
+            .latest-news {
+                margin-top: 0.3%;
+            }
+            .latest-news-component {
+                width: 100%;
+                max-width: 100%;
+            }
+            .latest-news{
+                height: 226px;
+                margin-top: 0.5%;
+            }
+    }
+    }
     
      
     
@@ -97,6 +99,11 @@
     //************************************************************
     
     // 640px - 1023px 
-    @media (min-width: --screen-sm-min) {
-
+    @include media-breakpoint-between(sm,md) {
+        app-psenhanced-custom-banner{
+            .latest-news-component{
+                max-width: 100%;
+                padding: 0 10px 0 10px;
+            }
+        }
     }
