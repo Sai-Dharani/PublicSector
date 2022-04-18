@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,300');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+body , main{
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif !important ;
+    overflow-x: hidden;
+}
+
+body {
+
+    cx-storefront.stop-navigating:after,
+    cx-storefront.start-navigating:after,
+    cx-storefront.stop-navigating:before,
+    cx-storefront.start-navigating:before {
+        display: none;
+    }
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
+    --cx-flex-basis: 50%;
+    margin: auto;
+}
+
+// state of rose bud 
+main cx-page-layout.LandingPage2Template {
+    display: block;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 639px) {
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section1 app-pscustom-simple-banner img{
+        height: 367px;
+        object-fit: cover;
+    }
+}
+
+//responsive
+a cx-media {
+    position: relative;
+    display: auto;
+    width: auto;
+    padding: 10px;
+}
+
+cx-media {
+    position: relative;
+    display: flex;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A,
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 1 !important;
+    max-width: 100% !important;
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    padding-top: 5%;
+}
+
+main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline {
+    font-weight: normal;
+    font-size: 1.5vw;
+    display: flex;
+    padding-top: 17%;
+    overflow-wrap: break-word;
+    width: auto;
+    line-height: 1;
+    font-family: sans-serif;
+    margin: 0 3% 0 3%;
+}
+
+cx-page-slot.Section2C .heading {
+    padding-bottom: 2px;
+}
+
+cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
+    margin-left: 10%;
+}
+
+cx-page-slot.SiteLogin {
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    color: black;
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    cx-login {
+        .cx-login-greet {
+            color: black;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-left: 5%;
+            font-weight: bold;
+        }
+
+        display: flex;
+        width: 160%;
+        font-weight: 600;
+        font-size: 12px;
+
+        div {
+            width: 70%;
+            padding: 2px 15px 0px 0px;
+        }
+
+        .HeaderLinks cx-link a:hover {
+            color: #ffffff;
+            background: #156ab5;
+            text-decoration: none;
+            padding: 10%;
+            border-radius: 7%;
+        }
+    }
+}
+
+cx-storefront header {
+    cx-page-layout.header {
+        margin-left: 14px;
+        letter-spacing: 0.1px;
+        .SearchBox{
+            margin: 0%;
+        }
+    }
+
+    background-color: #182029;
+}
+
+cx-category-navigation cx-navigation-ui.flyout {
+
+    span:hover,
+    cx-generic-link a:hover {
+        color: #ffffff;
+    }
+
+    nav .wrapper .childs {
+        padding: 15px 0px 3px 12px;
+    }
+
+    nav .wrapper .childs nav span {
+        padding-right: 70px;
+    }
+
+    nav .wrapper .childs nav:nth-of-type(2) span {
+        padding-right: 120px;
+    }
+
+    div:nth-of-type(1) {
+        background: #182029;
+        color: #ffffff;
+        padding: 0%;
+    }
+    @media(min-width:767px){
+        nav span cx-icon {
+            display: none;
+        }
+    }
+    nav:nth-of-type(5) .wrapper .childs nav cx-generic-link a {
+        padding-right: 120px;
+    }
+
+    nav div.wrapper {
+        border-top: #182029;
+    }
+
+    span:nth-of-type(1) {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    span a,
+    cx-generic-link a {
+        display: block;
+        width: 100%;
+        font-weight: 500;
+        font-size: 14px;
+    }
+}
+
+cx-category-navigation cx-navigation-ui nav {
+    .wrapper .childs nav {
+        span {
+            font-size: 18px;
+            font-weight: 400;
+            padding-bottom: 7px;
+        }
+
+        span:hover {
+            background: none;
+        }
+    }
+
+    .wrapper .childs nav .wrapper {
+        border-top: 1px solid #ffffff;
+    }
+
+    .wrapper .childs nav .wrapper .childs {
+        padding: 5px 0px 0px 0px;
+    }
+
+    nav {
+        padding: 5px 9px 9px 9px;
+    }
+
+    span,
+    cx-generic-link a {
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    .wrapper .all {
+        display: none;
+    }
+
+    span:hover,
+    cx-generic-link a:hover {
+        background: #104d83;
+        text-decoration: none;
+    }
+
+    padding-right: 10px;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
+    max-width: 100%;
+    margin: 0%;
+
+    cx-banner cx-generic-link cx-media {
+        padding: 0%;
+    }
+}
+
+// cx-page-layout .NavigationBar{
+//     // background: var(--cx-color-dark);
+//     // color: #ffffff;
+// }
+// @media (max-width: 1000px) and (min-width: 650px) {
+//     cx-page-slot.Section2C app-psenhanced-custom-banner {
+//         .latest-news-content {
+//             max-width: 50%;
+//         }
+//     }
+// }
+
+
+
+//freq backgorund color
+
+app-pscustom-featured-links {
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+    margin-top: 0;
+
+    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+        text-align: center;
+    }
+
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+
+        .js-responsive-image img {
+            width: auto;
+            height: 300px;
+
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    cx-page-slot.Section2B app-pscustom-banner {
+        max-width: fit-content;
+    }
+
+    cx-storefront header {
+        cx-page-layout.header {
+            margin: 0%;
+        }
+    }
+}
+
+app-pscustom-featured-links {
+    color: white;
+    background: #182029;
+    min-height: 220px;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid rgba(189, 189, 189, 0.5);
+    text-decoration: none;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist a {
+    color: white;
+}
+
+app-pscustom-featured-links h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 15px 0 0 40px;
+    line-height: 1.2;
+    
+}
+@media (max-width: 1000px) {
+    cx-page-slot.Section2C app-psenhanced-custom-banner {
+        .latest-news-content {
+            width: 100%;
+        }
+
+        .latest-news-component .latest-news-box-wrapper {
+            max-width: 100%;
+        }
+    }
+    cx-page-layout.LandingPage2Template cx-page-slot.Section2B{
+        padding-top: 0%;
+    }
+
+    cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
+        --cx-flex-basis: 100%;
+    }
+
+    cx-page-slot.Section2C app-psenhanced-custom-banner:nth-of-type(1) .latest-news {
+        margin-left: 0%;
+    }
+    cx-page-slot.Section1 app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+        text-align: center;
+    }
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+        .js-responsive-image img{
+            width: auto;
+            height: 300px;
+            span{
+                font-size: 24px;
+            }
+        }
+    }
+    cx-page-slot.Section2B app-pscustom-banner{
+        max-width: fit-content;
+    }
+     cx-storefront header {
+        cx-page-layout.header{
+            margin: 0%;
+        }
+    }
+    cx-storefront.LandingPage2Template main .LandingPage2Template {
+        background: #ffffff;
+    
+    }
+
+// iphone xr
+ 
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist .tagex li a{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       width: 100%;
+       height: 100%;
+       background: #01579b;
+       color: #fff;
+       line-height: 1.2;
+       font-size: 13px;
+       padding: 10px;
+       border-radius: 2px;
+    }
+
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist h2.serviceall a {
+        color: black;
+    }
+
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2A app-pscustom-featured-links .frequentserviceslist{
+       
+       width: 100%;
+    }
+
+    app-pscustom-featured-links {
+        color: black;
+        background: #fff !important;
+        min-height: 220px;
+        position: relative;
+        margin-top: 0;
+        width: 100%;
+        padding: 0;
+        border-top: 1px solid rgba(189, 189, 189, 0.5);
+    }
+
+    app-pscustom-featured-links h2{
+     color: black;
+        text-align: center;
+    }
+}
+@media (min-width:1000px){
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2C app-psenhanced-custom-banner .latest-news-content
+    {
+        max-width: 40%;
+    }
+}
+@media (min-width: 650px) and (max-width: 1000px){
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2C app-psenhanced-custom-banner .latest-news-content
+    {
+        max-width: 60%;
+    }
+}
+@media (min-width: 576px) and (max-width: 1000px){
+    main cx-page-layout.LandingPage2Template cx-page-slot.Section2B app-pscustom-banner  .hero-boxes .simple-responsive-banner-component{
+   padding: 2.5% !important;
+    }
+
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+    .js-responsive-image img{
+        padding-inline: 10px;
+         }
+    }
+}
+
+cx-storefront header .NavigationBar {
+    flex: 100%;
+    min-height: auto;
+}
+
+cx-storefront main .LandingPage2Template {
+    background: #eee;
+
+}
+
+main {
+    padding-bottom: 3%;
+}
