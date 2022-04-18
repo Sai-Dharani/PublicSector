@@ -1,7 +1,7 @@
 .latest-news {
     position: relative;
     width: 100%;
-    color: #fff;
+    color: var(--cx-color-services );
     margin-top: 1%;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
     overflow: hidden;
@@ -21,7 +21,7 @@
     height: 286px;
     position: relative;
     float: right;
-    background: #002f6c;
+    background: var(--cx-custom-heading);
     padding: 20px;
     font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
 }
@@ -44,7 +44,7 @@
 
 .latest-news-content a {
     font-size: 14px;
-    color: #fff;
+    color: var(--cx-color-services );
     text-transform: uppercase;
 }
 

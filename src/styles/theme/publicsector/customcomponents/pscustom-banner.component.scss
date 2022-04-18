@@ -21,7 +21,7 @@ app-pscustom-banner{
     }
     .hero-boxes .hero-text {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
-        color: #fff;
+        color: var(-cx-color-services) !important;
         width: 100%;
         font-size: 28px;
         font-weight: 400;
@@ -38,9 +38,6 @@ app-pscustom-banner{
     }
 }
 
-app-pscustom-simple-banner .banner-text-wrapper .banner-text {
-        text-align: center;
-    }
 
 //************************************************************
       //************************************************************

@@ -5,10 +5,6 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px
-//   xs: 480px,
-//   sm: 640px,
-//   md: 1024px,
-//   lg: 1400px,
 );
 
 cx-storefront{
@@ -21,13 +17,19 @@ cx-storefront{
 --brand-primary: 	#fdda19;  // yellow color
 --brand-secondary: 	#154259;  // blue color
 --brand-tertiary: 	#182029;  // dark blue gray color
-
+--cx-color-light : white;
+--cx-color-button-background : #01579b;
+--cx-custom-heading : #002f6c;
+--text-color:			#000000;
+--offcanvas-nav-header-background: #123F67;
+--nav-border-color: 			#e7e7e7;
+--link-hover-color:  	#104d83;
+--offcanvas-meta-nav-color: #0B0E12;
+--header-background-color: 	#F5F5F5;
 
 //*********Typography Colors*********
---text-color:			#000000;
 --text-color-secondary:	#19212b;
 --link-color: 			#156ab5;
---link-hover-color:  	#104d83;
 --headline-color:		--link-hover-color;
 
 //== Borders
@@ -50,9 +52,7 @@ cx-storefront{
 --input-error-bg:        #f6e0e0;
 
 
-//*********Header Background*********
---header-background-color: 	#F5F5F5; //set
---nav-border-color: 			#e7e7e7; // set
+//*********Header Background********* //set // set
 
 
 //*********Secondary Navigation colors*********
@@ -89,10 +89,8 @@ cx-storefront{
 
 
 //*********Offcanvas navigation colors*********
---offcanvas-nav-header-color: #ffffff; //set
---offcanvas-nav-header-background: #123F67;  // set
+--offcanvas-nav-header-color: #ffffff; //set // set
 --offcanvas-nav-disabled: --text-color-secondary;
---offcanvas-meta-nav-color: #0B0E12;
 --offcanvas-meta-nav-border-color: --meta-nav-border-color;
 --offcanvas-meta-nav-background: --meta-nav-hover-background;
 --offcanvas-meta-nav-background-open: --meta-nav-background;
