@@ -6,7 +6,6 @@ import { CmsFeaturedLinksComponent } from './CmsFeaturedLinksModel';
 @Component({
   selector: 'app-pscustom-featured-links',
   templateUrl: './pscustom-featured-links.component.html',
-  styleUrls: ['./pscustom-featured-links.component.scss']
 })
 export class PSCustomFeaturedLinksComponent implements OnInit {
 
