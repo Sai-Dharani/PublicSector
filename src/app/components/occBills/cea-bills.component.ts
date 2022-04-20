@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { ceaBill } from './cea-bills.model';
 import { occBillsService } from '../services/occBills.service';
-import * as myConstClass from './fileWithConstants';
+import * as myConstClass from './cea-contants';
 @Component({
   selector: 'cea-bills',
   templateUrl: './cea-bills.component.html',
