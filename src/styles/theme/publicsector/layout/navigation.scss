@@ -152,7 +152,7 @@ cx-storefront header .NavigationBar {
       @include media-breakpoint-between(sm,md) {
         cx-storefront header .NavigationBar cx-category-navigation cx-navigation-ui {
             nav{
-                background-color: var(var(--offcanvas-meta-nav-color));
+                background-color: var(--offcanvas-meta-nav-color);
                 color: var(--cx-color-links);
             }
             span, cx-generic-link a{
@@ -167,5 +167,6 @@ cx-storefront header .NavigationBar {
         .NavigationBar{
             margin: 0;
             width: 380px;
+            left: -380px;
         }
       }
