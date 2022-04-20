@@ -4,7 +4,7 @@ import { OccEndpointsService } from "@spartacus/core";
 import { Observable } from "rxjs";
 
 @Injectable()
-export class PDPService{
+export class ProductDetailsService{
 
 
 constructor(private httpclient: HttpClient, protected occEndpoints: OccEndpointsService){}

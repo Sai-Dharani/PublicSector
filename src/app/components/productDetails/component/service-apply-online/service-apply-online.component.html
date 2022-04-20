@@ -1,0 +1,14 @@
+<ng-container *ngIf="PDP | async as data">
+    <div *ngIf="data.description as description">
+        {{description}}
+    </div>
+    <ng-container *ngFor="let applyOnline of data.applyOnlineCMS">
+        <p>
+            {{applyOnline.description}}
+        </p>
+        <p>
+            {{applyOnline.title}}
+        </p>
+    </ng-container>
+</ng-container>
+

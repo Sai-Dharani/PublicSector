@@ -1,0 +1,10 @@
+<ng-container *ngIf="PDP | async as data">
+    <ng-container *ngIf="data.applyByPhoneCMS as applyByPhone">
+        <p>
+            {{applyByPhone.title}}
+        </p>
+        <p>
+            {{applyByPhone.description}}
+        </p>
+    </ng-container>
+</ng-container>

@@ -1,0 +1,11 @@
+<ng-container *ngIf="PDP | async as data">
+    <ng-container *ngIf="data.keyFacts as keyFacts">
+        <p>
+            {{keyFacts.title}}
+        </p>
+        <p>
+            {{keyFacts.description}}
+        </p>
+    </ng-container>
+    {{data.name}}
+</ng-container>

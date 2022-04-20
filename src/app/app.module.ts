@@ -22,6 +22,7 @@ import { PSCustomBannerModule } from "./components/pscustom-banner/pscustom-bann
 import { CeaBillsRoutingModule } from "./components/occBills/cea-bills.module";
 import { PSCustomHeadingComponent } from "./components/pscustom-heading/pscustom-heading.component";
 import { LogosComponent } from "./components/logos/logos.component";
+import { productDetailsModule } from "./components/productDetails/productDetails.module";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { LogosComponent } from "./components/logos/logos.component";
     PSCustomSocialMediaModule,
     PSCustomFeaturedLinksModule,
     PSCustomSimpleBannerModule,
-    PSCustomBannerModule
+    PSCustomBannerModule,
+    productDetailsModule
   ],
   providers: [provideConfig(publicsectorLayoutConfig)],
   bootstrap: [AppComponent]

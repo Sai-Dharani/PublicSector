@@ -1,0 +1,12 @@
+<ng-container *ngIf="PDP | async as data">
+    <ng-container *ngIf="data.relatedLinks as relatedLinks">
+           <p>
+            {{relatedLinks.title}}
+           </p>
+        <ng-container *ngFor=" let Links of relatedLinks.links">
+            <p>
+                <a href="{{Links.url}}">{{Links.linkName}}</a>
+            </p>
+        </ng-container>
+    </ng-container>
+</ng-container>
