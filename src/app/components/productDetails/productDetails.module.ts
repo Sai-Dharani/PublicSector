@@ -23,7 +23,7 @@ export const productDetailsRoutingConfig: RoutingConfig = {
     ConfigModule.withConfig({
       cmsComponents:{
         PSApplyOnlineComponent:{
-          component : ServiceApplyOnlineComponent
+          component : productDetailsComponent
         },
         PSApplyByEmailComponent:{
           component : ServiceApplyByEmailComponent
@@ -37,12 +37,12 @@ export const productDetailsRoutingConfig: RoutingConfig = {
         PSRelatedLinksComponent : {
           component : ServiceRelatedLinksComponent
         },
-        PSHelpDeskComponent : {
-          component : ServiceHelpDeskComponent
-        },
-        PSShareThisPageComponent: {
-          component : ServiceShareThisPageComponent
-        }
+        // PSHelpDeskComponent : {
+        //   component : ServiceHelpDeskComponent
+        // },
+        // PSShareThisPageComponent: {
+        //   component : ServiceShareThisPageComponent
+        // }
       },
       routing: {
         routes: {

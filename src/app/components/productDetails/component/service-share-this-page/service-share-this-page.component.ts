@@ -10,9 +10,9 @@ import { RegisterServicesComponent } from '../service-help-desk/ServiceModel';
 })
 export class ServiceShareThisPageComponent implements OnInit {
   
-  constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
+  //constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
 
-  data$ : Observable<RegisterServicesComponent> = this.component.data$
+ // data$ : Observable<RegisterServicesComponent> = this.component.data$
 
 
   ngOnInit(): void {

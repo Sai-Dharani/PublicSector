@@ -7,11 +7,11 @@ import { ProductDetailsService } from 'src/app/components/services/productDetail
   styleUrls: ['./service-apply-by-phone.component.scss']
 })
 export class ServiceApplyByPhoneComponent implements OnInit {
-  // @Input() 
+  @Input() 
   PDP:any;
   constructor(private ProductDetailsService:ProductDetailsService) { }
 
   ngOnInit(){
-    this.PDP=this.ProductDetailsService.getProductDetails();
+    //this.PDP=this.ProductDetailsService.getProductDetails();
   }
 }

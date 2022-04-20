@@ -9,11 +9,11 @@ import { ProductDetailsService } from 'src/app/components/services/productDetail
 export class ServiceApplyOnlineComponent implements OnInit {
 
   constructor(private ProductDetailsService:ProductDetailsService) { }
-  // @Input() 
+  @Input() 
   PDP:any;
 
   ngOnInit() {
-      this.PDP=this.ProductDetailsService.getProductDetails();
+      //this.PDP=this.ProductDetailsService.getProductDetails();
     // console.log(JSON.stringify(this.PDP))
   }
 
