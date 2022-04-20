@@ -9,7 +9,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot>* {
 cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
     float: left;
 
-    @media screen and (min-width: 992px) {
+    @include media-breakpoint-up(lg) {
         max-width: 50%;
 
     }
@@ -85,36 +85,141 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
     }
 }
 
+cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
+    float: right;
+
+    @include media-breakpoint-up(lg) {
+        max-width: 50%;
+
+        .col-md-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+
+    }
+
+
+    .form-check-input {
+        height: 5px;
+        margin-top: 0px;
+        max-height: 10px;
+    }
+
+    .justify-content-center {
+        justify-content: right !important;
+    }
+
+    .container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn-link {
+        font-size: 1.125rem;
+        color: --cx-color-button-background;
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+        font-size: 13px;
+    }
+
+    label .label-content {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    .form-control {
+        font-weight: 500;
+
+    }
+
+    .btn:hover,
+    .btn:active:hover,
+    .btn.active:hover {
+        outline: 2px solid --cx-color-dark;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+        color: --btn-primary-color;
+        background-color: --btn-primary-disabled-bg;
+        border-color: --btn-primary-color;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .btn-primary {
+        border: 1px solid;
+        color: --btn-primary-color;
+        ;
+        background-color: --btn-primary-disabled-bg;
+        border-color: --btn-primary-disabled-bg;
+    }
+
+    .btn {
+        font-size: 16px;
+        text-transform: none;
+        white-space: normal;
+    }
+
+    .btn {
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px 15px;
+        font-size: 14px;
+        line-height: 1.375;
+        border-radius: 0 !important;
+    }
+
+    font-family: "Alegreya Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+    cx-login-form.user-form {
+        width: 100%;
+        padding-left: 1%;
+
+        .user-form button,
+        .user-form a {
+            flex: 0 0 calc(50% - 10px);
+            margin-top: 0.5rem;
+        }
+
+
+    }
+}
+
 //************************************************************
-      //************************************************************
-      //************************************************************
-      //************************************************************
-      //                          MOBILE STYLES
-      //************************************************************
-      //************************************************************
-      //************************************************************
-      //************************************************************
-      //************************************************************
-      // 0 - 639px 
-      @media (max-width: --screen-xs-max) {
+//************************************************************
+//************************************************************
+//************************************************************
+//                          MOBILE STYLES
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+// 0 - 639px 
+@include media-breakpoint-down(sm) {}
 
-      
-    }
-    
-     
-    
-    //************************************************************
-    //************************************************************
-    //************************************************************
-    //************************************************************
-    //                          TABLET STYLES
-    //************************************************************
-    //************************************************************
-    //************************************************************
-    //************************************************************
-    //************************************************************
-    
-    // 640px - 1023px 
-    @media (min-width: --screen-sm-min) {
 
-    }
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//                          TABLET STYLES
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+//************************************************************
+
+// 640px - 1023px 
+@include media-breakpoint-between(sm, lg) {}
