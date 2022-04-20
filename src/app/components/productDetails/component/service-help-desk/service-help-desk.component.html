@@ -1,8 +1,4 @@
 <ng-container *ngIf="data$ | async as data">
-    <p>
-        {{data.title}}
-    </p>
-    <p>
-        {{data.description}}
-    </p>
+    <div [innerHtml]="data.title"></div>
+    <div [innerHtml]="data.description"></div>
 </ng-container>

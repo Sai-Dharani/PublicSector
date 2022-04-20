@@ -1,10 +1,6 @@
 <ng-container *ngIf="PDP | async as data">
     <ng-container *ngIf="data.applyByEmailCMS as applyByEmail">
-        <p>
-            {{applyByEmail.title}}
-        </p>
-        <p>
-            {{applyByEmail.description}}
-        </p>
+        <div [innerHtml]="applyByEmail.title"></div>
+        <div [innerHtml]="applyByEmail.description"></div>
     </ng-container>
 </ng-container>

@@ -1,11 +1,7 @@
 <ng-container *ngIf="PDP | async as data">
     <ng-container *ngIf="data.keyFacts as keyFacts">
-        <p>
-            {{keyFacts.title}}
-        </p>
-        <p>
-            {{keyFacts.description}}
-        </p>
+        <div [innerHtml]="keyFacts.title"></div>
+        <div [innerHtml]="keyFacts.description"></div>
     </ng-container>
-    {{data.name}}
+    <div [innerHtml]="data.addToCartLabelText"></div>
 </ng-container>
