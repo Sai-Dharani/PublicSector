@@ -1,0 +1,211 @@
+cx-page-slot.SiteLogin {
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    color: var(--cx-color-dark);
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    cx-login {
+        .cx-login-greet {
+            color: var(--cx-color-dark);
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-left: 5%;
+            font-weight: bold;
+        }
+
+        display: flex;
+        width: 160%;
+        font-weight: 600;
+        font-size: 12px;
+
+        div {
+            width: 70%;
+            padding: 2px 15px 0px 0px;
+        }
+
+        .HeaderLinks cx-link a:hover {
+            color: var(--cx-color-links);
+            background: var(--cx-color-services-background);
+            text-decoration: none;
+            padding: 10%;
+            border-radius: 7%;
+        }
+    }
+}
+cx-storefront header {
+    cx-page-layout.header {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        letter-spacing: 0.1px;
+        .SearchBox{
+            margin: 0%;
+        }
+    }
+    cx-page-slot.SiteLogo{
+        width: 100%;
+    }
+    background-color: var(--cx-color-navbar-background );
+}
+
+ //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          MOBILE STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      // 0 - 639px 
+      @include media-breakpoint-down(sm) {
+        cx-storefront header .header .PreHeader cx-hamburger-menu {
+            .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+                background-color: var(--text-color);
+            }
+            button{
+                position: relative;
+                padding-top: 50px;
+            }
+            .is-active{
+                background-color: var(--offcanvas-nav-header-background);
+                height: auto;
+                color: transparent;
+                overflow: hidden;
+                border: none;
+                position: fixed;
+                right: 0;
+                margin-top: 3%;
+                padding-top: 6%;
+                display: inline-block;
+                cursor: pointer;
+                width: 20%;
+                vertical-align: top;
+                border-left: 2px solid var(--nav-border-color);
+                border-right: 2px solid var(--nav-border-color);
+            }
+            .hamburger.is-active .hamburger-inner, .is-active.cx-hamburger .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .is-active.cx-hamburger .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after, .is-active.cx-hamburger .hamburger-inner::after {
+                 background-color: var(--cx-color-links); 
+            }
+        }
+        cx-storefront header .navigation .SiteLogin{
+            width: 100%;
+            left: 0;
+            position: fixed;
+            cx-login .HeaderLinks{
+                display: none;
+            }
+            cx-login div{
+                line-height: 50px;
+                background-color: var(--offcanvas-nav-header-background);
+                padding: 5px 12px 5px 20px;
+                cursor: pointer;
+                color: var(--cx-color-links);
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                font-size: 16px;
+                height: 60px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+        }
+        cx-storefront header .header .PreHeader{
+            position: absolute;
+        }
+      }
+      
+       
+      
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          TABLET STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      
+      // 640px - 1023px 
+      @include media-breakpoint-between(sm,md) {
+           .offcanvas{
+               cx-storefront main{
+                    transform: translate(380px, 0);
+               }
+          }
+        cx-storefront header .header .PreHeader cx-hamburger-menu {
+            .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+                background-color: var(--text-color);
+            }
+            button{
+                position: relative;
+                top:40px;
+            }
+            button:active{
+                @extend .offcanvas;
+            }
+            .is-active{
+                background-color: var(--offcanvas-nav-header-background);
+                height: auto;
+                color: transparent;
+                overflow: hidden;
+                border: none;
+                position: fixed;
+                margin-left: 25%;
+                margin-top: 4%;
+                display: inline-block;
+                cursor: pointer;
+                width: 20%;
+                vertical-align: top;
+                border-left: 2px solid var(--nav-border-color);
+                border-right: 2px solid var(--nav-border-color);
+            }
+            .hamburger.is-active .hamburger-inner, .is-active.cx-hamburger .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .is-active.cx-hamburger .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after, .is-active.cx-hamburger .hamburger-inner::after {
+                 background-color: var(--cx-color-links); 
+            }
+        }
+        cx-storefront header .navigation .SiteLogin{
+            width: 410px;
+            left: 0;
+            position: fixed;
+            cx-login .HeaderLinks{
+                display: none;
+            }
+            cx-login div{
+                line-height: 50px;
+                background-color: var(--offcanvas-nav-header-background);
+                padding: 5px 12px 5px 20px;
+                cursor: pointer;
+                color: var(--cx-color-links);
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                font-size: 16px;
+                height: 60px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+        }
+        cx-storefront header .header .PreHeader{
+            position: absolute;
+        }
+        cx-storefront header.is-expanded:after {
+            content: "";
+            display: block;
+            position: fixed;
+            width: 410px;
+            top: 0;
+            height: 100%;
+            left: 0;
+            background-color: var(--cx-color-dark);
+            z-index: 2;
+            -webkit-transform-origin-y: translate(410px,0);
+        }
+      }

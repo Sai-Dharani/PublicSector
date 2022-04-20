@@ -1,0 +1,196 @@
+body{
+    overflow-x: hidden;
+    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif !important;
+    // font-family: "Open Sans", Helvetica, Arial, sans-serif ;
+}
+// html{
+//     font-family: sans-serif;
+// }
+
+main {
+    padding-bottom: 3%;
+}
+cx-category-navigation div.hybrislogo{
+    display: none;
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
+    --cx-flex-basis: 50%;
+    margin: auto;
+}
+
+main cx-page-layout.LandingPage2Template {
+    display: block;
+    flex-wrap: wrap;
+}
+
+a cx-media {
+    position: relative;
+    display: auto;
+    width: auto;
+    padding: 10px;
+}
+
+cx-media {
+    position: relative;
+    display: flex;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2A,
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 1 !important;
+    max-width: 100% !important;
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    padding-top: 5%;
+}
+
+main .LandingPage2Template .Section2B cx-banner cx-generic-link a .headline {
+    font-weight: normal;
+    font-size: 1.5vw;
+    display: flex;
+    padding-top: 17%;
+    overflow-wrap: break-word;
+    width: auto;
+    line-height: 1;
+    font-family: sans-serif;
+    margin: 0 3% 0 3%;
+}
+
+cx-page-slot.Section2C .heading {
+    padding-bottom: 2px;
+}
+
+main cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
+    max-width: 100%;
+    margin: 0%;
+
+    cx-banner cx-generic-link cx-media {
+        padding: 0%;
+    }
+}
+
+cx-storefront header .NavigationBar {
+    flex: 100%;
+    min-height: auto;
+}
+
+cx-storefront main .LandingPage2Template {
+    background: var(--cx-color-main-background);
+  //  background: #eee;
+
+}
+ //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          MOBILE STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      // 0 - 639px 
+      @include media-breakpoint-down(sm) {
+        cx-storefront{
+            overflow-x: hidden;
+        }
+        main cx-page-layout.LandingPage2Template cx-page-slot.Section1 app-pscustom-simple-banner img{
+            height: 367px;
+            object-fit: cover;
+        }
+            cx-page-layout.LandingPage2Template cx-page-slot.Section2B{
+                padding-top: 0%;
+            }
+        
+            cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
+                --cx-flex-basis: 100%;
+            }
+        
+             cx-storefront header {
+                cx-page-layout.header{
+                    margin: 0%;
+                    background-color: var(--header-background-color);
+                }
+            }
+            cx-storefront.LandingPage2Template main .LandingPage2Template {
+                background: var(--cx-color-links);
+            
+            }
+            cx-category-navigation div.hybrislogo{
+                position: fixed;
+                display: block;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: var(--header-background-color);
+                width: 100%;
+                padding: 10px 20px 9px 20px;
+                margin: 0;
+                height: auto;
+            }
+            app-logos .title{
+                padding-bottom: 0%;
+            }
+        }
+      
+       
+      
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          TABLET STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      
+      // 640px - 1023px 
+      @include media-breakpoint-between(sm,md) {
+        cx-storefront{
+            overflow-x: hidden;
+        }
+        cx-storefront.LandingPage2Template main .LandingPage2Template {
+            background: var(--cx-color-links);
+        }
+        cx-page-slot.Section2B div.heading .news{
+            margin-bottom: 35px;
+            margin-top: 80px;
+        }
+    
+         cx-storefront header {
+            cx-page-layout.header{
+                margin: 0%;
+            }
+        }
+
+        cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
+            --cx-flex-basis: 100%;
+        }
+
+        cx-page-layout.LandingPage2Template cx-page-slot.Section2C app-psenhanced-custom-banner{
+            width: 100%;
+
+        }
+    
+        cx-category-navigation div.hybrislogo{
+            position: fixed;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--header-background-color);
+            width: 100%;
+            padding: 10px 20px 9px 20px;
+            margin: 0;
+            height: auto;
+        }
+        app-logos .title{
+            justify-content: center;
+            padding-bottom: 5%;
+        }
+
+      }
