@@ -1,8 +1,10 @@
-<ng-container *ngIf="PDP | async as data">
+<ng-container *ngIf="PDP | async as data" class="card-transparent">
+    
     <h1 [innerHtml]="data.name"></h1>
     <div *ngIf="data.description as description">
        <div [innerHtml]="description"></div> 
     </div>
+    <div class="card">
     <ng-container *ngFor="let applyOnline of data.applyOnlineCMS">
         <h2 [innerHtml]="applyOnline.title"></h2>
         <div [innerHtml]="applyOnline.description"></div>
@@ -10,5 +12,6 @@
             <span>{{data.addToCartLabelText}}</span>
         </button>
     </ng-container>
+</div>
 </ng-container>
 

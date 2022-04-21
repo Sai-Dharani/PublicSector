@@ -1,0 +1,64 @@
+.card{
+    margin: 15px 0 15px 0;
+background: #f2f2f2;
+min-height: auto;
+display: inline-block;
+padding-bottom: 20px;
+width: 100%;
+word-break: break-all;
+padding: 0 20px 20px 20px;
+}
+
+h2{
+    font-size: 20px;
+    //margin-bottom: 0;
+    margin: 20px 15px 10px 0px;
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+
+button{
+    width: 100%;
+}
+.btn-primary {
+    border: 1px solid;
+    color: #000000;
+    background-color: #fdda19;
+    border-color: #fdda19;
+}
+
+.btn{
+    font-size: 16px;
+    text-transform: none;
+    white-space: normal;
+    box-shadow: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    
+    line-height: 1.375;
+}
+
+
+
+//************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          MOBILE STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      // 0 - 639px 
+    //   @include media-breakpoint-down(sm) {
+    //     app-service-key-facts{
+
+    //     }
+    //   }
+
+    // @media  (min-width: 576px)
+    // {
+    //     padding: ;
+    // }
