@@ -4,8 +4,7 @@
     height: auto;
     padding-bottom: 20px;
     width: 100%;
-}
-
+} 
 h1{
     font-size: 30px;
     color: #154f82;
@@ -20,11 +19,6 @@ h1{
     margin-inline-end: 0px;
 }
 
-h2{
-    font-size: 20px;
-    font-weight:bold;
-    //color: red;
-}
 button{
     width: 100%;
 }
@@ -46,22 +40,6 @@ button{
     line-height: 1.375;
 }
 
-.card{
-    margin: 15px 0 15px 0;
-background: #f2f2f2;
-min-height: auto;
-display: inline-block;
-padding-bottom: 20px;
-width: 100%;
-word-break: break-all;
-padding: 0 20px 20px 20px;
-}
-
-h2{
-    font-size: 20px;
-    //margin-bottom: 0;
-    margin: 20px 15px 10px 0px;
-    border-bottom: 1px solid #d3d3d3;
-    padding-bottom: 15px;
-    font-weight: 500;
+.applyOnline:nth-child(2n){
+    display: none;
 }

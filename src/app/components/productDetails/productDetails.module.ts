@@ -25,18 +25,18 @@ export const productDetailsRoutingConfig: RoutingConfig = {
         PSApplyOnlineComponent:{
           component : productDetailsComponent
         },
-        PSApplyByEmailComponent:{
-          component : ServiceApplyByEmailComponent
-        },
-        PSApplyByPhoneComponent : {
-          component : ServiceApplyByPhoneComponent
-        },
-        PSKeyFactsComponent : {
-          component : ServiceKeyFactsComponent
-        },
-        PSRelatedLinksComponent : {
-          component : ServiceRelatedLinksComponent
-        },
+        // PSApplyByEmailComponent:{
+        //   component : ServiceApplyByEmailComponent
+        // },
+        // PSApplyByPhoneComponent : {
+        //   component : ServiceApplyByPhoneComponent
+        // },
+        // PSKeyFactsComponent : {
+        //   component : ServiceKeyFactsComponent
+        // },
+        // PSRelatedLinksComponent : {
+        //   component : ServiceRelatedLinksComponent
+        // },
         // PSHelpDeskComponent : {
         //   component : ServiceHelpDeskComponent
         // },

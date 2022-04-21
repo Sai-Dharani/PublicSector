@@ -9,9 +9,9 @@ import { RegisterServicesComponent } from './ServiceModel';
   styleUrls: ['./service-help-desk.component.scss']
 })
 export class ServiceHelpDeskComponent implements OnInit {
-  constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
+  //constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
 
-  data$ : Observable<RegisterServicesComponent> = this.component.data$
+ // data$ : Observable<RegisterServicesComponent> = this.component.data$
   ngOnInit(){
 
   }

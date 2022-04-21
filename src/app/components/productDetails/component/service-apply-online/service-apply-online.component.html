@@ -2,15 +2,17 @@
     
     <h1 [innerHtml]="data.name"></h1>
     <div *ngIf="data.description as description">
-       <div [innerHtml]="description"></div> 
+       <div class="onlineDescription" [innerHtml]="description"></div> 
     </div>
     <div class="card">
     <ng-container *ngFor="let applyOnline of data.applyOnlineCMS">
-        <h2 [innerHtml]="applyOnline.title"></h2>
-        <div [innerHtml]="applyOnline.description"></div>
-        <button class="btn btn-primary" type="submit">
-            <span>{{data.addToCartLabelText}}</span>
-        </button>
+        <div class="applyOnline">
+            <h2 [innerHtml]="applyOnline.title"></h2> 
+            <div class="servicesDescription" [innerHtml]="applyOnline.description"></div>
+            <button class="btn btn-primary" type="submit">
+                <span>{{data.addToCartLabelText}}</span>
+            </button>
+        </div>
     </ng-container>
 </div>
 </ng-container>

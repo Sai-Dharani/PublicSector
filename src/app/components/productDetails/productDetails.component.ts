@@ -4,11 +4,10 @@ import { ProductDetailsService } from '../services/productDetails.service';
 @Component({
   selector: 'app-productDetails',
   templateUrl: './productDetails.component.html',
-  styleUrls: ['./productDetails.component.scss']
 })
 export class productDetailsComponent implements OnInit {
 pdp : any;
-  constructor(private ProductDetailsService:ProductDetailsService) { }
+constructor(private ProductDetailsService:ProductDetailsService) { }
 
   ngOnInit(){
     console.log(this.pdp)
