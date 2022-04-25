@@ -10,11 +10,11 @@ import { ServiceRelatedLinksComponent } from './component/service-related-links/
 import { ServiceHelpDeskComponent } from './component/service-help-desk/service-help-desk.component';
 import { ServiceShareThisPageComponent } from './component/service-share-this-page/service-share-this-page.component';
 import { productDetailsComponent } from './productDetails.component';
+import { RouterModule } from '@angular/router';
 
 export const productDetailsRoutingConfig: RoutingConfig = {
 
 };
-
 @NgModule({
   declarations: [productDetailsComponent, ServiceApplyOnlineComponent, ServiceApplyByEmailComponent, ServiceApplyByPhoneComponent, ServiceKeyFactsComponent, ServiceRelatedLinksComponent, ServiceHelpDeskComponent, ServiceShareThisPageComponent],
   exports: [productDetailsComponent, ServiceApplyOnlineComponent, ServiceApplyByEmailComponent, ServiceApplyByPhoneComponent],
@@ -23,32 +23,25 @@ export const productDetailsRoutingConfig: RoutingConfig = {
     ConfigModule.withConfig({
       cmsComponents:{
         PSApplyOnlineComponent:{
-          component : productDetailsComponent
+          component : ServiceApplyOnlineComponent
         },
-        // PSApplyByEmailComponent:{
-        //   component : ServiceApplyByEmailComponent
-        // },
-        // PSApplyByPhoneComponent : {
-        //   component : ServiceApplyByPhoneComponent
-        // },
-        // PSKeyFactsComponent : {
-        //   component : ServiceKeyFactsComponent
-        // },
-        // PSRelatedLinksComponent : {
-        //   component : ServiceRelatedLinksComponent
-        // },
-        // PSHelpDeskComponent : {
-        //   component : ServiceHelpDeskComponent
-        // },
-        // PSShareThisPageComponent: {
-        //   component : ServiceShareThisPageComponent
-        // }
-      },
-      routing: {
-        routes: {
-          ProductDetail: {
-            paths: ['p/register-birth'],
-          }
+        PSApplyByEmailComponent:{
+          component : ServiceApplyByEmailComponent
+        },
+        PSApplyByPhoneComponent : {
+          component : ServiceApplyByPhoneComponent
+        },
+        PSKeyFactsComponent : {
+          component : ServiceKeyFactsComponent
+        },
+        PSRelatedLinksComponent : {
+          component : ServiceRelatedLinksComponent
+        },
+        PSHelpDeskComponent : {
+          component : ServiceHelpDeskComponent
+        },
+        PSShareThisPageComponent: {
+          component : ServiceShareThisPageComponent
         }
       }
     })

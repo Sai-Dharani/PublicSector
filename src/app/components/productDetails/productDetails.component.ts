@@ -1,16 +1,13 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
-import { ProductDetailsService } from '../services/productDetails.service';
+import { ChangeDetectorRef, Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-productDetails',
   templateUrl: './productDetails.component.html',
 })
 export class productDetailsComponent implements OnInit {
-pdp : any;
-constructor(private ProductDetailsService:ProductDetailsService) { }
+constructor(protected cdr: ChangeDetectorRef) { }
 
   ngOnInit(){
-    console.log(this.pdp)
-    this.pdp = this.ProductDetailsService.getProductDetails()
+    //this.cdr.checkNoChanges()
   }
 }

@@ -1,8 +1,7 @@
-<!-- <ng-container *ngIf="data$ | async as data">
-    <p>
-        {{data.title}}
-    </p>
-</ng-container> -->
 <div class="card">
-    <h2>Share this page</h2>
+    <ng-container *ngIf="data$ | async as data">
+        <h2>
+            {{data.title}}
+        </h2>
+    </ng-container>
 </div>

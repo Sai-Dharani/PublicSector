@@ -3,16 +3,14 @@ import { ProductDetailsService } from 'src/app/components/services/productDetail
 
 @Component({
   selector: 'app-service-key-facts',
-  templateUrl: './service-key-facts.component.html',
-  styleUrls: ['./service-key-facts.component.scss']
+  templateUrl: './service-key-facts.component.html'
 })
 export class ServiceKeyFactsComponent implements OnInit {
-  @Input() 
   PDP:any;
   constructor(private ProductDetailsService:ProductDetailsService) { }
 
   ngOnInit(){
-   // this.PDP=this.ProductDetailsService.getProductDetails();
+    this.PDP=this.ProductDetailsService.getProductDetails();
   }
 
 }

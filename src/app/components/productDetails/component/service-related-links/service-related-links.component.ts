@@ -3,16 +3,14 @@ import { ProductDetailsService } from 'src/app/components/services/productDetail
 
 @Component({
   selector: 'app-service-related-links',
-  templateUrl: './service-related-links.component.html',
-  styleUrls: ['./service-related-links.component.scss']
+  templateUrl: './service-related-links.component.html'
 })
 export class ServiceRelatedLinksComponent implements OnInit {
-  @Input() 
   PDP:any;
   constructor(private ProductDetailsService:ProductDetailsService) { }
 
   ngOnInit(){
-   // this.PDP=this.ProductDetailsService.getProductDetails();
+    this.PDP=this.ProductDetailsService.getProductDetails();
   }
 
 

@@ -3,18 +3,15 @@ import { ProductDetailsService } from 'src/app/components/services/productDetail
 
 @Component({
   selector: 'app-service-apply-online',
-  templateUrl: './service-apply-online.component.html',
-  styleUrls: ['./service-apply-online.component.scss']
+  templateUrl: './service-apply-online.component.html'
 })
 export class ServiceApplyOnlineComponent implements OnInit {
 
   constructor(private ProductDetailsService:ProductDetailsService) { }
-  @Input() 
   PDP:any;
 
   ngOnInit() {
-      //this.PDP=this.ProductDetailsService.getProductDetails();
-    // console.log(JSON.stringify(this.PDP))
+      this.PDP=this.ProductDetailsService.getProductDetails();
   }
 
   
