@@ -1,6 +1,26 @@
-<ng-container *ngIf="data$ | async as data">
+<!-- <ng-container *ngIf="data$ | async as data">
     <div class="card">
-        <h2 [innerHtml]="data.title"></h2>
+        <h2 [innerHtml]="title"></h2>
         <p class="servicesDescription" [innerHtml]="data.description"></p>
     </div>
-</ng-container>
+</ng-container> -->
+<!-- <ng-container *ngIf="data$ | async as data">
+    <div [innerHtml]="data.title"></div>
+    <div [innerHtml]="data.description"></div>
+</ng-container> -->
+<div class="card col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="card-section">
+        <div class="card-section">
+            <div class="card-section-h2">
+                <h2><span tabindex="0">Helpdesk</span></h2>
+            </div>
+            <div id="helpSection">
+                <div>
+                    Our helpdesk will assist you should you have any questions about this application. Our Customer
+                    Service
+                    representatives are available during these hours:</div>
+
+                <p><span>Mon - Sat: 7am - 7pm</span></p>
+                <div><span>on +61 12345 678</span></div>
+            </div>
+        </div>

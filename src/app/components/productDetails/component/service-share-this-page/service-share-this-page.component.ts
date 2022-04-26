@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CmsComponentData } from '@spartacus/storefront';
 import { Observable } from 'rxjs';
-import { RegisterServicesComponent } from '../service-help-desk/ServiceModel';
+import { ProductDetailsService } from 'src/app/components/services/productDetails.service';
 
 @Component({
   selector: 'app-service-share-this-page',
   templateUrl: './service-share-this-page.component.html'
 })
 export class ServiceShareThisPageComponent implements OnInit {
-  
-  constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
 
- data$ : Observable<RegisterServicesComponent> = this.component.data$
+  // constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
+
+  //  data$ : Observable<RegisterServicesComponent> = this.component.data$
 
 
   ngOnInit(): void {
