@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CmsComponentData } from '@spartacus/storefront';
 import { Observable } from 'rxjs';
-import { ProductDetailsService } from 'src/app/components/services/productDetails.service';
+import { RegisterServicesComponent } from '../../productDetails.Model';
 
 @Component({
   selector: 'app-service-share-this-page',
@@ -9,9 +9,9 @@ import { ProductDetailsService } from 'src/app/components/services/productDetail
 })
 export class ServiceShareThisPageComponent implements OnInit {
 
-  // constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
+  constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
 
-  //  data$ : Observable<RegisterServicesComponent> = this.component.data$
+   data$ : Observable<RegisterServicesComponent> = this.component.data$
 
 
   ngOnInit(): void {

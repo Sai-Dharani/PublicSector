@@ -1,3 +1,4 @@
+import { Component, OnInit } from '@angular/core';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { OccEndpointsService } from "@spartacus/core";
@@ -11,14 +12,19 @@ export class ProductDetailsService {
 
     constructor(private httpclient: HttpClient, protected occEndpoints: OccEndpointsService, private route: Router) {
         this.href = this.route.url.split('/').pop()
-        console.log(this.href)
+        console.log(this.href);
+        // let currentUrl = this.route.url;
+        // this.route.navigateByUrl(currentUrl)
     }
 
     getProductDetails(): Observable<any> {
         this.pdp = `/products/${this.href}?fields=FULL`;
-        // this.cdr.detectChanges();
+         //this.cdr.detectChanges();
         // window.location.reload();
+        // let currentUrl = this.route.url;
+        // this.route.navigateByUrl(this.occEndpoints.getBaseUrl() + currentUrl)
         return this.httpclient.get(this.occEndpoints.getBaseUrl() + this.pdp);
+        //this.cdr.detectChanges();
 
     }
 }

@@ -8,6 +8,6 @@ export class productDetailsComponent implements OnInit {
 constructor(protected cdr: ChangeDetectorRef) { }
 
   ngOnInit(){
-    //this.cdr.checkNoChanges()
+    this.cdr.detectChanges();
   }
 }
