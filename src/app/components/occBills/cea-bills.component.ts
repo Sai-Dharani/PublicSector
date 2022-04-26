@@ -7,6 +7,7 @@ import { occBillsService } from '../services/occBills.service';
   templateUrl: './cea-bills.component.html',
   styleUrls: ['./cea-bills.component.scss']
 
+
 })
 export class CeaBillsComponent implements OnInit {
   config = {
