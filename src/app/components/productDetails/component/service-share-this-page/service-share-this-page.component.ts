@@ -9,16 +9,12 @@ import { RegisterServicesComponent } from '../../productDetails.Model';
 })
 export class ServiceShareThisPageComponent implements OnInit {
 
-  constructor(private component:CmsComponentData<RegisterServicesComponent>) { }
+  constructor(private component: CmsComponentData<RegisterServicesComponent>) { }
 
-   data$ : Observable<RegisterServicesComponent> = this.component.data$
+  data$: Observable<RegisterServicesComponent> = this.component.data$
 
 
-  constructor(private ProductDetailsService: ProductDetailsService) { }
-  PDP: any;
-
-  ngOnInit() {
-    this.PDP = this.ProductDetailsService.getProductDetails();
+  ngOnInit(): void {
   }
 
 }

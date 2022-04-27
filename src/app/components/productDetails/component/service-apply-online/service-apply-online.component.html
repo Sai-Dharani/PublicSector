@@ -1,19 +1,20 @@
 <ng-container *ngIf="PDP | async as data" class="card-transparent">
-    
+
     <h1 [innerHtml]="data.name"></h1>
     <div *ngIf="data.description as description">
-       <p class="onlineDescription" [innerHtml]="description"></p> 
+        <p class="onlineDescription" [innerHtml]="description"></p>
     </div>
     <div class="card">
-    <ng-container *ngFor="let applyOnline of data.applyOnlineCMS">
-        <div class="applyOnline">
-            <h2 [innerHtml]="applyOnline.title"></h2> 
-            <p class="servicesDescription" [innerHtml]="applyOnline.description"></p>
-            <button class="btn btn-primary" type="submit">
-                <span>{{data.addToCartLabelText}}</span>
-            </button>
-        </div>
-    </ng-container>
-</div>
+        <ng-container *ngFor="let applyOnline of data.applyOnlineCMS">
+            <div class="applyOnline">
+                <h2 [innerHtml]="applyOnline.title"></h2>
+                <p class="servicesDescription" [innerHtml]="applyOnline.description"></p>
+                <!-- <button class="btn btn-primary" type="submit">
+                    <span>{{data.addToCartLabelText}}</span>
+                </button> -->
+                <cx-add-to-cart class="cart" [showQuantity]="false" [product]="product">
+                </cx-add-to-cart>
+            </div>
+        </ng-container>
+    </div>
 </ng-container>
-

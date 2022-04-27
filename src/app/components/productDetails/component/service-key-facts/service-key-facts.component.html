@@ -1,10 +1,13 @@
-<div class="row card"><ng-container *ngIf="PDP | async as data">
-    <ng-container *ngIf="data.keyFacts as keyFacts">
-        <h2 [innerHtml]="keyFacts.title"></h2>
-        <div class="servicesDescription"  [innerHtml]="keyFacts.description"></div>
+<div class="row card">
+    <ng-container *ngIf="PDP | async as data">
+        <ng-container *ngIf="data.keyFacts as keyFacts">
+            <h2 [innerHtml]="keyFacts.title"></h2>
+            <div class="servicesDescription" [innerHtml]="keyFacts.description"></div>
+        </ng-container>
+        <!-- <button class="btn btn-primary" type="submit">
+            <span>{{data.addToCartLabelText}}</span>
+        </button> -->
+        <cx-add-to-cart class="cart" [showQuantity]="false" [product]="product">
+        </cx-add-to-cart>
     </ng-container>
-    <button class="btn btn-primary" type="submit">
-        <span>{{data.addToCartLabelText}}</span>
-    </button>
-</ng-container>
 </div>

@@ -9,16 +9,16 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class ServiceApplyOnlineComponent implements OnInit {
 
-  constructor(private ProductDetailsService:ProductDetailsService, private route: Router, protected cdr: ChangeDetectorRef,) { }
-  PDP:any;
+  constructor(private ProductDetailsService: ProductDetailsService, private route: Router, protected cdr: ChangeDetectorRef,) { }
+  PDP: any;
 
   ngOnInit() {
     let currentUrl = this.route.url;
     // console.log(currentUrl)
     // this.route.navigateByUrl(currentUrl)
-    this.PDP=this.ProductDetailsService.getProductDetails();
+    this.PDP = this.ProductDetailsService.getProductDetails();
     this.cdr.detectChanges();
   }
 
-  
+
 }

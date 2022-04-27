@@ -11,37 +11,50 @@ import { ServiceHelpDeskComponent } from './component/service-help-desk/service-
 import { ServiceShareThisPageComponent } from './component/service-share-this-page/service-share-this-page.component';
 import { productDetailsComponent } from './productDetails.component';
 import { RouterModule } from '@angular/router';
+import { AddToCartModule } from '@spartacus/storefront';
 
-export const productDetailsRoutingConfig: RoutingConfig = {
-
+export const translationOverwrites = {
+  en: {
+    product: {
+      addToCart: {
+        addToCart: 'Register Now',
+      },
+    },
+  },
 };
+// export const productDetailsRoutingConfig: RoutingConfig = {
+
+// };
 @NgModule({
   declarations: [productDetailsComponent, ServiceApplyOnlineComponent, ServiceApplyByEmailComponent, ServiceApplyByPhoneComponent, ServiceKeyFactsComponent, ServiceRelatedLinksComponent, ServiceHelpDeskComponent, ServiceShareThisPageComponent],
   exports: [productDetailsComponent, ServiceApplyOnlineComponent, ServiceApplyByEmailComponent, ServiceApplyByPhoneComponent],
   imports: [
     CommonModule,
+    AddToCartModule,
+
     ConfigModule.withConfig({
-      cmsComponents:{
-        PSApplyOnlineComponent:{
-          component : ServiceApplyOnlineComponent
+      i18n: { resources: translationOverwrites },
+      cmsComponents: {
+        PSApplyOnlineComponent: {
+          component: ServiceApplyOnlineComponent
         },
-        PSApplyByEmailComponent:{
-          component : ServiceApplyByEmailComponent
+        PSApplyByEmailComponent: {
+          component: ServiceApplyByEmailComponent
         },
-        PSApplyByPhoneComponent : {
-          component : ServiceApplyByPhoneComponent
+        PSApplyByPhoneComponent: {
+          component: ServiceApplyByPhoneComponent
         },
-        PSKeyFactsComponent : {
-          component : ServiceKeyFactsComponent
+        PSKeyFactsComponent: {
+          component: ServiceKeyFactsComponent
         },
-        PSRelatedLinksComponent : {
-          component : ServiceRelatedLinksComponent
+        PSRelatedLinksComponent: {
+          component: ServiceRelatedLinksComponent
         },
-        PSHelpDeskComponent : {
-          component : ServiceHelpDeskComponent
+        PSHelpDeskComponent: {
+          component: ServiceHelpDeskComponent
         },
         PSShareThisPageComponent: {
-          component : ServiceShareThisPageComponent
+          component: ServiceShareThisPageComponent
         }
       }
     })
