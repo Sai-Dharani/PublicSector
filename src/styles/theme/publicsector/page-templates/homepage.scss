@@ -5,7 +5,7 @@ main {
     padding-bottom: 3%;
 }
 cx-category-navigation div.hybrislogo{
-    display: none;
+    display: none !important;
 }
 
 cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
