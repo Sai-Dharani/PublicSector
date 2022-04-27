@@ -14,7 +14,11 @@ export class ServiceShareThisPageComponent implements OnInit {
    data$ : Observable<RegisterServicesComponent> = this.component.data$
 
 
-  ngOnInit(): void {
+  constructor(private ProductDetailsService: ProductDetailsService) { }
+  PDP: any;
+
+  ngOnInit() {
+    this.PDP = this.ProductDetailsService.getProductDetails();
   }
 
 }

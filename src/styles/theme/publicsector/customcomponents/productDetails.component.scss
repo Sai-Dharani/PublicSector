@@ -139,15 +139,15 @@
 
 //share this page
 
-.pdp-section-h2 {
-    font-size: 18px;
-    font-weight: 500;
-    margin: 20px 15px 10px 0px;
-    border-bottom: 1px solid var(--btn-default-hover-border);
-    padding-bottom: 15px;
-    font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+// .pdp-section-h2 {
+//     font-size: 18px;
+//     font-weight: 500;
+//     margin: 20px 15px 10px 0px;
+//     border-bottom: 1px solid var(--btn-default-hover-border);
+//     padding-bottom: 15px;
+//     font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
 
-}
+// }
 
 .icon {
     height: 27px;
@@ -209,6 +209,10 @@ a {
     background-color: transparent;
 }
 
+.icon-list {
+    list-style: none !important;
+}
+
 .follow-us-Facebook {
     background-image: url('/assets/icons/rr_facebook.png');
     position: relative;
@@ -224,6 +228,12 @@ a {
     text-indent: 100%;
     overflow: hidden;
     background-position-x: center;
+}
+
+.follow-us-Facebook:hover,
+.follow-us-Facebook:focus {
+    background-image: url('/assets/icons/facebook.gif');
+    outline: 5px double #000000;
 }
 
 .follow-us-Twitter {
@@ -290,8 +300,13 @@ a {
 
 //help desk
 .helpSection {
-    font-size: 10px;
+    font-size: 16px;
+}
 
+.card-section-description {
+    margin-top: 20px;
+    margin-left: 17px;
+    margin-right: 17px;
 }
 
 
