@@ -27,21 +27,19 @@ cx-category-navigation cx-navigation-ui.flyout {
     }
 
     div:nth-of-type(1) {
-        background: #182029;
+        background: var(--cx-color-navbar-background );
         color: var(--cx-color-links);
         padding: 0%;
     }
-     @media(min-width:767px){
-        nav span cx-icon {
-            display: none;
-        }
+    nav span cx-icon {
+        display: none;
     }
     nav:nth-of-type(5) .wrapper .childs nav cx-generic-link a {
         padding-right: 120px;
     }
 
     nav div.wrapper {
-        border-top: #182029;
+        border-top: var(--brand-tertiary);
     }
 
     span:nth-of-type(1) {
@@ -94,7 +92,7 @@ cx-category-navigation cx-navigation-ui nav {
 
     span:hover,
     cx-generic-link a:hover {
-        background: #104d83;
+        background: var(--link-hover-color);
         text-decoration: none;
     }
 
@@ -121,13 +119,18 @@ cx-storefront header .NavigationBar {
       @include media-breakpoint-down(sm) {
         cx-storefront header .NavigationBar cx-category-navigation cx-navigation-ui {
             nav{
-                background-color: #0b0e12;
-                color: #ffffff;
+                background-color: var(--offcanvas-meta-nav-color);
+                color: var(--cx-color-links);
             }
             span, cx-generic-link a{
                 padding: 20px 30% 20px 50px;
             }
-    
+            padding-top: 4%;
+        }
+        cx-category-navigation cx-navigation-ui.flyout{
+            nav span cx-icon {
+                display: block;
+            } 
         }
       
       }
@@ -146,6 +149,24 @@ cx-storefront header .NavigationBar {
       //************************************************************
       
       // 640px - 1023px 
-      @media (min-width: --screen-sm-min) {
-
+      @include media-breakpoint-between(sm,md) {
+        cx-storefront header .NavigationBar cx-category-navigation cx-navigation-ui {
+            nav{
+                background-color: var(--offcanvas-meta-nav-color);
+                color: var(--cx-color-links);
+            }
+            span, cx-generic-link a{
+                padding: 20px 30% 20px 50px;
+            }
+        }
+        cx-category-navigation cx-navigation-ui.flyout{
+            nav span cx-icon {
+                display: block;
+            } 
+        }
+        .NavigationBar{
+            margin: 0;
+            width: 380px;
+            left: -380px;
+        }
       }

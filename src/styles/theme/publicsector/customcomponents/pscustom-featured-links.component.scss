@@ -1,0 +1,210 @@
+app-pscustom-featured-links{
+
+    color: var(--cx-color-light);
+    background: var(--cx-color-navbar-background );
+    min-height: 220px;
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    padding: 0;
+    border-top: 1px solid rgba(189, 189, 189, 0.5);
+    text-decoration: none;
+
+    cx-storefront header {
+        cx-page-layout.header {
+            margin: 0%;
+        }
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+    .tagex a:focus{
+        background-color: var(--brand-primary);
+        color: var(--cx-color-dark);
+    }
+    .frequentserviceslist a {
+        color: var(--cx-color-light);
+    }
+    .tagex li {
+        display: grid;
+        list-style-type: none;
+        grid-gap: 10px;
+        font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
+        font-size: 14px; 
+    }
+    .frequentserviceslist ul.tagex{
+        margin-left: 40px;
+    }
+    ul{
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:10px;
+        grid-auto-rows: 1fr;
+        width: 100%;
+    }
+    .serviceall a{
+        text-decoration: none;
+        color: var(--cx-color-services);
+        font-size: 16px;
+    }
+
+    .frequentserviceslist{
+        float: right;
+        margin-right: 5%;
+    }
+
+    // .frequentserviceslist a{ 
+    //     color: white;
+    // }
+
+    cx-page-slot.Section2B app-pscustom-banner .hero-boxes-wrapper .simple-responsive-banner-component {
+        padding-top: 0%;
+        padding-bottom: 0%;
+
+        .js-responsive-image img {
+            width: auto;
+            height: 300px;
+
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    h2 {
+        color: var(--cx-color-services);
+        text-transform: uppercase;
+        font-weight: normal;
+        font-family: inherit;
+        letter-spacing: 1px;
+        font-size: 18px;
+        margin: 15px 0 0 40px;
+        line-height: 1.2;
+    }
+
+}
+
+//************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //                          MOBILE STYLES
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      //************************************************************
+      // 0 - 639px 
+      @include media-breakpoint-down(sm) {
+        app-pscustom-featured-links{
+            color: var(-cx-color-dark);
+            background: var(--cx-color-services) !important;
+            min-height: 220px;
+            position: relative;
+            margin-top: 0;
+            width: 100%;
+            padding: 0;
+            border-top: 1px solid rgba(189, 189, 189, 0.5);
+         .frequentserviceslist{
+            margin-right: 0% !important;
+            margin-bottom: 14%;
+        }
+        ul{
+            padding: 0 10px;
+            margin-left: 0%;
+        }
+        h2{
+            margin-left: 0%;
+        }
+         .frequentserviceslist .tagex li a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background: var(--cx-color-button-background);
+            color: var(--cx-color-services);
+            line-height: 1.2;
+            font-size: 13px;
+            padding: 10px;
+            border-radius: 2px;
+         }
+     
+          .frequentserviceslist h2.serviceall a {
+             color: var(-cx-color-dark);
+             color: var(--cx-color-dark) !important;
+         }
+     
+          .frequentserviceslist{
+             width: 100% !important;
+         }
+         
+          .frequentserviceslist ul.tagex {
+             margin-left: 0%;
+             padding: 0 10px 0 10px;
+         }
+            h2{
+             color: var(-cx-color-dark) !important;
+             color: var(--cx-color-dark);
+             text-align: center;
+         }
+        }
+    }
+    
+     
+    
+    //************************************************************
+    //************************************************************
+    //************************************************************
+    //************************************************************
+    //                          TABLET STYLES
+    //************************************************************
+    //************************************************************
+    //************************************************************
+    //************************************************************
+    //************************************************************
+    
+    // 640px - 1023px 
+    @include media-breakpoint-between(sm, md) {
+        app-pscustom-featured-links .frequentserviceslist .tagex li a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background: var(--cx-color-button-background);
+            color: var(--cx-color-services);
+            line-height: 1.2;
+            font-size: 13px;
+            padding: 10px;
+            border-radius: 2px;
+         }
+     
+         app-pscustom-featured-links .frequentserviceslist h2.serviceall a {
+             color: var(--cx-color-dark) !important;
+             text-align: center;
+         }
+         app-pscustom-featured-links .frequentserviceslist h2 {
+            color: var(-cx-color-dark);
+            text-align: center;
+        }
+     
+        app-pscustom-featured-links .frequentserviceslist{
+             width: 100% !important;
+             padding: 0 10px;
+         }
+         app-pscustom-featured-links {
+            color: var(-cx-color-dark);
+            background: var(--cx-color-light) !important;
+            min-height: 220px;
+            position: relative;
+            margin-top: 0;
+            width: 100%;
+            padding: 0;
+            border-top: 1px solid rgba(189, 189, 189, 0.5);
+        }  
+    }

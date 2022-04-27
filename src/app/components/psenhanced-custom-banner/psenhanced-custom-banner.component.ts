@@ -6,7 +6,6 @@ import { CmsEnhancedBannerComponent } from './CmsEnhancedBannerModel';
 @Component({
   selector: 'app-psenhanced-custom-banner',
   templateUrl: './psenhanced-custom-banner.component.html',
-  styleUrls: ['./psenhanced-custom-banner.component.scss']
 })
 export class PSEnhancedCustomBannerComponent implements OnInit {
   

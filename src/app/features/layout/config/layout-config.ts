@@ -10,14 +10,12 @@ export const publicsectorLayoutConfig: LayoutConfig = {
                 'SearchBox',
                 'SiteLogin',
                 'NavigationBar',
-                //'HeaderLinks',
                 'TopHeaderSlot',
                 'BottomHeaderSlot',              
                 'PlaceholderContentSlot',
                 'HomepageNavLink',
                 ],
             },
-            // slots: ['SiteLogo', 'SearchBox','TopHeaderSlot','NavigationBar','BottomHeaderSlot']
             slots: ['PreHeader','SiteLogo', 'SearchBox']
         },
         LandingPage2Template: {
@@ -27,6 +25,12 @@ export const publicsectorLayoutConfig: LayoutConfig = {
                 'Section2B',
                 'Section2C',
                 'Section2D'
+            ]
+        },
+        ServiceRequestDetailsPageTemplate :{
+            slots:[
+                'LeftSection',
+                'RightSection'
             ]
         },
         footer: {

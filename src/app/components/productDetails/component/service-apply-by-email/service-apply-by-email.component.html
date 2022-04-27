@@ -1,0 +1,8 @@
+<div class="card">
+<ng-container *ngIf="PDP | async as data">
+    <ng-container *ngIf="data.applyByEmailCMS as applyByEmail">
+        <h2 [innerHtml]="applyByEmail.title"></h2>
+        <div [innerHtml]="applyByEmail.description"></div>
+    </ng-container>
+</ng-container>
+</div>

@@ -1,38 +1,50 @@
+.banner{
+    position: relative;
+    margin-bottom: -18.5%;
+    margin-top: -18.5%;
+}
 
-a:hover{
+.qps-banner {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.banner-text-wrapper {
+    top: auto;
+    bottom: 0;
+}
+.banner-text-wrapper {
+    background: var(--brand-tertiary);
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.banner-text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    text-align: left;
+    color: var(--cx-color-services);
+}
+h1 {
+    font-size: 32px !important;
+    font-weight: normal;
+    margin-top: -5px;
+}
+.banner-text-wrapper .banner-text a {
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: var(--cx-color-services);
     text-decoration: none;
-}
-.tagex a:focus{
-    background-color: #fdda19;
-    color: black;
-}
-.tagex li {
-    display: grid;
-    list-style-type: none;
-     grid-gap: 10px;
-   font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
-   font-size: 14px;
-
-   
-}
-ul{
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap:10px;
-    grid-auto-rows: 1fr;
-    width: 100%;
-}
-.serviceall a{
-    text-decoration: none;
-    color: #fff;
     font-size: 16px;
 }
-
-.frequentserviceslist{
-   // float: left;
-    float: right;
-    margin-right: 3%;
+app-pscustom-simple-banner .banner-text-wrapper .banner-text {
+    text-align: left;
 }
 
 //************************************************************
@@ -47,15 +59,14 @@ ul{
       //************************************************************
       // 0 - 639px 
       @include media-breakpoint-down(sm) {
-        .frequentserviceslist{
-            margin-right: 0%;
-            margin-bottom: 14%;
-        }
-        ul{
-            padding: 0 10px;
-        }
-        h2{
-            margin-left: 0%;
+        app-pscustom-simple-banner{
+            .qps-banner .banner{
+                margin: 0%;
+            }
+
+            .banner-text-wrapper .banner-text {
+                text-align: center;
+            }
         }
       
     }
@@ -74,6 +85,13 @@ ul{
     //************************************************************
     
     // 640px - 1023px 
-    @media (min-width: --screen-sm-min) {
-
+    @include media-breakpoint-between(sm, md) {
+        .banner{
+            position: relative;
+            margin-top: -10.5%;
+            margin-bottom: -10.5%;
+        }
+        .banner-text{
+            text-align: center !important;
+        }
     }

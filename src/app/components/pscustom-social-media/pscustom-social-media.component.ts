@@ -6,7 +6,6 @@ import { CmsSocialMediaComponent } from './CmsSocialMediaModel';
 @Component({
   selector: 'app-pscustom-social-media',
   templateUrl: './pscustom-social-media.component.html',
-  styleUrls: ['./pscustom-social-media.component.scss']
 })
 export class PSCustomSocialMediaComponent implements OnInit {
 

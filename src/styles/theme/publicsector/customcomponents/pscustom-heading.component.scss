@@ -1,34 +1,16 @@
-.links-head{
-    padding: 25px 0;
-    text-align: center;
-    overflow: hidden;
-}
-h2{
-    font-size: 32px;
-    text-transform: uppercase;
-    margin-top: 3%;
-    font-weight: 400;
-    color: #002f6c;
-}
-.icons{
-    display: inline-block;
-    margin: 0 11px;
-    overflow: hidden;
-    border-radius: 50%;
-}
-.facebook, .twitter, .linkedin, .youtube, .instagram{
-    width: 54px;
-    height: 54px;
-    background-size: 54px;
-    margin: 0;
-    text-indent: 100%;
-    white-space: nowrap;
-    position: static;
-    overflow: hidden;
-}
-.social-media{
-    padding-bottom: 5%;
-}
+    .heading{
+        padding-left: 3%;
+    }
+    .news{
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--cx-custom-heading);
+        text-transform: uppercase;
+        margin-bottom: 20%;
+        margin-top: 30%;
+    }
+
+
 //************************************************************
       //************************************************************
       //************************************************************
@@ -40,9 +22,12 @@ h2{
       //************************************************************
       //************************************************************
       // 0 - 639px 
-      @media (max-width: --screen-xs-max) {
+      @include media-breakpoint-down(sm) {
+            .news{
+                margin-bottom: 10%;
+                margin-top: 15%;
+            }
 
-      
     }
     
      
@@ -59,6 +44,6 @@ h2{
     //************************************************************
     
     // 640px - 1023px 
-    @media (min-width: --screen-sm-min) {
+    @include media-breakpoint-between(sm,md) {
 
     }

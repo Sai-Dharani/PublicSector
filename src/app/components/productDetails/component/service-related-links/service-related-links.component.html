@@ -1,0 +1,13 @@
+<div class="row no-margin card"><ng-container *ngIf="PDP | async as data">
+    <ng-container *ngIf="data.relatedLinks as relatedLinks">
+           <h2>
+            {{relatedLinks.title}}
+           </h2>
+        <ng-container *ngFor=" let Links of relatedLinks.links">
+           <h6>
+                <a href="{{Links.url}}">{{Links.linkName}}</a>
+            </h6>
+        </ng-container>
+    </ng-container>
+</ng-container>
+</div>
