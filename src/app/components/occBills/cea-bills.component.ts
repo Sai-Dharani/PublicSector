@@ -5,10 +5,7 @@ import { occBillsService } from '../services/occBills.service';
 import * as myConstClass from './cea-contants';
 @Component({
   selector: 'cea-bills',
-  templateUrl: './cea-bills.component.html',
-  styleUrls: ['./cea-bills.component.scss']
-
-
+  templateUrl: './cea-bills.component.html'
 })
 export class CeaBillsComponent implements OnInit {
   config = {
