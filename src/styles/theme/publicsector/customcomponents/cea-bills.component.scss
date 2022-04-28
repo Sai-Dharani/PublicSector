@@ -35,6 +35,15 @@ a {
     max-width: 100%;
 }
 
+.bill-seperator {
+    border-right: 1px solid var(--border-color-3);
+    width: 1px;
+    top: 0;
+    right: 15px;
+    min-height: 45px;
+    box-sizing: border-box;
+}
+
 .bill-download-pdf {
     color: var(--link-color);
     font-size: 15px;
@@ -352,7 +361,8 @@ div {
     padding-top: auto;
 }
 
-.page-number.current {
+.page-number,
+.current {
     background: var(--cx-color-links) !important;
     font-weight: 600;
     color: var(--cx-color-dark) !important;
@@ -360,7 +370,7 @@ div {
 
 }
 
-.page-number span {
+.page-number {
     display: block;
     width: 28px;
     height: 28px;
@@ -377,6 +387,17 @@ div {
 
 .pagination-next {
     padding-left: 10px;
+}
+
+.pagination-bar-results {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: 1px solid var(--border-color-3);
 }
 
 //************************************************************

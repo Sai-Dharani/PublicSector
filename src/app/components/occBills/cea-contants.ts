@@ -9,4 +9,4 @@ export const IssueDate = 'Issue Date';
 export const BillID = 'Bill ID';
 export const Status = 'Status';
 export const DueDate = 'Due Date';
-export const DownloadAs = 'Download bill as a PDF';
+export const DownloadAs = 'Download bill as PDF';
