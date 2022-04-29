@@ -103,7 +103,7 @@ a {
 }
 
 .btn {
-    font-size: 14px;
+    font-size: 14px !important;
     text-transform: none;
     white-space: normal;
 }
@@ -353,22 +353,22 @@ div {
 
 .custom-pagination .page-number {
     display: inline-block;
+    font-size: 20px;
     /* padding: 5px 12px; */
     margin: 0px 4px;
     border-radius: 25px;
-    color: var(--cx-color-services-background) !important;
-    padding-bottom: auto;
-    padding-top: auto;
+    color: var(--cx-color-services-background);
+    // padding-bottom: auto;
+    // padding-top: auto;
 }
 
-.page-number,
 .current {
     background: var(--cx-color-links) !important;
     font-weight: 600;
     color: var(--cx-color-dark) !important;
-
-
 }
+
+.page-number {}
 
 .page-number {
     display: block;
