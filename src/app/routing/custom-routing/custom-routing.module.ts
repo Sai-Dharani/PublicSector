@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { UrlModule, AuthGuard, CmsConfig, ConfigModule } from '@spartacus/core';
-import { BannerComponent, CmsPageGuard, FooterNavigationComponent, LinkComponent, MediaComponent, MediaModule, PageLayoutComponent } from '@spartacus/storefront';
+import { BannerComponent, CmsPageGuard, FooterNavigationComponent, LinkComponent, MediaComponent, MediaModule, PageLayoutComponent, SearchBoxComponent } from '@spartacus/storefront';
 
 export const staticRoutes: Routes = [
   {
@@ -24,6 +24,9 @@ export const staticRoutes: Routes = [
       cmsComponents: {
         PSSimpleResponsiveBannerComponent: {
           component: BannerComponent,
+        },
+        PSSearchBoxComponent :{
+          component : SearchBoxComponent,
         },
       },
     } as CmsConfig),

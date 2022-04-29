@@ -136,6 +136,51 @@
         }
     }
 }
+.header cx-searchbox{
+    label{
+        background-color: #ffffff;
+        height: 38px;
+        width: 0;
+        padding: 0;
+        border: 1px solid #cccccc;
+        input{
+            border: 0;
+            box-shadow: none;
+            height: 38px;
+            background-color: transparent;
+            padding: 0 0 10px 10px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        cx-searchbox::before{
+            content: "Hello";
+        }
+        .search-icon{
+            padding-top: 10px;
+            background-color: #fdda19;
+        }
+    }
+    ul li{
+        border-top: 1px solid #cecaca;
+        display: block;
+        width: 100%;
+        padding: 20px;
+        a {
+            font-size: 14px;
+            padding: 3px 1em 3px .4em;
+            cx-media{
+                display: none;
+            }
+        }
+    } 
+    ul li a:hover{
+        background: #fdd119;
+    }
+    position: absolute;
+    right: 51%;
+    color: #000000;
+   // margin-top: -10px;
+}
 
 //share this page
 

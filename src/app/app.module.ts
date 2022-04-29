@@ -24,11 +24,15 @@ import { PSCustomHeadingComponent } from "./components/pscustom-heading/pscustom
 import { LogosComponent } from "./components/logos/logos.component";
 import { productDetailsModule } from "./components/productDetails/productDetails.module";
 
+
+import { ProductListModule } from "./components/productGrid/product-list.module";
+import { ProductFacetNavigationModule } from "./components/productGrid/product-facet-navigation";
+
 @NgModule({
   declarations: [
     AppComponent,
     PSCustomHeadingComponent,
-    LogosComponent
+    LogosComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { productDetailsModule } from "./components/productDetails/productDetails
     PSCustomFeaturedLinksModule,
     PSCustomSimpleBannerModule,
     PSCustomBannerModule,
-    productDetailsModule
+    productDetailsModule,
+    ProductListModule,
+    ProductFacetNavigationModule
   ],
   providers: [provideConfig(publicsectorLayoutConfig)],
   bootstrap: [AppComponent]

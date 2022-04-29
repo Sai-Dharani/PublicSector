@@ -33,6 +33,9 @@ export const publicsectorLayoutConfig: LayoutConfig = {
                 'RightSection'
             ]
         },
+        ProductGridPageTemplate: {
+            slots: ['ProductLeftRefinements', 'ProductGridSlot'],
+          },
         footer: {
             slots: ['Footer']
           },
