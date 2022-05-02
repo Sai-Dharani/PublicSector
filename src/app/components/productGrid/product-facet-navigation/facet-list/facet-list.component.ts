@@ -45,6 +45,7 @@ export class FacetListComponent {
   /** The list of all facet and values related to the products in the list */
   facetList$: Observable<FacetList> = this.facetService.facetList$;
 
+
   iconTypes = ICON_TYPE;
 
   dialogFocusConfig: FocusConfig = {
@@ -62,7 +63,9 @@ export class FacetListComponent {
     protected facetService: FacetService,
     protected elementRef: ElementRef,
     protected renderer: Renderer2
-  ) {}
+  ) {
+    console.log(this.facetList$)
+  }
 
   /**
    * Toggles the facet group in case it is not expanded.

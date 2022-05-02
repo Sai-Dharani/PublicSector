@@ -4,9 +4,10 @@ import {
   ElementRef,
   ViewChild,
 } from '@angular/core';
-import { BreakpointService, ICON_TYPE } from '@spartacus/storefront';
+import { ICON_TYPE } from '@spartacus/storefront';
 import { asapScheduler, BehaviorSubject, interval, Observable, of } from 'rxjs';
 import { delayWhen, observeOn, switchMap } from 'rxjs/operators';
+import { BreakpointService } from 'src/app/features/layout/breakpoint/breakpoint.service';
 
 
 @Component({

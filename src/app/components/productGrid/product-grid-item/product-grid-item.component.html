@@ -15,6 +15,8 @@
   class="cx-product-name"
   [innerHTML]="product.nameHtml"
 ></a>
+{{product.shortDescription}}
+{{product.departments}}
 
 <ng-template [cxOutlet]="ProductListOutlets.ITEM_DETAILS">
   <div class="cx-product-rating">
@@ -22,9 +24,9 @@
       *ngIf="product.averageRating"
       [rating]="product?.averageRating"
     ></cx-star-rating>
-    <div *ngIf="!product.averageRating">
+    <!-- <div *ngIf="!product.averageRating">
       {{ 'productDetails.noReviews' | cxTranslate }}
-    </div>
+    </div> -->
   </div>
   <div class="cx-product-price-container">
     <div

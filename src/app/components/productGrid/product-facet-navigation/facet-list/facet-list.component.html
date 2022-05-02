@@ -1,3 +1,4 @@
+{{(facetList$ | async) |json }}
 <section
   class="inner"
   *ngIf="(facetList$ | async)?.facets as facets"
