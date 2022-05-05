@@ -73,8 +73,9 @@ export class ProductFacetService {
       return false;
     }
     if (state.context.type === PageType.CATEGORY_PAGE) {
+      const check = page.currentQuery.query.value.replace(/%26/g, "&");
       return (
-        page.currentQuery.query.value.indexOf(
+        check.indexOf(
           `allCategories:${state.context.id}`
         ) > -1
       );
