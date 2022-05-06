@@ -1,47 +1,48 @@
-<a
-  [routerLink]="{ cxRoute: 'product', params: product } | cxUrl"
-  class="cx-product-image-container"
-  tabindex="-1"
->
-  <cx-media
-    class="cx-product-image"
-    [container]="product.images?.PRIMARY"
-    format="product"
-    [alt]="product.summary"
-  ></cx-media>
-</a>
-<a
-  [routerLink]="{ cxRoute: 'product', params: product } | cxUrl"
-  class="cx-product-name"
-  [innerHTML]="product.nameHtml"
-></a>
-{{product.shortDescription}}
-{{product.departments}}
-
-<ng-template [cxOutlet]="ProductListOutlets.ITEM_DETAILS">
-  <div class="cx-product-rating">
-    <cx-star-rating
-      *ngIf="product.averageRating"
-      [rating]="product?.averageRating"
-    ></cx-star-rating>
-    <!-- <div *ngIf="!product.averageRating">
-      {{ 'productDetails.noReviews' | cxTranslate }}
-    </div> -->
+<!-- <a [routerLink]="{ cxRoute: 'product', params: product } | cxUrl" class="cx-product-image-container" tabindex="-1">
+  <cx-media class="cx-product-image" [container]="product.images?.PRIMARY" format="product" [alt]="product.summary">
+  </cx-media>
+</a> -->
+<div class="plp-card-cell card">
+  <div class="card-section-h2">
+    <h2><span tabindex="0"><a [routerLink]="{ cxRoute: 'product', params: product } | cxUrl" class="cx-product-name"
+          [innerHTML]="product.nameHtml"></a></span></h2>
   </div>
-  <div class="cx-product-price-container">
+
+  <div class="card-section-content">
+    {{product.shortDescription}}
+  </div>
+
+  <div class="card-section-footer col-xs-12 col-sm-12 col-md-12">
+    <div class="product-department card-section-h4">
+      {{product.departments}}
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 plp-custom-padding plp-button">
+      <a href="" aria-label="View Details For Transfer a car registration Service Request"
+        class="name btn btn-white btn-block"><span class="plp-btn">View Details</span></a>
+    </div>
+
     <div
-      class="cx-product-price"
-      [attr.aria-label]="'productDetails.productPrice' | cxTranslate"
-    >
-      {{ product.price?.formattedValue }}
+      class="col-xs-12 col-sm-6 col-md-6 plp-custom-padding plp-button PSProductGridComponent-ServiceListAddToCartAction"
+      data-index="1">
+      <div class="PSProductGridComponent-ServiceListAddToCartAction" data-index="1">
+        <ng-template [cxOutlet]="ProductListOutlets.ITEM_ACTIONS">
+          <cx-add-to-cart *ngIf="product.stock?.stockLevelStatus !== 'outOfStock'" [showQuantity]="false"
+            [product]="product">
+          </cx-add-to-cart>
+        </ng-template>
+      </div>
     </div>
   </div>
-</ng-template>
+  <!-- <ng-template [cxOutlet]="ProductListOutlets.ITEM_DETAILS">
+    <div class="cx-product-rating">
+      <cx-star-rating *ngIf="product.averageRating" [rating]="product?.averageRating"></cx-star-rating>
+    </div>
+    <div class="cx-product-price-container">
+      <div class="cx-product-price" [attr.aria-label]="'productDetails.productPrice' | cxTranslate">
+        {{ product.price?.formattedValue }}
+      </div>
+    </div>
+  </ng-template> -->
 
-<ng-template [cxOutlet]="ProductListOutlets.ITEM_ACTIONS">
-  <cx-add-to-cart
-    *ngIf="product.stock?.stockLevelStatus !== 'outOfStock'"
-    [showQuantity]="false"
-    [product]="product"
-  ></cx-add-to-cart>
-</ng-template>
+
+</div>
