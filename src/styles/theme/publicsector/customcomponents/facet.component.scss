@@ -1,0 +1,101 @@
+main .ProductGridPageTemplate{
+    margin:0 !important;
+    .ProductLeftRefinements{
+        max-width: 35% !important;
+        margin-left: 20px;
+        height: 100%;
+        padding-top: 0% !important;
+        app-product-retrieve-a-draft{
+            border-bottom: 0;
+            background: #f2f2f2;
+            padding: 30px 20px 30px 20px;
+            h2{
+                border-bottom: 1px solid #d3d3d3;
+                font-size: 20px;
+                color: #000000;
+                padding-bottom: 15px;
+                margin-bottom: 3px; 
+            }
+            p{
+                font-size: 16px;
+            }
+            button{
+                width: 100%;
+                font-size: 16px;
+                a{
+                    color: #000000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.ProductGridSlot app-product-retrieve-a-draft{
+    display: none;
+}
+cx-product-facet-navigation{
+    .dialog-trigger{
+        display: none;
+    }
+    h2{
+        color: #104d83;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 20px;
+    }
+    h2{
+        text-transform: capitalize;
+    }
+    cx-facet-list section{
+        padding: 0 !important;
+    }
+    cx-facet {
+        border-bottom: 0;
+        background: #f2f2f2;
+        margin: 20px 0 20px 0;
+        padding: 30px 20px 30px 20px;
+        .heading{
+            border-bottom: 1px solid #d3d3d3 !important;
+            font-size: 20px;
+            font-weight: 500 !important;
+            color: #000000;
+            padding-bottom: 15px;
+            margin-bottom: 3px;
+            margin-top: -31px;
+            .collapse-icon, .expand-icon{
+                display: none;
+            }
+        }
+        .heading:hover{
+            color: #000000 !important;
+        }
+        .value{
+            padding-left: 0;
+            margin: 10px 0;
+            span{
+                display: flex;
+            }
+            .label{
+                cursor: pointer;
+                font-weight: normal;
+                display: block;
+                margin: 0;
+                color: #000000;
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+        }
+        .value::before{
+            border: 1px solid #cccccc !important;
+            text-align: center;
+            vertical-align: middle;
+            background: #ffffff;
+            margin-top: -3px;
+            width: 25px !important;
+            height: 25px !important;
+            padding: 0;
+            margin-right: 10px;
+        }
+    }
+}

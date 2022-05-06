@@ -1,3 +1,5 @@
+<div class="hidden-xs hidden-sm">
+  <h2>{{heading}}</h2>
 <button
   #trigger
   class="btn btn-action btn-block dialog-trigger"
@@ -16,3 +18,4 @@
   [class.active]="isActive$ | async"
   [class.dialog]="hasTrigger"
 ></cx-facet-list>
+</div>

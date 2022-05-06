@@ -16,6 +16,7 @@ import { ProductScrollComponent } from './container/product-scroll/product-scrol
 import { ProductGridItemComponent } from './product-grid-item/product-grid-item.component';
 import { ProductListItemComponent } from './product-list-item/product-list-item.component';
 import { ProductViewComponent } from './product-view/product-view.component';
+import { ProductRetrieveADraftComponent } from './product-retrieve-a-draft/product-retrieve-a-draft.component';
 
 @NgModule({
   imports: [
@@ -47,6 +48,9 @@ import { ProductViewComponent } from './product-view/product-view.component';
         SearchResultsListComponent: {
           component: ProductListComponent,
         },
+        PSRetrieveADraftComponent: {
+          component: ProductRetrieveADraftComponent
+        }
       },
     }),
   ],
@@ -56,6 +60,7 @@ import { ProductViewComponent } from './product-view/product-view.component';
     ProductGridItemComponent,
     ProductViewComponent,
     ProductScrollComponent,
+    ProductRetrieveADraftComponent,
   ],
   exports: [
     ProductListComponent,
