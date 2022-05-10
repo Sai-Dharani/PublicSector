@@ -21,7 +21,7 @@ cx-product-grid-item.col-md-4 {
 .card {
   margin: 15px 0 15px 0;
   background: var(--well-quaternary-bg) !important;
-  min-height: auto;
+  min-height: 300px;
   display: inline-block;
   padding-bottom: 20px;
   width: 100%;
@@ -41,13 +41,14 @@ a:hover {
 .card-section,
 .card-section-h2 {
   border-bottom: 1px solid var(--border-color-4) !important;
+  margin-top: 10px;
 }
 
 cx-product-grid-item .cx-product-name {
-  font-size: 16px !important; // make variable
+  font-size: 18px !important; // make variable
   font-weight: 500 !important; //make a variable 
   line-height: var(--cx-line-height, 1.2222222222);
-  text-align: center;
+  text-align: left !important;
   margin: 0 0 0 0 !important;
   color: var(--cx-color-services-background) !important;
   text-decoration: none;
@@ -63,14 +64,16 @@ cx-product-grid-item .cx-product-name {
 
 .card-section,
 .card-section-content {
-  margin: 5px 0px 30% 0px;
   font-size: 16px;
-
+  max-height: 50px;
+  min-height: 50px;
+  margin: 5px 0px 80px 0px;
 }
 
 .card-section-h4 {
   font-size: 16px;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .card-section-footer {
@@ -90,14 +93,27 @@ cx-product-grid-item .cx-product-name {
 .btn-white.active,
 .open .dropdown-toggle.btn-white {
   color: #ffffff !important;
-  background-color: #000000;
+  background-color: #000000 !important;
   border-color: #bcbaba;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.btn {
-  font-size: 16px;
+.btn-white {
+  font-size: 16px !important;
   text-transform: none;
   white-space: normal;
+  background-color: white !important;
+  font-size: 16px !important;
+  border-color: #bcbaba !important;
+  font-weight: 600;
+
+}
+
+.btn {
+  font-size: 16px !important;
+}
+
+.plp-button {
+  padding-left: 0px !important;
 }
