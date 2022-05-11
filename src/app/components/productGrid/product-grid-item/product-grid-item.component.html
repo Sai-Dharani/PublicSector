@@ -2,10 +2,10 @@
   <cx-media class="cx-product-image" [container]="product.images?.PRIMARY" format="product" [alt]="product.summary">
   </cx-media>
 </a> -->
-<div class="plp-card-cell card">
+<div class="plp-card-cell plp-card ">
   <div class="card-section-h2">
-    <h2><span tabindex="0"><a [routerLink]="{ cxRoute: 'product', params: product } | cxUrl" class="cx-product-name"
-          [innerHTML]="product.nameHtml"></a></span></h2>
+    <h2><span tabindex="0" class="plp-card-title"><a [routerLink]="{ cxRoute: 'product', params: product } | cxUrl"
+          class=" plp-card-title" [innerHTML]="product.nameHtml"></a></span></h2>
   </div>
 
   <div class="card-section-content">
@@ -16,18 +16,16 @@
     <div class="product-department card-section-h4">
       {{product.departments}}
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 plp-custom-padding plp-button">
+    <div class="plp-button col-xs-12 col-sm-12 col-md-6 plp-custom-padding">
       <a href="" aria-label="View Details For Transfer a car registration Service Request"
         class="name btn btn-white btn-block"><span class="plp-btn">View Details</span></a>
     </div>
 
-    <div
-      class="col-xs-12 col-sm-6 col-md-6 plp-custom-padding plp-button PSProductGridComponent-ServiceListAddToCartAction"
-      data-index="1">
+    <div class="plp-button col-xs-12 col-sm-12 col-md-6 plp-custom-padding" data-index="1">
       <div class="PSProductGridComponent-ServiceListAddToCartAction" data-index="1">
         <ng-template [cxOutlet]="ProductListOutlets.ITEM_ACTIONS">
-          <cx-add-to-cart *ngIf="product.stock?.stockLevelStatus !== 'outOfStock'" [showQuantity]="false"
-            [product]="product">
+          <cx-add-to-cart class="plp-register-btn" *ngIf="product.stock?.stockLevelStatus !== 'outOfStock'"
+            [showQuantity]="false" [product]="product">
           </cx-add-to-cart>
         </ng-template>
       </div>
