@@ -7,8 +7,8 @@ body{
 main {
     padding-bottom: 3%;
 }
-cx-category-navigation div.hybrislogo{
-    display: none !important;
+.NavigationBar cx-category-navigation .hybrislogo{
+    display: none;
 }
 
 cx-page-layout.LandingPage2Template cx-page-slot.Section2C {
@@ -34,9 +34,9 @@ cx-media {
 }
 
 main cx-page-layout.LandingPage2Template cx-page-slot.Section2A,
-cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
-    --cx-flex-basis: 1 !important;
-    max-width: 100% !important;
+main cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 1;
+    max-width: 100%;
 }
 
 cx-page-layout.LandingPage2Template cx-page-slot.Section2B {

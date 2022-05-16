@@ -30,8 +30,8 @@
     text-align: left;
     color: var(--cx-color-services);
 }
-h1 {
-    font-size: 32px !important;
+.banner-text h1 {
+    font-size: 32px;
     font-weight: normal;
     margin-top: -5px;
 }
@@ -91,7 +91,7 @@ app-pscustom-simple-banner .banner-text-wrapper .banner-text {
             margin-top: -10.5%;
             margin-bottom: -10.5%;
         }
-        .banner-text{
-            text-align: center !important;
+        app-pscustom-simple-banner .banner-text-wrapper .banner-text{
+            text-align: center;
         }
     }

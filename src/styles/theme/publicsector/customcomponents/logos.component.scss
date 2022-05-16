@@ -61,8 +61,8 @@ app-logos{
     //************************************************************
     
     // 640px - 1023px 
-    @include media-breakpoint-down(lg) {
-        // .title{
-        //     justify-content: center;
-        // }
+    @include media-breakpoint-between(sm, md) {
+        app-logos .title{
+            text-align: center;
+        }
     }

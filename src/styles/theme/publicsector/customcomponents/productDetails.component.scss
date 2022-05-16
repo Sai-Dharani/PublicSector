@@ -1,4 +1,4 @@
-.ServiceRequestDetailsPageTemplate {
+.ServiceRequestDetailsPageTemplate{
     .LeftSection {
         max-width: 69.5%;
         float: left;
@@ -20,14 +20,13 @@
     }
 
     .card {
-        margin: 15px 0 15px 0 !important;
+        margin: 15px 0 15px 0;
         background: var(--well-quaternary-bg);
         min-height: auto;
         display: inline-block;
-        padding-bottom: 20px !important;
         width: 100%;
         word-break: break-all;
-        padding: 0px 10px 0px 10px;
+        padding: 0px 10px 20px 10px;
     }
 
     .servicesDescription {
@@ -235,8 +234,8 @@ a {
     background-color: transparent;
 }
 
-.icon-list {
-    list-style: none !important;
+app-service-share-this-page .social-icons ul li.icon-list {
+    list-style: none;
 }
 
 
