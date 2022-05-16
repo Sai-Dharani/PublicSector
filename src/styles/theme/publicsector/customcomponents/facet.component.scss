@@ -1,18 +1,18 @@
-main .ProductGridPageTemplate{
-    margin:0 !important;
+main cx-page-layout.ProductGridPageTemplate{
+    margin:0 ;
     .ProductLeftRefinements{
-        max-width: 35% !important;
+        max-width: 35%;
         margin-left: 20px;
         height: 100%;
-        padding-top: 0% !important;
+        padding-top: 0%;
         app-product-retrieve-a-draft{
             border-bottom: 0;
-            background: #f2f2f2;
+            background: var(--well-quaternary-bg);
             padding: 30px 20px 30px 20px;
             h2{
-                border-bottom: 1px solid #d3d3d3;
+                border-bottom: 1px solid var(--cx-color-facet-heading);
                 font-size: 20px;
-                color: #000000;
+                color: var(--text-color);
                 padding-bottom: 15px;
                 margin-bottom: 3px; 
             }
@@ -23,7 +23,7 @@ main .ProductGridPageTemplate{
                 width: 100%;
                 font-size: 16px;
                 a{
-                    color: #000000;
+                    color: var(--text-color);
                     text-decoration: none;
                 }
             }
@@ -38,37 +38,36 @@ cx-product-facet-navigation{
         display: none;
     }
     h2{
-        color: #104d83;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 22px;
-    margin-top: 20px;
+        color: var(--link-hover-color);
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 22px;
+        margin-top: 20px;
     }
     h2{
         text-transform: capitalize;
     }
-    cx-facet-list section{
-        padding: 0 !important;
+    cx-facet-list .inner{
+        padding: 0;
     }
-    cx-facet {
+    cx-facet.multi-select {
         border-bottom: 0;
-        background: #f2f2f2;
+        background: var( --well-quaternary-bg);
         margin: 20px 0 20px 0;
         padding: 30px 20px 30px 20px;
-        .heading{
-            border-bottom: 1px solid #d3d3d3 !important;
+        button.heading{
+            border-bottom: 1px solid var(  --cx-color-facet-heading);
             font-size: 20px;
-            font-weight: 500 !important;
-            color: #000000;
-            padding-bottom: 15px;
-            margin-bottom: 3px;
-            margin-top: -31px;
+            font-weight: 500;
+            color: var(--text-color);
+            padding: 0px 0px 15px 0px;
+            margin: 0px 0px 3px 0px;
             .collapse-icon, .expand-icon{
                 display: none;
             }
         }
-        .heading:hover{
-            color: #000000 !important;
+        button.heading:hover{
+            color: var(--text-color);
         }
         .value{
             padding-left: 0;
@@ -81,21 +80,60 @@ cx-product-facet-navigation{
                 font-weight: normal;
                 display: block;
                 margin: 0;
-                color: #000000;
+                color: var(--text-color);
                 text-transform: uppercase;
                 font-size: 13px;
             }
         }
-        .value::before{
-            border: 1px solid #cccccc !important;
+        a.value::before{
+            border: 1px solid var( --border-color-3);
             text-align: center;
             vertical-align: middle;
-            background: #ffffff;
+            background: var( --cx-color-links);
             margin-top: -3px;
-            width: 25px !important;
-            height: 25px !important;
+            width: 25px;
+            height: 25px;
             padding: 0;
             margin-right: 10px;
+        }
+        a.value.selected::before{
+            background: url(https://publicsector.local:9002/yacceleratorstoref…raddon/responsive/common/images/checkbox_tick.png) no-repeat scroll 0 0;
+            border: 0;
+            background-color: var( --border-color);
+        }
+        a.value:hover:not(.selected)::before{
+            border: none;
+        }
+    }
+    cx-active-facets{
+        div{
+            border-bottom: 0;
+            background: var(--well-quaternary-bg);
+            padding: 30px 20px 30px 20px;
+            width: 400px;
+        }
+        h4{
+            border-bottom: 1px solid var(--cx-color-facet-heading);
+            font-size: 20px;
+            color: var(--text-color);
+            padding-bottom: 15px;
+            margin-bottom: 3px; 
+        }
+        a{
+            display: block;
+        }
+        a:hover{
+            background: none;
+        }
+        a span{
+            color: var(--text-color);
+            font-size: 16px;
+        }
+        a cx-icon{
+            color: var( --link-color);    
+        }
+        a cx-icon:hover{
+            color:var(--link-hover-color);   
         }
     }
 }
