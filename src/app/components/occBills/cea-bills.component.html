@@ -6,10 +6,10 @@
   </button>
   <span class="page-title">{{page_label.page_title}}</span>
   <br><br>
-  <p class="text-body">{{page_label.text_body_1}}
+  <p class="cea-text-body">{{page_label.text_body_1}}
   </p>
   <br>
-  <p class="text-body">{{page_label.text_body_2}}
+  <p class="cea-text-body">{{page_label.text_body_2}}
   </p>
   <br>
   <div class="col-xs-6 col-sm-8 visible-lg visible-md visible-sm totalResults-top-padding">
@@ -51,7 +51,7 @@
           <span (click)="p.previous()">
             <span class="glyphicon glyphicon-chevron-left"></span> </span>
         </div>
-        <div class="page-number align-top" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
+        <div class="page-number" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
           <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">{{ page.label }}</span>
           <div *ngIf="p.getCurrent() === page.value">
             <span>{{ page.label }}</span>
@@ -131,7 +131,7 @@
           Allowed</div>
         <div>
           <div class="col-md-12 no-space bill-more-info">
-            <button type="button" class="btn btn-primary btn-block "
+            <button type="button" class="cea-btn cea-btn-primary btn-block "
               onclick="window.location='/yacceleratorstorefront/en/bills/payment?billCode=10004'">
               {{item.type.isPaymentAllowed ? 'Pay This Bill' : 'More Info'}}
             </button>
