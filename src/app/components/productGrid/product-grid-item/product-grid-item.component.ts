@@ -28,7 +28,7 @@ export class ProductGridItemComponent implements OnChanges {
 
   constructor(
     protected productListItemContextSource: ProductListItemContextSource
-  ) {}
+  ) { }
 
   ngOnChanges(changes?: SimpleChanges): void {
     if (changes?.product) {
