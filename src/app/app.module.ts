@@ -27,12 +27,14 @@ import { productDetailsModule } from "./components/productDetails/productDetails
 
 import { ProductListModule } from "./components/productGrid/product-list.module";
 import { ProductFacetNavigationModule } from "./components/productGrid/product-facet-navigation";
+import { CartTotalsComponent } from './cart-totals/cart-totals.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PSCustomHeadingComponent,
     LogosComponent,
+    CartTotalsComponent,
   ],
   imports: [
     BrowserModule,
