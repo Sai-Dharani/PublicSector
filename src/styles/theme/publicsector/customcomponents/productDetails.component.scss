@@ -21,7 +21,7 @@
 
     .card {
         margin: 15px 0 15px 0 !important;
-        background: #f2f2f2;
+        background: var(--well-quaternary-bg);
         min-height: auto;
         display: inline-block;
         padding-bottom: 20px !important;
@@ -38,8 +38,8 @@
         width: 100%;
 
         tr {
-            background: #f2f2f2;
-            border-bottom: 3px #fff solid;
+            background: var(--well-quaternary-bg);
+            border-bottom: 3px var(--cx-color-services) solid;
         }
 
         td {
@@ -51,7 +51,7 @@
     h2 {
         font-size: 20px;
         margin: 20px 15px 10px 15px;
-        border-bottom: 1px solid #d3d3d3;
+        border-bottom: 1px solid var(--cx-color-facet-heading);
         font-weight: 500;
         padding-bottom: 15px;
     }
@@ -75,7 +75,7 @@
         }
 
         a {
-            color: #156ab5;
+            color: var(--link-color);
         }
 
         button {
@@ -84,9 +84,9 @@
 
         .btn-primary {
             border: 1px solid;
-            color: #000000;
-            background-color: #fdda19;
-            border-color: #fdda19;
+            color: var(--text-color);
+            background-color: var(--brand-primary);
+            border-color: var(--brand-primary);
         }
 
         .btn {
@@ -110,7 +110,7 @@
 
         h1 {
             font-size: 30px;
-            color: #154f82;
+            color: var(--product-detail-head);
             line-height: 1.1;
         }
 
@@ -138,11 +138,11 @@
 }
 .header cx-searchbox{
     label{
-        background-color: #ffffff;
+        background-color: var(--cx-color-links);
         height: 38px;
         width: 0;
         padding: 0;
-        border: 1px solid #cccccc;
+        border: 1px solid var(--steps-background-active);
         input{
             border: 0;
             box-shadow: none;
@@ -157,11 +157,11 @@
         }
         .search-icon{
             padding-top: 10px;
-            background-color: #fdda19;
+            background-color: var(--brand-primary);
         }
     }
     ul li{
-        border-top: 1px solid #cecaca;
+        border-top: 1px solid var(--border-color-2);
         display: block;
         width: 100%;
         padding: 20px;
@@ -174,25 +174,15 @@
         }
     } 
     ul li a:hover{
-        background: #fdd119;
+        background: var(--product-detail-background);
     }
     position: absolute;
     right: 51%;
-    color: #000000;
+    color: var(--text-color);
    // margin-top: -10px;
 }
 
-//share this page
 
-// .pdp-section-h2 {
-//     font-size: 18px;
-//     font-weight: 500;
-//     margin: 20px 15px 10px 0px;
-//     border-bottom: 1px solid var(--btn-default-hover-border);
-//     padding-bottom: 15px;
-//     font-family: 'Alegreya Sans', 'Helvetica', 'Arial', sans-serif;
-
-// }
 
 .icon {
     height: 27px;
@@ -215,8 +205,8 @@
     border-style: double;
     border-width: 5px;
 
-    background-color: black;
-    color: white;
+    background-color: var(--cx-color-dark);
+    color: var(--cx-color-light);
     margin-bottom: 0px;
 
 }
@@ -224,14 +214,14 @@
 .fab {
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: var(--cx-color-dark);
     padding: 6px;
     margin-right: 12px;
     margin-bottom: 3px;
 
     font-size: 18px;
     background-color: var(--table-head-bg);
-    color: black;
+    color: var(--cx-color-dark);
 
 
 }
@@ -270,7 +260,7 @@ a {
 .follow-us-Facebook:hover,
 .follow-us-Facebook:focus {
     background-image: url('/assets/icons/facebook.gif');
-    outline: 3px solid #000000;
+    outline: 3px solid var(--text-color);
 }
 
 .follow-us-Twitter {
@@ -293,7 +283,7 @@ a {
 .follow-us-Twitter:hover,
 .follow-us-Twitter:active {
     background-image: url('/assets/icons/twitter.gif');
-    outline: 3px solid #000000;
+    outline: 3px solid var(--text-color);
 
 
 }
@@ -318,7 +308,7 @@ a {
 .follow-us-Instagram:hover,
 .follow-us-Instagram:active {
     background-image: url('/assets/icons/instagram.png');
-    outline: 3px solid #000000;
+    outline: 3px solid var(--text-color);
 
 }
 
@@ -342,7 +332,7 @@ a {
 .follow-us-LinkedIn:hover,
 .follow-us-LinkedIn:active {
     background-image: url('/assets/icons/linkedin.gif');
-    outline: 3px solid #000000;
+    outline: 3px solid var(--text-color);
 
 
 }
