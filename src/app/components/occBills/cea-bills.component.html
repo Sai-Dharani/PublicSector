@@ -13,8 +13,8 @@
   </p>
   <br>
   <div class="col-xs-6 col-sm-8 visible-lg visible-md visible-sm totalResults-top-padding">
-    <div class="totalResults ng-binding top totalResults-top-padding col-xs-12 col-sm-5" tabindex="0">
-      <span class="total-bill-result">
+    <div class="totalResults ng-binding top totalResults-top-padding col-xs-12 col-sm-4 " tabindex="0">
+      <span class="total-bill-result ">
         <!-- outputs which bills are displayed in 1-10,11-20 format  -->
         <strong>{{
           (config.currentPage * config.itemsPerPage) - 9}}&nbsp; - &nbsp;{{(config.currentPage *
@@ -25,6 +25,7 @@
         <strong>&nbsp;{{config.totalItems}}&nbsp;</strong> bills found
       </span>
     </div>
+    <div class="col-sm-1 bill-seperator"></div>
     <div class="col-sm-6 col-md-3">
       <div class="form-group">
         <input type="hidden" name="customerPK" value=" ">
@@ -42,14 +43,15 @@
       </div>
     </div>
   </div>
-  <div class="text-right totalResults top">
+
+  <div class="text-right totalResults top ">
     <pagination-template #p="paginationApi" (pageChange)="onTableDataChange($event)">
       <div class="custom-pagination">
         <div class="pagination-previous" [class.disabled]="p.isFirstPage()">
           <span (click)="p.previous()">
             <span class="glyphicon glyphicon-chevron-left"></span> </span>
         </div>
-        <div class="page-number" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
+        <div class="page-number align-top" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value">
           <span (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">{{ page.label }}</span>
           <div *ngIf="p.getCurrent() === page.value">
             <span>{{ page.label }}</span>
@@ -61,6 +63,12 @@
         </div>
       </div>
     </pagination-template>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="pagination-bar-results">
+      </div>
+    </div>
   </div>
   <div class="divOuterTable row no-margin my-bill ">
     <div class="divTable billhistory-list-table" role="grid">

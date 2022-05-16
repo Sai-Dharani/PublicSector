@@ -28,29 +28,45 @@ a {
     color: var(--cx-color-services-background);
 
 }
-.bills{
+
+.bills {
     margin: 0;
     padding: 0;
     max-width: 100%;
 }
+
+.bill-seperator {
+    border-right: 1px solid var(--border-color-3);
+    width: 1px;
+    top: 0;
+    right: 15px;
+    min-height: 45px;
+    box-sizing: border-box;
+}
+
 .bill-download-pdf {
-    color: var( --link-color);
+    color: var(--link-color);
     font-size: 15px;
     font-weight: 500;
 }
-.bill-download-pdf:hover{
-    color:var(--link-hover-color);
+
+.bill-download-pdf:hover {
+    color: var(--link-hover-color);
     text-decoration: none;
 }
+
 .divTableRow .divTableCell {
-    .no-space{
-        padding:0;
+    .no-space {
+        padding: 0;
     }
+
     font-size: 16px;
 }
-.divTableHeading span{
+
+.divTableHeading span {
     font-size: 17px;
 }
+
 .glyphicon-chevron-left {
     font-size: 18px;
     color: var(--cx-color-services-background);
@@ -81,11 +97,13 @@ a {
 }
 
 .text-body {
-    font-size: 14px;
+    font-size: 16px !important;
+    margin: 0px !important;
+    font-size: inherit;
 }
 
 .btn {
-    font-size: 14px;
+    font-size: 14px !important;
     text-transform: none;
     white-space: normal;
 }
@@ -110,14 +128,21 @@ a {
     }
 }
 
-.totalResults,
+.totalResults {
+    margin: 25px 0 10px 0;
+
+
+}
+
 .top {
     margin: 25px 0 10px 0;
 
 }
 
 .totalResults-top-padding {
-    padding: 0px;
+    padding: 0px 0 0 3px !important;
+
+
 }
 
 .total-bill-result {
@@ -328,23 +353,23 @@ div {
 
 .custom-pagination .page-number {
     display: inline-block;
+    font-size: 20px;
     /* padding: 5px 12px; */
     margin: 0px 4px;
     border-radius: 25px;
-    color: var(--cx-color-services-background) !important;
-    padding-bottom: auto;
-    padding-top: auto;
+    color: var(--cx-color-services-background);
+    // padding-bottom: auto;
+    // padding-top: auto;
 }
 
-.page-number.current {
+.current {
     background: var(--cx-color-links) !important;
     font-weight: 600;
     color: var(--cx-color-dark) !important;
-
-
 }
 
-.page-number span {
+
+.page-number {
     display: block;
     width: 28px;
     height: 28px;
@@ -361,6 +386,17 @@ div {
 
 .pagination-next {
     padding-left: 10px;
+}
+
+.pagination-bar-results {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: 1px solid var(--border-color-3);
 }
 
 //************************************************************

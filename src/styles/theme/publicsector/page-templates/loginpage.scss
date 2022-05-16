@@ -31,7 +31,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
 
         .btn-link {
             font-size: 1.125rem;
-            color: #156ab5;
+            color: var(--link-color);
             text-decoration: underline;
             cursor: pointer;
             display: inline-block;
@@ -48,24 +48,24 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
         .btn:hover,
         .btn:active:hover,
         .btn.active:hover {
-            outline: 2px solid #000000;
+            outline: 2px solid var(--text-color);
         }
 
         .btn-primary:hover,
         .btn-primary:focus,
         .btn-primary:active {
-            color: #000000;
-            background-color: #fdda19;
-            border-color: #000000;
+            color: var(--text-color);
+            background-color: var(--brand-primary);
+            border-color: var(--text-color);
             -webkit-box-shadow: none;
             box-shadow: none;
         }
 
         .btn-primary {
             border: 1px solid;
-            color: #000000;
-            background-color: #fdda19;
-            border-color: #fdda19;
+            color: var(--text-color);
+            background-color: var(--brand-primary);
+            border-color: var(--brand-primary);
         }
 
         .btn {
