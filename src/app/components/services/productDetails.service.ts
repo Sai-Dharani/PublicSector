@@ -3,7 +3,8 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { OccEndpointsService } from "@spartacus/core";
 import { Observable } from "rxjs";
-import { NavigationEnd, Router, Routes } from "@angular/router"
+import { NavigationEnd, Router, RouterEvent, Routes } from "@angular/router"
+import { filter } from 'rxjs/operators';
 
 @Injectable()
 export class ProductDetailsService {
@@ -15,6 +16,14 @@ export class ProductDetailsService {
         console.log(this.href);
         // let currentUrl = this.route.url;
         // this.route.navigateByUrl(currentUrl)
+        this.route.events.pipe(
+            filter((e: any): e is RouterEvent => e instanceof RouterEvent)
+          ).subscribe((evt: RouterEvent) => {
+            if (evt instanceof NavigationEnd) {
+              console.log(evt.url.split('/').pop())
+              this.href = evt.url.split('/').pop();
+            }   
+        })
     }
 
     getProductDetails(): Observable<any> {
