@@ -8,7 +8,8 @@ import { ICON_TYPE } from '@spartacus/storefront';
 import { asapScheduler, BehaviorSubject, interval, Observable, of } from 'rxjs';
 import { delayWhen, observeOn, switchMap } from 'rxjs/operators';
 import { BreakpointService } from 'src/app/features/layout/breakpoint/breakpoint.service';
-
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'cx-product-facet-navigation',
@@ -16,6 +17,9 @@ import { BreakpointService } from 'src/app/features/layout/breakpoint/breakpoint
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductFacetNavigationComponent {
+  href:any;
+  name:any;
+  heading:any
   iconTypes = ICON_TYPE;
 
   /**
@@ -63,7 +67,21 @@ export class ProductFacetNavigationComponent {
     observeOn(asapScheduler)
   );
 
-  constructor(protected breakpointService: BreakpointService) {}
+  constructor(protected breakpointService: BreakpointService, private route: Router) {
+    this.href = this.route.url.split('/').pop();
+    this.route.events.pipe(
+      filter((e: any): e is RouterEvent => e instanceof RouterEvent)
+    ).subscribe((evt: RouterEvent) => {
+      if (evt instanceof NavigationEnd) {
+        console.log(evt.url.split('/').pop())
+        this.href = evt.url.split('/').pop();
+        this.name=this.href.replace(/-/g, ' ');
+        console.log(this.name);
+        localStorage.setItem('Name', this.name);
+      }  
+  })
+  this.heading = localStorage.getItem('Name') 
+  }
 
   launch() {
     this.open$.next(true);

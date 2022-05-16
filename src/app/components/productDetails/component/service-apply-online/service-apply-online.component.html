@@ -1,5 +1,4 @@
-<ng-container *ngIf="PDP | async as data" class="card-transparent">
-
+<ng-container *ngIf="PDP as data" class="card-transparent">
     <h1 [innerHtml]="data.name"></h1>
     <div *ngIf="data.description as description">
         <p class="onlineDescription" [innerHtml]="description"></p>

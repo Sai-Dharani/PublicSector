@@ -27,6 +27,8 @@ export class ProductDetailsService {
     }
 
     getProductDetails(): Observable<any> {
+     // alert(this.href);
+     console.log("This is text" + this.href)
         this.pdp = `/products/${this.href}?fields=FULL`;
          //this.cdr.detectChanges();
         // window.location.reload();
