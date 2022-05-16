@@ -18,9 +18,14 @@ cx-product-grid-item.col-md-4 {
 }
 
 .plp-button {
-
   padding-left: 0px !important;
   max-width: 50%;
+}
+
+.plp-btn {
+  padding-top: 10px;
+
+
 }
 
 .plp-card {
@@ -85,9 +90,9 @@ a:hover {
 
 }
 
-.card-section-footer {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+.custom-card-section-footer {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .btn:hover,
@@ -101,26 +106,58 @@ a:hover {
 .btn-white:active,
 .btn-white.active,
 .open .dropdown-toggle.btn-white {
-  color: #ffffff !important;
-  background-color: #000000 !important;
+  color: #ffffff;
+  background-color: #000000;
   border-color: #bcbaba;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.btn-white {
-  font-size: 16px !important;
+.btn-white,
+.custom-btn-white {
+  font-size: 16px;
   text-transform: none;
   white-space: normal;
-  background-color: white !important;
-  font-size: 16px !important;
-  border-color: #bcbaba !important;
+  background-color: white;
+  font-size: 16px;
+  border-color: #bcbaba;
   font-weight: 600;
 
 }
 
-.btn {
-  font-size: 16px !important;
+.custom-btn {
+  font-size: 1.125rem;
+  text-transform: none;
+  line-height: 1.34;
+  padding: 11px 12px;
+  height: 48px;
+  max-height: 48px;
+  min-width: 48px;
+  border-radius: var(--cx-buttons-border-radius);
+  text-align: center;
+  color: var(--cx-color-dark);
+  outline: 1px solid var(--border-color-4);
+}
+
+.custom-btn:hover {
+  text-transform: none;
+  text-decoration: none;
+  color: var(--cx-color-light);
+  background-color: var(--cx-color-dark);
+  outline: 1px solid var(--cx-color-dark);
+
+
+}
+
+
+plp-register-btn {
+  font-size: 16px;
+
+}
+
+.btn,
+.custom-btn {
+  font-size: 16px;
 }
 
 @include media-breakpoint-down(sm) {

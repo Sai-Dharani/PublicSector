@@ -31,6 +31,7 @@
     "@spartacus/core": "~4.3.0",
     "@spartacus/order": "~4.3.0",
     "@spartacus/product": "~4.3.0",
+    "@spartacus/product-configurator": "^4.3.0",
     "@spartacus/smartedit": "~4.3.0",
     "@spartacus/storefinder": "~4.3.0",
     "@spartacus/storefront": "~4.3.0",
