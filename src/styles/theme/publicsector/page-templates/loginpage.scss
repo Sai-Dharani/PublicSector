@@ -100,10 +100,29 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
     }
 
 
+    input {
+        min-height: 20px;
+        border-color: var(--border-color);
+        background-color: var(--cx-color-links);
+        color: var(--cx-color-dark);
+        border-radius: 0;
+
+    }
+
+    input.ng-dirty,
+    input.ng-invalid,
+    input.ng-touched {
+        border-color: var(--border-color);
+        background-color: var(--cx-color-links);
+        color: var(--cx-color-dark);
+
+    }
+
     .form-check-input {
         height: 5px;
         margin-top: 0px;
         max-height: 10px;
+
     }
 
     .justify-content-center {
@@ -115,6 +134,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
         margin: 0px;
         width: 100%;
         max-width: 100%;
+        text-align: left;
     }
 
     .btn-link {
@@ -131,6 +151,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
         font-size: 14px;
         font-weight: 400;
         text-transform: none;
+        float: left;
     }
 
     .form-control {
