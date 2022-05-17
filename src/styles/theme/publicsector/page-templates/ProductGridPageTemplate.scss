@@ -1,24 +1,4 @@
 cx-page-layout.ProductGridPageTemplate {
-    max-width: 100% !important;
-    margin: 0px !important;
-}
-
-.cx-pagination {
-    float: right;
-}
-
-a.current {
-    background-color: var(--cx-color-links);
-}
-
-.page {
-    color: var(--cx-color-services-background);
-
-}
-
-cx-pagination a.current {
-    background-color: var(--cx-color-links);
-    border-color: var(--cx-color-primary);
-    color: var(--cx-color-inverse);
-    opacity: 1;
+    max-width: 100%;
+    margin: 0px;
 }

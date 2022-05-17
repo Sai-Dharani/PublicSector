@@ -1,28 +1,35 @@
-main cx-page-layout.ProductGridPageTemplate{
-    margin:0 ;
-    .ProductLeftRefinements{
+main cx-page-layout.ProductGridPageTemplate {
+    margin: 0;
+    max-width: 100%;
+
+    .ProductLeftRefinements {
         max-width: 35%;
         margin-left: 20px;
         height: 100%;
         padding-top: 0%;
-        app-product-retrieve-a-draft{
+
+        app-product-retrieve-a-draft {
             border-bottom: 0;
             background: var(--well-quaternary-bg);
             padding: 30px 20px 30px 20px;
-            h2{
+
+            h2 {
                 border-bottom: 1px solid var(--cx-color-facet-heading);
                 font-size: 20px;
                 color: var(--text-color);
                 padding-bottom: 15px;
-                margin-bottom: 3px; 
+                margin-bottom: 3px;
             }
-            p{
+
+            p {
                 font-size: 16px;
             }
-            button{
+
+            button {
                 width: 100%;
                 font-size: 16px;
-                a{
+
+                a {
                     color: var(--text-color);
                     text-decoration: none;
                 }
@@ -30,52 +37,65 @@ main cx-page-layout.ProductGridPageTemplate{
         }
     }
 }
-.ProductGridSlot app-product-retrieve-a-draft{
+
+.ProductGridSlot app-product-retrieve-a-draft {
     display: none;
 }
-cx-product-facet-navigation{
-    .dialog-trigger{
+
+cx-product-facet-navigation {
+    .dialog-trigger {
         display: none;
     }
-    h2{
+
+    h2 {
         color: var(--link-hover-color);
         font-size: 28px;
         font-weight: 700;
         line-height: 22px;
         margin-top: 20px;
     }
-    h2{
+
+    h2 {
         text-transform: capitalize;
     }
-    cx-facet-list .inner{
+
+    cx-facet-list .inner {
         padding: 0;
     }
+
     cx-facet.multi-select {
         border-bottom: 0;
-        background: var( --well-quaternary-bg);
+        background: var(--well-quaternary-bg);
         margin: 20px 0 20px 0;
         padding: 30px 20px 30px 20px;
-        button.heading{
-            border-bottom: 1px solid var(  --cx-color-facet-heading);
+
+        button.heading {
+            border-bottom: 1px solid var(--cx-color-facet-heading);
             font-size: 20px;
             font-weight: 500;
             color: var(--text-color);
             padding: 0px 0px 15px 0px;
             margin: 0px 0px 3px 0px;
-            .collapse-icon, .expand-icon{
+
+            .collapse-icon,
+            .expand-icon {
                 display: none;
             }
         }
-        button.heading:hover{
+
+        button.heading:hover {
             color: var(--text-color);
         }
-        .value{
+
+        .value {
             padding-left: 0;
             margin: 10px 0;
-            span{
+
+            span {
                 display: flex;
             }
-            .label{
+
+            .label {
                 cursor: pointer;
                 font-weight: normal;
                 display: block;
@@ -85,55 +105,65 @@ cx-product-facet-navigation{
                 font-size: 13px;
             }
         }
-        a.value::before{
-            border: 1px solid var( --border-color-3);
+
+        a.value::before {
+            border: 1px solid var(--border-color-3);
             text-align: center;
             vertical-align: middle;
-            background: var( --cx-color-links);
+            background: var(--cx-color-links);
             margin-top: -3px;
             width: 25px;
             height: 25px;
             padding: 0;
             margin-right: 10px;
         }
-        a.value.selected::before{
+
+        a.value.selected::before {
             background: url(https://publicsector.local:9002/yacceleratorstoref…raddon/responsive/common/images/checkbox_tick.png) no-repeat scroll 0 0;
             border: 0;
-            background-color: var( --border-color);
+            background-color: var(--border-color);
         }
-        a.value:hover:not(.selected)::before{
+
+        a.value:hover:not(.selected)::before {
             border: none;
         }
     }
-    cx-active-facets{
-        div{
+
+    cx-active-facets {
+        div {
             border-bottom: 0;
             background: var(--well-quaternary-bg);
             padding: 30px 20px 30px 20px;
             width: 400px;
         }
-        h4{
+
+        h4 {
             border-bottom: 1px solid var(--cx-color-facet-heading);
             font-size: 20px;
             color: var(--text-color);
             padding-bottom: 15px;
-            margin-bottom: 3px; 
+            margin-bottom: 3px;
         }
-        a{
+
+        a {
             display: block;
         }
-        a:hover{
+
+        a:hover {
             background: none;
         }
-        a span{
+
+        a span {
             color: var(--text-color);
             font-size: 16px;
         }
-        a cx-icon{
-            color: var( --link-color);    
+
+        a cx-icon {
+            color: var(--link-color);
         }
-        a cx-icon:hover{
-            color:var(--link-hover-color);   
+
+        a cx-icon:hover {
+            color: var(--link-hover-color);
         }
     }
 }
