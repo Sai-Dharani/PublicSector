@@ -45,7 +45,6 @@ export class CeaBillsComponent implements OnInit {
   filterData(value: string) {
     this._OccBillsService.setStatus(value);
     this.config.currentPage = 1;
-
     this.fetchData();
   }
   onBack() {
