@@ -3,7 +3,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot {
 }
 
 cx-page-layout.LoginPageTemplate cx-page-slot>* {
-    max-width: 100% !important;
+    max-width: 100%;
 }
 
 cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
@@ -21,6 +21,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
 
     cx-login-form.user-form {
         width: 100%;
+        max-width: 100%;
         padding-left: 1%;
 
         .user-form button,
@@ -80,13 +81,17 @@ cx-page-layout.LoginPageTemplate cx-page-slot.LeftContentSlot {
             padding: 10px 15px;
             font-size: 14px;
             line-height: 1.375;
-            border-radius: 0 !important;
+            border-radius: 0;
         }
     }
 }
 
 cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
     float: right;
+
+    cx-register {
+        max-width: 100%;
+    }
 
     @include media-breakpoint-up(lg) {
         max-width: 50%;
@@ -118,6 +123,10 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
 
     }
 
+    .form-check input[type="checkbox"]:checked::after {
+        border-color: black;
+    }
+
     .form-check-input {
         height: 5px;
         margin-top: 0px;
@@ -126,7 +135,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
     }
 
     .justify-content-center {
-        justify-content: right !important;
+        justify-content: right;
     }
 
     .container {
@@ -139,7 +148,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
 
     .btn-link {
         font-size: 1.125rem;
-        color: --cx-color-button-background;
+        color: var(--cx-color-button-background);
         text-decoration: underline;
         cursor: pointer;
         display: inline-block;
@@ -195,7 +204,14 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
         padding: 10px 15px;
         font-size: 14px;
         line-height: 1.375;
-        border-radius: 0 !important;
+
+    }
+
+    .btn-primary {
+        border: 1px solid;
+        color: var(--text-color);
+        background-color: var(--brand-primary);
+        border-color: var(--brand-primary);
     }
 
     font-family: "Alegreya Sans",
@@ -205,6 +221,7 @@ cx-page-layout.LoginPageTemplate cx-page-slot.RightContentSlot {
 
     cx-login-form.user-form {
         width: 100%;
+        max-width: 100%;
         padding-left: 1%;
 
         .user-form button,
