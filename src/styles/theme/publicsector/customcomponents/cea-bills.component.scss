@@ -55,6 +55,17 @@ a {
     text-decoration: none;
 }
 
+.cea-row {
+    width: 102%;
+}
+
+.cea-nobills {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 45px 0px;
+}
+
 .divTableRow .divTableCell {
     .no-space {
         padding: 0;
@@ -148,8 +159,7 @@ a {
 
 .totalResults-top-padding {
     padding: 0px 0 0 3px;
-
-
+    margin-left: -15px;
 }
 
 .total-bill-result {
@@ -362,7 +372,7 @@ div {
     display: inline-block;
     font-size: 20px;
     /* padding: 5px 12px; */
-    margin: 0px 4px;
+    margin: 0px 0px;
     border-radius: 25px;
     color: var(--cx-color-services-background);
     // padding-bottom: auto;
@@ -412,7 +422,33 @@ div {
 //************************************************************
 //************************************************************
 // 0 - 639px 
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+    .cea-row {
+        width: 109%;
+    }
+
+    .totalResults-top-padding {
+        padding: 0px 0 0 3px;
+        margin-left: 0px;
+    }
+
+    .pagination-text {
+        font-size: 14px;
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+
+    .top {
+        margin: 0;
+        margin-left: 0px;
+    }
+
+    .totalResults {
+        margin: 0;
+
+    }
+}
 
 
 
@@ -428,4 +464,13 @@ div {
 //************************************************************
 
 // 640px - 1023px 
-@include media-breakpoint-between(sm, lg) {}
+@include media-breakpoint-between(sm, lg) {
+    .top {
+        margin: 15px 0 10px 0;
+
+    }
+
+    .cea-row {
+        width: 104%;
+    }
+}
